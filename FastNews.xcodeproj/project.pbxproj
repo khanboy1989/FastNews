@@ -18,6 +18,13 @@
 		5457F48B26FA00780020C5CB /* FastNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457F48A26FA00780020C5CB /* FastNewsTests.swift */; };
 		5457F49626FA00780020C5CB /* FastNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457F49526FA00780020C5CB /* FastNewsUITests.swift */; };
 		54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54FE4B4226FA04BA005541C5 /* .swiftlint.yml */; };
+		54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */; };
+		54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4926FA06A3005541C5 /* Reusable.swift */; };
+		54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4B26FA06BB005541C5 /* NibLoadable.swift */; };
+		54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4D26FA06ED005541C5 /* NibOwnerLoadable.swift */; };
+		54FE4B5026FA0721005541C5 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4F26FA0721005541C5 /* UITableView+Reusable.swift */; };
+		54FE4B5326FA0757005541C5 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B5226FA0757005541C5 /* StoryboardBased.swift */; };
+		54FE4B5526FA0781005541C5 /* StoryboardSceneBased..swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B5426FA0781005541C5 /* StoryboardSceneBased..swift */; };
 		71AA518B3937F6FC7566D7E9 /* libPods-FastNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F749E9CFF9F211F026F6A7AB /* libPods-FastNewsTests.a */; };
 		A50A37930487D6AB874D19A9 /* Pods_FastNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AE50C94335452CC486F535 /* Pods_FastNews.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +65,13 @@
 		5457F49526FA00780020C5CB /* FastNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastNewsUITests.swift; sourceTree = "<group>"; };
 		5457F49726FA00780020C5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54FE4B4226FA04BA005541C5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		54FE4B4926FA06A3005541C5 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		54FE4B4B26FA06BB005541C5 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		54FE4B4D26FA06ED005541C5 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
+		54FE4B4F26FA0721005541C5 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		54FE4B5226FA0757005541C5 /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		54FE4B5426FA0781005541C5 /* StoryboardSceneBased..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSceneBased..swift; sourceTree = "<group>"; };
 		5F66A6A6E8805B1CFC776AED /* Pods-FastNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-FastNewsTests/Pods-FastNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79F0CE428D21FE79DC9EF635 /* Pods-FastNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastNews.debug.xcconfig"; path = "Target Support Files/Pods-FastNews/Pods-FastNews.debug.xcconfig"; sourceTree = "<group>"; };
 		7B809834A9F40BA278D9D46C /* Pods-FastNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastNewsTests.release.xcconfig"; path = "Target Support Files/Pods-FastNewsTests/Pods-FastNewsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +135,7 @@
 		5457F46F26FA00760020C5CB /* FastNews */ = {
 			isa = PBXGroup;
 			children = (
+				54FE4B4526FA0602005541C5 /* Utility */,
 				5457F47026FA00760020C5CB /* AppDelegate.swift */,
 				5457F47226FA00760020C5CB /* SceneDelegate.swift */,
 				5457F47426FA00760020C5CB /* ViewController.swift */,
@@ -149,6 +164,36 @@
 				5457F49726FA00780020C5CB /* Info.plist */,
 			);
 			path = FastNewsUITests;
+			sourceTree = "<group>";
+		};
+		54FE4B4526FA0602005541C5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				54FE4B5126FA0746005541C5 /* Storyboard */,
+				54FE4B4626FA0626005541C5 /* View */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		54FE4B4626FA0626005541C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */,
+				54FE4B4926FA06A3005541C5 /* Reusable.swift */,
+				54FE4B4B26FA06BB005541C5 /* NibLoadable.swift */,
+				54FE4B4D26FA06ED005541C5 /* NibOwnerLoadable.swift */,
+				54FE4B4F26FA0721005541C5 /* UITableView+Reusable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		54FE4B5126FA0746005541C5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				54FE4B5226FA0757005541C5 /* StoryboardBased.swift */,
+				54FE4B5426FA0781005541C5 /* StoryboardSceneBased..swift */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		727E1F5A265CB32B3BD012B9 /* Frameworks */ = {
@@ -414,10 +459,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */,
+				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
 				5457F47B26FA00760020C5CB /* FastNews.xcdatamodeld in Sources */,
+				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
+				54FE4B5026FA0721005541C5 /* UITableView+Reusable.swift in Sources */,
+				54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */,
 				5457F47526FA00760020C5CB /* ViewController.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,
+				54FE4B5326FA0757005541C5 /* StoryboardBased.swift in Sources */,
 				5457F47326FA00760020C5CB /* SceneDelegate.swift in Sources */,
+				54FE4B5526FA0781005541C5 /* StoryboardSceneBased..swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
