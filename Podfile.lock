@@ -25,6 +25,9 @@ PODS:
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
   - SwiftLint (0.43.1)
+  - Swinject (2.7.0)
+  - SwinjectAutoregistration (2.7.0):
+    - Swinject (~> 2.7)
 
 DEPENDENCIES:
   - Action
@@ -34,8 +37,13 @@ DEPENDENCIES:
   - RxFlow
   - RxSwift (~> 6.2.0)
   - SwiftLint
+  - Swinject (= 2.7.0)
+  - SwinjectAutoregistration (= 2.7.0)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Swinject
+    - SwinjectAutoregistration
   trunk:
     - Action
     - Alamofire
@@ -59,7 +67,9 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  Swinject: 18195e17ad6140f994e95e11c7b04b21410598e8
+  SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: bc9783800def4792e32477dcb86772986ed42705
+PODFILE CHECKSUM: 71966adc4ba6bc15448962fb17d9ec6766bec579
 
 COCOAPODS: 1.10.2

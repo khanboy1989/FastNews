@@ -17,6 +17,8 @@ target 'FastNews' do
   pod 'Moya', '~> 14.0'
   pod 'Moya-ModelMapper', '~> 10.0'
   pod 'SwiftLint'
+  pod 'Swinject', '2.7.0'
+  pod 'SwinjectAutoregistration' , '2.7.0'
 
  end
 
