@@ -15,12 +15,11 @@ import Moya
 class Dependencies {
     let container = Container()
     
-    init() {
-        self.configure()
-    }
-    
     func configure() {
-        
+        configureClients()
+        configureServices()
+        configureSteppers()
+        configureViewModels()
     }
     
     func resolve<Service>() -> Service {
@@ -44,6 +43,22 @@ class Dependencies {
                                                    _ arg2: Arg2,
                                                    _ arg3: Arg3) -> Service {
         return container.resolve(Service.self, arguments: arg1, arg2, arg3)!
+    }
+    
+    private func configureClients() {
+        
+    }
+    
+    private func configureServices() {
+        container.autoregister(ReachabilityServiceType.self, initializer: ReachabilityService.init)
+    }
+    
+    private func configureViewModels() {
+        
+    }
+    
+    private func configureSteppers() {
+        
     }
     
 }
