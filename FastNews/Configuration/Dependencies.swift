@@ -54,7 +54,7 @@ class Dependencies {
     }
     
     private func configureViewModels() {
-        
+        container.autoregister(ViewModel.self, initializer: ViewModel.init)
     }
     
     private func configureSteppers() {
