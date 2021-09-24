@@ -161,6 +161,14 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		543B246C26FE570900286616 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				543B245C26FE54AD00286616 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5457F46426FA00760020C5CB = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +195,7 @@
 		5457F46F26FA00760020C5CB /* FastNews */ = {
 			isa = PBXGroup;
 			children = (
-				543B245C26FE54AD00286616 /* Fonts */,
+				543B246C26FE570900286616 /* Resources */,
 				5490ACC426FCFB4C00CC460A /* Flows */,
 				5490ACC126FCB53F00CC460A /* ViewModelType */,
 				5490ACC926FD015700CC460A /* ViewModelBased */,
