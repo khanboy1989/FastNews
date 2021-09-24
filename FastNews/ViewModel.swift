@@ -12,7 +12,7 @@ import RxSwift
 import Action
 
 final class ViewModel: ViewModelType, Stepper {
-    let steps =  PublishRelay<Step>()
+    let steps = PublishRelay<Step>()
     var input: Input { return internalInput }
     var outPut: Output { return internalOutput }
     
@@ -33,10 +33,9 @@ final class ViewModel: ViewModelType, Stepper {
         internalOutput = Output()
     }
     
-    
     private func createTestAction() -> Action<String, Void> {
         return Action(workFactory: {string in
-            return Observable.create ( { observer in
+            return Observable.create({ observer in
                 print("Observed string:\(string)")
                 observer.onCompleted()
                 return Disposables.create()
