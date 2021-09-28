@@ -31,7 +31,7 @@ class AppFlow: Flow {
     }
     
     func navigateToViewController() -> FlowContributors {
-        let viewController = ViewController.instantiate()
+        let viewController = CategoriesViewController.instantiate()
         viewController.viewModel = resolver.resolve(ViewModel.self)
         rootWindow.rootViewController = viewController
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))

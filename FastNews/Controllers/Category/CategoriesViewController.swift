@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class ViewController: UIViewController, StoryboardBased, ViewModelBased {
+class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
     var viewModel: ViewModel!
 
     @IBOutlet private weak var label: UILabel!
