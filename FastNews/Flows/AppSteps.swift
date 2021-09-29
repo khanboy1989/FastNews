@@ -10,4 +10,7 @@ import RxFlow
 
 enum AppSteps: Step {
     case initial
+    case main
+    case categories
+    case sources
 }

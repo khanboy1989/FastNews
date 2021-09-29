@@ -55,6 +55,9 @@ class Dependencies {
     
     private func configureViewModels() {
         container.autoregister(ViewModel.self, initializer: ViewModel.init)
+        container.autoregister(TabBarViewModel.self, initializer: TabBarViewModel.init)
+        container.autoregister(CategoriesViewModel.self, initializer: CategoriesViewModel.init)
+        container.autoregister(SourcesViewModel.self, initializer: SourcesViewModel.init)
     }
     
     private func configureSteppers() {

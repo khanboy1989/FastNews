@@ -8,13 +8,10 @@
 import Foundation
 import UIKit
 
-
-enum ColorTheme{
+enum ColorTheme {
     case appBackground
     
-    
-    
-    var color:UIColor{
+    var color: UIColor {
         switch self {
         case .appBackground:
             return UIColor(named: "cAppBackground")!

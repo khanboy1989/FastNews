@@ -26,15 +26,21 @@ class AppFlow: Flow {
         guard let step = step as? AppSteps else { return .none }
         switch step {
         case .initial:
-            return navigateToViewController()
+            return navigateToMain()
+        default:
+            return .none
         }
     }
     
-    func navigateToViewController() -> FlowContributors {
-        let viewController = CategoriesViewController.instantiate()
-        viewController.viewModel = resolver.resolve(ViewModel.self)
-        rootWindow.rootViewController = viewController
-        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: viewController.viewModel))
+    func navigateToMain() -> FlowContributors {
+        let mainFlow = MainFlow(withResolve: resolver)
+        let mainStepper = OneStepper(withSingleStep: AppSteps.main)
+        
+        Flows.use(mainFlow, when: .ready) {[unowned self] (root) in
+            self.rootWindow.rootViewController = root
+        }
+        
+        return .one(flowContributor: .contribute(withNextPresentable: mainFlow, withNextStepper: mainStepper))
     }
 
 }
