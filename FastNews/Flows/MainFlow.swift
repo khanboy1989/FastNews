@@ -24,7 +24,6 @@ class MainFlow: Flow {
     private let rootViewController: TabBarController
     private let resolver: Dependencies
     private let disposeBag = DisposeBag()
-    private let mainNavigator: MainNavigator
     private let categoryStepper = CategoryStepper()
     private let sourceStepper = SourceStepper()
     
@@ -32,7 +31,6 @@ class MainFlow: Flow {
         self.resolver = resolver
         self.rootViewController = TabBarController.instantiate()
         self.rootViewController.viewModel = resolver.resolve(TabBarViewModel.self)
-        self.mainNavigator = MainNavigator(mainTabBarController: rootViewController, categoryStepper: categoryStepper, sourceStepper: sourceStepper)
     }
     
     func navigate(to step: Step) -> FlowContributors {

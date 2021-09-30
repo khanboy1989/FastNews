@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		249EA83078DA0F6061D83589 /* libPods-FastNewsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D5A748C7F9702014949FC7 /* libPods-FastNewsUITests.a */; };
+		5403DB12270501C700414F28 /* TopHeadlinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403DB11270501C700414F28 /* TopHeadlinesModel.swift */; };
+		5403DB142705020100414F28 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403DB132705020100414F28 /* CategoryType.swift */; };
 		542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BA2704369F009C1D23 /* CategoryFlow.swift */; };
 		542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BC2704374A009C1D23 /* SourceFlow.swift */; };
 		542202C027048D82009C1D23 /* SourcesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542202BF27048D82009C1D23 /* SourcesViewController.storyboard */; };
@@ -42,9 +44,7 @@
 		54F5F3B827031D410044A362 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3B727031D410044A362 /* TabBarController.swift */; };
 		54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3B927032D780044A362 /* MainFlow.swift */; };
 		54F5F3BC270332150044A362 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3BB270332150044A362 /* TabBarViewModel.swift */; };
-		54F5F3BF27034D470044A362 /* FlowNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3BE27034D470044A362 /* FlowNavigator.swift */; };
 		54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */; };
-		54F5F3C327034FBD0044A362 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3C227034FBD0044A362 /* MainNavigator.swift */; };
 		54F5F3C6270395780044A362 /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3C5270395780044A362 /* UIViewController+rx.swift */; };
 		54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54FE4B4226FA04BA005541C5 /* .swiftlint.yml */; };
 		54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */; };
@@ -78,6 +78,8 @@
 /* Begin PBXFileReference section */
 		39BCB2F08E685CFAB811E82C /* Pods-FastNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastNews.release.xcconfig"; path = "Target Support Files/Pods-FastNews/Pods-FastNews.release.xcconfig"; sourceTree = "<group>"; };
 		50AE50C94335452CC486F535 /* Pods_FastNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5403DB11270501C700414F28 /* TopHeadlinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesModel.swift; sourceTree = "<group>"; };
+		5403DB132705020100414F28 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		542202BA2704369F009C1D23 /* CategoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFlow.swift; sourceTree = "<group>"; };
 		542202BC2704374A009C1D23 /* SourceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceFlow.swift; sourceTree = "<group>"; };
 		542202BF27048D82009C1D23 /* SourcesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SourcesViewController.storyboard; sourceTree = "<group>"; };
@@ -118,9 +120,7 @@
 		54F5F3B727031D410044A362 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		54F5F3B927032D780044A362 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		54F5F3BB270332150044A362 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
-		54F5F3BE27034D470044A362 /* FlowNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigator.swift; sourceTree = "<group>"; };
 		54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepNavigator.swift; sourceTree = "<group>"; };
-		54F5F3C227034FBD0044A362 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		54F5F3C5270395780044A362 /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+rx.swift"; sourceTree = "<group>"; };
 		54FE4B4226FA04BA005541C5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
@@ -167,6 +167,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5403DB10270501AA00414F28 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5403DB11270501C700414F28 /* TopHeadlinesModel.swift */,
+				5403DB132705020100414F28 /* CategoryType.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		542202BE27048D47009C1D23 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +285,7 @@
 		5464CFBF2702479900969B0D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5403DB10270501AA00414F28 /* Client */,
 				5464CFC0270247B400969B0D /* Configuration */,
 			);
 			path = Network;
@@ -374,9 +384,7 @@
 		54F5F3BD270337AA0044A362 /* Navigators */ = {
 			isa = PBXGroup;
 			children = (
-				54F5F3BE27034D470044A362 /* FlowNavigator.swift */,
 				54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */,
-				54F5F3C227034FBD0044A362 /* MainNavigator.swift */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -695,6 +703,7 @@
 				5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */,
 				54F5F3BC270332150044A362 /* TabBarViewModel.swift in Sources */,
 				5490ACC626FCFB5A00CC460A /* AppFlow.swift in Sources */,
+				5403DB12270501C700414F28 /* TopHeadlinesModel.swift in Sources */,
 				542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */,
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
 				54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */,
@@ -702,6 +711,7 @@
 				543B246A26FE54D400286616 /* Font.swift in Sources */,
 				54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */,
 				5457F47B26FA00760020C5CB /* FastNews.xcdatamodeld in Sources */,
+				5403DB142705020100414F28 /* CategoryType.swift in Sources */,
 				54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */,
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
@@ -713,13 +723,11 @@
 				54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,
-				54F5F3BF27034D470044A362 /* FlowNavigator.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,
 				5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */,
 				54FE4B5326FA0757005541C5 /* StoryboardBased.swift in Sources */,
 				54F5F3B827031D410044A362 /* TabBarController.swift in Sources */,
 				5457F47326FA00760020C5CB /* SceneDelegate.swift in Sources */,
-				54F5F3C327034FBD0044A362 /* MainNavigator.swift in Sources */,
 				54F5F3C6270395780044A362 /* UIViewController+rx.swift in Sources */,
 				54FE4B5526FA0781005541C5 /* StoryboardSceneBased..swift in Sources */,
 			);
@@ -898,8 +906,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QK348HV74W;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FastNews/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -907,6 +915,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhankhan.FastNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -918,8 +927,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QK348HV74W;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FastNews/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -927,6 +936,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhankhan.FastNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
