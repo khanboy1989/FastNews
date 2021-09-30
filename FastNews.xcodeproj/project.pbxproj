@@ -16,6 +16,15 @@
 		542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202C127048E78009C1D23 /* SourcesViewController.swift */; };
 		542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202C3270497DA009C1D23 /* CategoriesViewModel.swift */; };
 		542202C62704983C009C1D23 /* SourcesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202C52704983C009C1D23 /* SourcesViewModel.swift */; };
+		542FB52E27059919001CF0E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 542FB52D27059919001CF0E6 /* Localizable.strings */; };
+		542FB53027059955001CF0E6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB52F27059955001CF0E6 /* Localizable.swift */; };
+		542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB53227059A2A001CF0E6 /* NewsCompatible.swift */; };
+		542FB53527059A9C001CF0E6 /* String+news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB53427059A9C001CF0E6 /* String+news.swift */; };
+		542FB5392705A941001CF0E6 /* CustomSegmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB5382705A941001CF0E6 /* CustomSegmentsView.swift */; };
+		542FB53B2705A94C001CF0E6 /* CustomSegmentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542FB53A2705A94C001CF0E6 /* CustomSegmentsView.xib */; };
+		542FB53E2705A965001CF0E6 /* CustomSegmentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB53D2705A965001CF0E6 /* CustomSegmentItemView.swift */; };
+		542FB5402705A972001CF0E6 /* CustomSegmentItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */; };
+		542FB5422705B95D001CF0E6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */; };
 		543B246326FE54C700286616 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245D26FE54C700286616 /* AirbnbCerealLight.ttf */; };
 		543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245E26FE54C700286616 /* AirbnbCerealBlack.ttf */; };
 		543B246526FE54C700286616 /* AirbnbCerealBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245F26FE54C700286616 /* AirbnbCerealBook.ttf */; };
@@ -86,6 +95,15 @@
 		542202C127048E78009C1D23 /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
 		542202C3270497DA009C1D23 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		542202C52704983C009C1D23 /* SourcesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewModel.swift; sourceTree = "<group>"; };
+		542FB52D27059919001CF0E6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		542FB52F27059955001CF0E6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		542FB53227059A2A001CF0E6 /* NewsCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCompatible.swift; sourceTree = "<group>"; };
+		542FB53427059A9C001CF0E6 /* String+news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+news.swift"; sourceTree = "<group>"; };
+		542FB5382705A941001CF0E6 /* CustomSegmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentsView.swift; sourceTree = "<group>"; };
+		542FB53A2705A94C001CF0E6 /* CustomSegmentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentsView.xib; sourceTree = "<group>"; };
+		542FB53D2705A965001CF0E6 /* CustomSegmentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentItemView.swift; sourceTree = "<group>"; };
+		542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentItemView.xib; sourceTree = "<group>"; };
+		542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		543B245D26FE54C700286616 /* AirbnbCerealLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealLight.ttf; sourceTree = "<group>"; };
 		543B245E26FE54C700286616 /* AirbnbCerealBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBlack.ttf; sourceTree = "<group>"; };
 		543B245F26FE54C700286616 /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBook.ttf; sourceTree = "<group>"; };
@@ -186,6 +204,50 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		542FB52C27059842001CF0E6 /* Localisation */ = {
+			isa = PBXGroup;
+			children = (
+				542FB52D27059919001CF0E6 /* Localizable.strings */,
+				542FB52F27059955001CF0E6 /* Localizable.swift */,
+			);
+			path = Localisation;
+			sourceTree = "<group>";
+		};
+		542FB531270599CD001CF0E6 /* NameSpacing */ = {
+			isa = PBXGroup;
+			children = (
+				542FB53227059A2A001CF0E6 /* NewsCompatible.swift */,
+			);
+			path = NameSpacing;
+			sourceTree = "<group>";
+		};
+		542FB5362705A56D001CF0E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				542FB5372705A898001CF0E6 /* CustomSegment */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		542FB5372705A898001CF0E6 /* CustomSegment */ = {
+			isa = PBXGroup;
+			children = (
+				542FB53C2705A953001CF0E6 /* CustomSegmentItem */,
+				542FB5382705A941001CF0E6 /* CustomSegmentsView.swift */,
+				542FB53A2705A94C001CF0E6 /* CustomSegmentsView.xib */,
+			);
+			path = CustomSegment;
+			sourceTree = "<group>";
+		};
+		542FB53C2705A953001CF0E6 /* CustomSegmentItem */ = {
+			isa = PBXGroup;
+			children = (
+				542FB53D2705A965001CF0E6 /* CustomSegmentItemView.swift */,
+				542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */,
+			);
+			path = CustomSegmentItem;
+			sourceTree = "<group>";
+		};
 		543B245C26FE54AD00286616 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +265,8 @@
 		543B246B26FE55D500286616 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				542FB531270599CD001CF0E6 /* NameSpacing */,
+				542FB52C27059842001CF0E6 /* Localisation */,
 				5464CFC327024A2E00969B0D /* Theme */,
 				5457F47026FA00760020C5CB /* AppDelegate.swift */,
 				5457F47226FA00760020C5CB /* SceneDelegate.swift */,
@@ -246,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				5464CFC12702494A00969B0D /* Controllers */,
+				542FB5362705A56D001CF0E6 /* Views */,
 				543B246C26FE570900286616 /* Resources */,
 				5490ACC426FCFB4C00CC460A /* Flows */,
 				5490ACC126FCB53F00CC460A /* ViewModelType */,
@@ -393,6 +458,8 @@
 			isa = PBXGroup;
 			children = (
 				54F5F3C5270395780044A362 /* UIViewController+rx.swift */,
+				542FB53427059A9C001CF0E6 /* String+news.swift */,
+				542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -564,9 +631,12 @@
 				543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */,
 				5457F48026FA00770020C5CB /* LaunchScreen.storyboard in Resources */,
 				5457F47D26FA00770020C5CB /* Assets.xcassets in Resources */,
+				542FB53B2705A94C001CF0E6 /* CustomSegmentsView.xib in Resources */,
 				543B246626FE54C700286616 /* AirbnbCerealMedium.ttf in Resources */,
+				542FB5402705A972001CF0E6 /* CustomSegmentItemView.xib in Resources */,
 				543B246826FE54C700286616 /* AirbnbCerealExtraBold.ttf in Resources */,
 				54F5F3B627031CC50044A362 /* TabBarController.storyboard in Resources */,
+				542FB52E27059919001CF0E6 /* Localizable.strings in Resources */,
 				543B246726FE54C700286616 /* AirbnbCerealBold.ttf in Resources */,
 				543B246526FE54C700286616 /* AirbnbCerealBook.ttf in Resources */,
 				5457F47826FA00760020C5CB /* CategoriesViewController.storyboard in Resources */,
@@ -708,7 +778,9 @@
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
 				54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */,
 				542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */,
+				542FB53527059A9C001CF0E6 /* String+news.swift in Sources */,
 				543B246A26FE54D400286616 /* Font.swift in Sources */,
+				542FB5422705B95D001CF0E6 /* UIView+Extensions.swift in Sources */,
 				54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */,
 				5457F47B26FA00760020C5CB /* FastNews.xcdatamodeld in Sources */,
 				5403DB142705020100414F28 /* CategoryType.swift in Sources */,
@@ -717,10 +789,14 @@
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
 				5490ACC026FCB48100CC460A /* ViewModel.swift in Sources */,
 				54FE4B5026FA0721005541C5 /* UITableView+Reusable.swift in Sources */,
+				542FB53E2705A965001CF0E6 /* CustomSegmentItemView.swift in Sources */,
+				542FB5392705A941001CF0E6 /* CustomSegmentsView.swift in Sources */,
 				542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */,
 				5490ACC326FCB55300CC460A /* ViewModelType.swift in Sources */,
 				5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */,
+				542FB53027059955001CF0E6 /* Localizable.swift in Sources */,
 				54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */,
+				542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,

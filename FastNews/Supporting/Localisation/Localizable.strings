@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  FastNews
+
+  Created by Serhan Khan on 30/09/2021.
+  
+*/
+
+
+
+// CategoryTypes localisable strings
+"CategoryType.Bussines" = "Business";
+"CategoryType.Entertainment" = "Entertainment";
+"CategoryType.General" = "General";
+"CategoryType.Health" = "Health";
+"CategoryType.Science" = "Science";
+"CategoryType.Sports" = "Sports";
+"CategoryType.Technology" = "Tecnology";
+

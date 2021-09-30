@@ -14,6 +14,5 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Categories did load")
     }
 }
