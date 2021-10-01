@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol LocalizableType {
     var localized: String { get }
 }

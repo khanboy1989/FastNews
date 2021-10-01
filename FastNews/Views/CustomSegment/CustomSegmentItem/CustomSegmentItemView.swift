@@ -8,18 +8,19 @@
 import UIKit
 
 class CustomSegmentItemView: UIView, NibOwnerLoadable {
+    var onTap: ( () -> Void)?
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var indicatorView: UIView!
     
     var item: CustomSegmentItem? {
-        didSet{
+        didSet {
             refresh()
         }
     }
     
-    var isSelected:Bool = false {
-        didSet{
+    var isSelected: Bool = false {
+        didSet {
            refresh()
         }
     }
@@ -36,7 +37,8 @@ class CustomSegmentItemView: UIView, NibOwnerLoadable {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        sharedInit()
     }
     
     private func sharedInit() {
@@ -55,6 +57,10 @@ class CustomSegmentItemView: UIView, NibOwnerLoadable {
             titleLabel.textColor = ColorTheme.grey.color
             indicatorView.isHidden = true
         }
+    }
+    
+    @IBAction private func didTap(_ sender: UIButton) {
+        onTap?()
     }
 
 }

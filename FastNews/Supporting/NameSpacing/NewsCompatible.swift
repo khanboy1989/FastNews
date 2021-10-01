@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct News<Base> {
     public let base: Base
     

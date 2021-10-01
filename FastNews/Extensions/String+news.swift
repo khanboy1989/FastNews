@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension String: NewsCompatible { }
 
 extension News where Base == String {

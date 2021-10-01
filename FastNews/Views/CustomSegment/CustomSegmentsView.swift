@@ -7,10 +7,6 @@
 
 import UIKit
 
-class CustomSegmentsView:UIView, NibOwnerLoadable {
+class CustomSegmentsView: UIView, NibOwnerLoadable {
     
 }
-
-
-
-

@@ -39,14 +39,24 @@
                         </view>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-8I-GOm">
+                    <rect key="frame" x="0.0" y="0.0" width="93" height="59"/>
+                    <connections>
+                        <action selector="didTap:" destination="-1" eventType="touchUpInside" id="jeJ-cL-KEQ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VKj-QK-fG0" secondAttribute="bottom" id="03S-qC-UnS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bvs-8I-GOm" secondAttribute="trailing" id="7DK-Jl-HUQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bvs-8I-GOm" secondAttribute="bottom" id="D4T-xo-shV"/>
                 <constraint firstItem="VKj-QK-fG0" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="GwZ-bM-ir3"/>
                 <constraint firstItem="VKj-QK-fG0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" id="LId-6u-vEi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VKj-QK-fG0" secondAttribute="trailing" id="Zfl-YV-auO"/>
+                <constraint firstItem="bvs-8I-GOm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jpX-9X-3Ve"/>
+                <constraint firstItem="bvs-8I-GOm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lR6-hT-pmy"/>
                 <constraint firstItem="VKj-QK-fG0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="q4C-rD-vGC"/>
                 <constraint firstItem="VKj-QK-fG0" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="uja-xu-sm2"/>
             </constraints>
