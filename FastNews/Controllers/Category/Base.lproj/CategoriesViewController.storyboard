@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,24 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmT-Kh-XdQ">
-                                <rect key="frame" x="186" y="442.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-29-Ncv" customClass="CustomSegmentsView" customModule="FastNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                                <color key="backgroundColor" name="cAppBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ImT-CV-stU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="cAppBackground"/>
                         <constraints>
-                            <constraint firstItem="tmT-Kh-XdQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4bz-cI-neY"/>
-                            <constraint firstItem="tmT-Kh-XdQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F2h-9a-BRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nd-29-Ncv" secondAttribute="trailing" id="4A4-bK-Rfg"/>
+                            <constraint firstItem="4nd-29-Ncv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xy5-Gp-Hhx"/>
+                            <constraint firstItem="4nd-29-Ncv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="uwW-Pt-4qh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customSegmentsView" destination="4nd-29-Ncv" id="Z6y-FN-5Fv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="64"/>
+            <point key="canvasLocation" x="95.652173913043484" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>

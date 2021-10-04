@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomSegmentItemView: UIView, NibOwnerLoadable {
-    var onTap: ( () -> Void)?
+    var onTap: ( ( CustomSegmentItem? ) -> Void)?
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var indicatorView: UIView!
@@ -27,17 +27,20 @@ class CustomSegmentItemView: UIView, NibOwnerLoadable {
 
     init(item: CustomSegmentItem) {
         super.init(frame: .zero)
+        self.loadNibContent()
         self.item = item
         sharedInit()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.loadNibContent()
         sharedInit()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.loadNibContent()
         sharedInit()
     }
     
@@ -60,11 +63,12 @@ class CustomSegmentItemView: UIView, NibOwnerLoadable {
     }
     
     @IBAction private func didTap(_ sender: UIButton) {
-        onTap?()
+        onTap?(item)
     }
 
 }
 
 struct CustomSegmentItem {
     var title: String
+    var isSelected: Bool
 }

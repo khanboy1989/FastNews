@@ -20,7 +20,7 @@ enum CategoryType: CaseIterable {
     var title: String {
         switch self {
         case .business:
-            return Localizable.CategoryType.general.localized
+            return Localizable.CategoryType.business.localized
         case .entertainment:
             return Localizable.CategoryType.entertainment.localized
         case .general:
