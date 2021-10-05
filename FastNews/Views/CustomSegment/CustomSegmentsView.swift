@@ -13,7 +13,8 @@ class CustomSegmentsView: UIView, NibOwnerLoadable {
     @IBOutlet private weak var stackView: UIStackView!
     
     private var itemViews: [CustomSegmentItemView] = []
-    
+    var onWillChangeSelectedIndex:( (Int) -> Void )?
+   
     var items = [CustomSegmentItem]() {
         didSet {
             refreshSubviews()
@@ -45,25 +46,20 @@ class CustomSegmentsView: UIView, NibOwnerLoadable {
             stackView.removeArrangedSubview(view)
         }
         itemViews = []
-        
-        for (_, item) in items.enumerated() {
-            let subview = CustomSegmentItemView(item: item)
+        for (index, item) in items.enumerated() {
+            let subview = CustomSegmentItemView(item: item, index: index)
             subview.isSelected = item.isSelected
             stackView.addArrangedSubview(subview)
-            subview.onTap = {[weak self] customSegmentItem in
-            //guard let self = self else {return}
-                
+            subview.onTap = {[weak self] _, selectedIndex in
+                guard let self = self, let selectedIndex = selectedIndex else { return }
+                self.onWillChangeSelectedIndex?(selectedIndex)
             }
             itemViews.append(subview)
         }
-        refresh()
     }
     
     func setItems(items: [CustomSegmentItem]) {
         self.items = items
-    }
-    
-    private func refresh() {
     }
     
 }

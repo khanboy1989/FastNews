@@ -10,22 +10,22 @@ import RxSwift
 
 class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
     
-    var viewModel: CategoriesViewModel!
     @IBOutlet private weak var customSegmentsView: CustomSegmentsView!
+   
+    var viewModel: CategoriesViewModel!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var customSegmentItems = [CustomSegmentItem]()
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        viewModel.outPut.categoryTypes.drive(onNext: customSegmentsView.setItems)
+            .disposed(by: disposeBag)
         
-        let allCases = CategoryType.allCases
-        
-        for item in allCases {
-            if item == .business {
-                customSegmentItems.append(CustomSegmentItem(title: item.title, isSelected: true))
-            } else {
-                customSegmentItems.append(CustomSegmentItem(title: item.title, isSelected: false))
-            }
+        customSegmentsView.onWillChangeSelectedIndex = {[weak self] index in
+            self?.viewModel.input.selectedCategoryType.execute(index)
         }
-        customSegmentsView.setItems(items: customSegmentItems)
     }
 }

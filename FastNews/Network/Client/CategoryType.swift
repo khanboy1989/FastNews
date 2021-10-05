@@ -35,4 +35,23 @@ enum CategoryType: CaseIterable {
             return Localizable.CategoryType.technology.localized
         }
     }
+    
+    var index: Int {
+        switch self {
+        case .business:
+            return 0
+        case .entertainment:
+            return 1
+        case .general:
+            return 2
+        case .health:
+            return 3
+        case .science:
+            return 4
+        case .sports:
+            return 5
+        case .technology:
+            return 6
+        }
+    }
 }
