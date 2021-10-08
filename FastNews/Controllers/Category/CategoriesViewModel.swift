@@ -30,6 +30,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
     private let reachabilityService: ReachabilityServiceType
     private let categoryTypes = BehaviorRelay<[CustomSegmentItem]>(value: [])
     private let selectedCategoryType = BehaviorRelay<CategoryType>(value: .business)
+  
     
     init(reachabilityService: ReachabilityServiceType) {
         self.reachabilityService = reachabilityService
@@ -51,7 +52,8 @@ class CategoriesViewModel: ViewModelType, Stepper {
     private func createSelectCategoryAction() -> Action<Int, Void> {
         return Action<Int, Void>(workFactory: {[weak self] index in
             return Observable.create { observer in
-                if let strongSelf = self, let selectedItem = CategoryType.allCases.first(where: { $0.index == index} ) {
+                if let strongSelf = self, let selectedItem = CategoryType.allCases.first(where: { $0.index == index }) {
+                    strongSelf.selectedCategoryType.accept(selectedItem)
                     strongSelf.categoryTypes.accept(strongSelf.createCategoryTypes(selectedItem: selectedItem))
                 }
                 observer.onCompleted()

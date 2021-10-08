@@ -46,11 +46,21 @@ class Dependencies {
     }
     
     private func configureClients() {
+        container.register(CategoryApiConfiguration.self){ _ in
+            return Environment.current.categoryApiConfiguration
+        }
+        
+        container.register(MoyaProvider<CategoryApi>.self){_ in
+            return Environment.current.categoryApiProvider
+        }
+        
+        container.autoregister(CategoryClient.self, initializer: CategoryClient.init)
         
     }
     
     private func configureServices() {
         container.autoregister(ReachabilityServiceType.self, initializer: ReachabilityService.init)
+        container.autoregister(CategoryServiceType.self, initializer: CategoryService.init)
     }
     
     private func configureViewModels() {
