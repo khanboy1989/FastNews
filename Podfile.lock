@@ -1,75 +1,86 @@
 PODS:
-  - Action (5.0.0):
-    - RxCocoa (~> 6.0)
-    - RxSwift (~> 6.0)
-  - Alamofire (5.4.3)
+  - Action (4.2.0):
+    - RxCocoa (< 7.0, >= 5.0)
+    - RxSwift (< 7.0, >= 5.0)
+  - Alamofire (4.9.1)
   - ModelMapper (10.0.1):
     - ModelMapper/Core (= 10.0.1)
   - ModelMapper/Core (10.0.1)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya-ModelMapper (10.0.0):
-    - Moya-ModelMapper/Core (= 10.0.0)
-  - Moya-ModelMapper/Core (10.0.0):
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya-ModelMapper/Core (9.0.0):
     - ModelMapper (~> 10.0)
-    - Moya (~> 14.0)
-  - Moya/Core (14.0.0):
-    - Alamofire (~> 5.0)
-  - RxCocoa (6.2.0):
-    - RxRelay (= 6.2.0)
-    - RxSwift (= 6.2.0)
-  - RxFlow (2.12.2):
-    - RxCocoa (>= 6.0.0)
-    - RxSwift (>= 6.0.0)
-  - RxRelay (6.2.0):
-    - RxSwift (= 6.2.0)
-  - RxSwift (6.2.0)
-  - SwiftLint (0.43.1)
+    - Moya (~> 13.0)
+  - Moya-ModelMapper/RxSwift (9.0.0):
+    - Moya-ModelMapper/Core
+    - Moya/RxSwift (~> 13.0)
+    - RxSwift
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - Result (4.1.0)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxFlow (2.11.0):
+    - RxCocoa (>= 5.1.1)
+    - RxSwift (>= 5.1.1)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.3)
+  - SwiftLint (0.44.0)
   - Swinject (2.7.0)
   - SwinjectAutoregistration (2.7.0):
     - Swinject (~> 2.7)
 
 DEPENDENCIES:
   - Action
-  - Moya (~> 14.0)
-  - Moya-ModelMapper (~> 10.0)
-  - RxCocoa (~> 6.2.0)
+  - Moya-ModelMapper/RxSwift (~> 9.0)
+  - Moya/RxSwift (from `./Moya-RxSwift5.podspec`)
+  - RxCocoa (~> 5.0)
   - RxFlow
-  - RxSwift (~> 6.2.0)
+  - RxSwift (~> 5.0)
   - SwiftLint
   - Swinject (= 2.7.0)
   - SwinjectAutoregistration (= 2.7.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Swinject
-    - SwinjectAutoregistration
-  trunk:
     - Action
     - Alamofire
     - ModelMapper
-    - Moya
     - Moya-ModelMapper
+    - Result
     - RxCocoa
     - RxFlow
     - RxRelay
     - RxSwift
     - SwiftLint
+    - Swinject
+    - SwinjectAutoregistration
+
+EXTERNAL SOURCES:
+  Moya:
+    :podspec: "./Moya-RxSwift5.podspec"
 
 SPEC CHECKSUMS:
-  Action: 47f1825511907b4fcd79dd7a7db9526c20f78018
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Action: 5dc2194f7a0b77857c82a677b0da655f197c005f
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ModelMapper: 0f68dd4300d0e27290c70f66492c7f795da21bcf
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Moya-ModelMapper: e3a478500921e7299804dc1ac550f1ebf3228ade
-  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
-  RxFlow: fa434215aca391d10d4d5048c0a035c9502b3666
-  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
-  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
-  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  Moya: 713c275235897e34057bc01406b9f75d6c1048ee
+  Moya-ModelMapper: 4948625af7fc5eef41ad9fdfe0c3517170b50960
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxFlow: c5242626a73a03d0a0163f0ab795538c467b791f
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
+  RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
+  SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
   Swinject: 18195e17ad6140f994e95e11c7b04b21410598e8
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 71966adc4ba6bc15448962fb17d9ec6766bec579
+PODFILE CHECKSUM: 4f0134c402bfdc5bda5a1dd3c5e69e5c6cc2ee55
 
 COCOAPODS: 1.10.2

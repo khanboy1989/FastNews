@@ -20,12 +20,17 @@ class CategoryClient {
     }
     
     func topHeadlines(categoryType: CategoryType, lang: String) -> Observable<TopHeadLinesModel> {
-        return Observable<TopHeadLinesModel>.create{ observer in
-            
-            observer.onCompleted()
-            
-            return Disposables.create()
-        }
+
+        fatalError("Not implemented yet!!!")
         
+        //        let request = provider.rx.request(.topHeadLines(config: self.configuration, category: categoryType, lang: lang))
+//            .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
+//            .map({response -> TopHeadLinesModel in
+//
+//
+//            }).asObservable()
+//
+//
+//        return request
     }
 }

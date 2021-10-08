@@ -47,8 +47,8 @@ extension Environment {
             configuration.tlsMinimumSupportedProtocol = SSLProtocol.tlsProtocol12
         }
         
-        let session = Session(configuration: configuration)
-        return MoyaProvider<T>(session:session)
+        let manager = SessionManager(configuration: configuration)
+        return MoyaProvider<T>(manager:manager)
 
     }
 }

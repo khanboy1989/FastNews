@@ -6,8 +6,14 @@
 //
 
 import Foundation
-
+import Mapper
 
 struct TopHeadLinesModel {
     
+}
+
+extension TopHeadLinesModel: Mappable {
+    init(map: Mapper) throws {
+        
+    }
 }

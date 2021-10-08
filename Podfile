@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.6'
+platform :ios, '11.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -10,16 +10,15 @@ target 'FastNews' do
 
   # Pods for FastNews
  
-  pod 'RxSwift', '~> 6.2.0'
-  pod 'RxCocoa', '~> 6.2.0'
+  pod 'RxSwift' , '~> 5.0'  
+  pod 'RxCocoa' , '~> 5.0'
   pod 'RxFlow'
   pod 'Action'		
-  pod 'Moya', '~> 14.0'
-  pod 'Moya-ModelMapper', '~> 10.0'
+  pod 'Moya-ModelMapper/RxSwift', '~> 9.0'
   pod 'SwiftLint'
   pod 'Swinject', '2.7.0'
   pod 'SwinjectAutoregistration' , '2.7.0'
-
+  pod 'Moya/RxSwift', :podspec => './Moya-RxSwift5.podspec'
  end
 
  target 'FastNewsTests' do
@@ -30,3 +29,7 @@ target 'FastNews' do
   target 'FastNewsUITests' do
     # Pods for testing
   end
+
+
+
+

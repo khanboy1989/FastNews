@@ -20,19 +20,20 @@ final class ReachabilityService: ReachabilityServiceType {
     private let _didBecomeReachable = PublishSubject<Bool>()
     init() {
         if let reachability = reachability {
-            reachability.startListening(onUpdatePerforming: { status in
-                #if DEBUG
-                print("ReachabilityService interent:\(status)")
-                #endif
-                switch status {
-                case .notReachable:
-                    self._didBecomeReachable.onNext(false)
-                case .reachable:
-                    self._didBecomeReachable.onNext(true)
-                case .unknown:
-                    self._didBecomeReachable.onNext(false)
-                }
-            })
+            reachability.startListening()
+//            reachability.startListening { status in
+//                #if DEBUG
+//                print("ReachabilityService interent:\(status)")
+//                #endif
+//                switch status {
+//                case .notReachable:
+//                    self._didBecomeReachable.onNext(false)
+//                case .reachable:
+//                    self._didBecomeReachable.onNext(true)
+//                case .unknown:
+//                    self._didBecomeReachable.onNext(false)
+//                }
+//            }
         }
     }
     
