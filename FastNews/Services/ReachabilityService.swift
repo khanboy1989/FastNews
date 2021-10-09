@@ -11,7 +11,7 @@ import RxCocoa
 import Alamofire
 
 protocol ReachabilityServiceType {
-   func didBecomeReachable()-> Observable<Bool>
+    func didBecomeReachable()-> Observable<Bool>
 }
 
 final class ReachabilityService: ReachabilityServiceType {
@@ -20,33 +20,32 @@ final class ReachabilityService: ReachabilityServiceType {
     private let _didBecomeReachable = PublishSubject<Bool>()
     init() {
         if let reachability = reachability {
-            reachability.startListening()
-//            reachability.startListening { status in
-//                #if DEBUG
-//                print("ReachabilityService interent:\(status)")
-//                #endif
-//                switch status {
-//                case .notReachable:
-//                    self._didBecomeReachable.onNext(false)
-//                case .reachable:
-//                    self._didBecomeReachable.onNext(true)
-//                case .unknown:
-//                    self._didBecomeReachable.onNext(false)
-//                }
-//            }
+            reachability.startListening(onUpdatePerforming: { status in
+                #if DEBUG
+                print("ReachabilityService interent:\(status)")
+                #endif
+                switch status {
+                case .notReachable:
+                    self._didBecomeReachable.onNext(false)
+                case .reachable:
+                    self._didBecomeReachable.onNext(true)
+                case .unknown:
+                    self._didBecomeReachable.onNext(false)
+                }
+            })
         }
     }
-    
-    deinit {
-        #if DEBUG
-        print("\(type(of: self)): \(#function)")
-        #endif
-        if let reachability = reachability {
-            reachability.stopListening()
+        
+        deinit {
+            #if DEBUG
+            print("\(type(of: self)): \(#function)")
+            #endif
+            if let reachability = reachability {
+                reachability.stopListening()
+            }
+        }
+        
+        func didBecomeReachable() -> Observable<Bool> {
+            return _didBecomeReachable.asObservable()
         }
     }
-    
-    func didBecomeReachable() -> Observable<Bool> {
-        return _didBecomeReachable.asObservable()
-    }
-}

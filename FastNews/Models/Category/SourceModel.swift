@@ -9,15 +9,14 @@ import Foundation
 import Mapper
 
 struct SourceModel {
-    let id: String
-    let name: String
+    let id: String?
+    let name: String?
 }
 
 extension SourceModel: Mappable {
     init(map: Mapper) throws {
-        try id = map.from("id")
-        try name = map.from("name")
+        id = map.optionalFrom("id")
+        name = map.optionalFrom("name")
     }
-    
     
 }

@@ -14,7 +14,7 @@ target 'FastNews' do
   pod 'RxCocoa' , '~> 5.0'
   pod 'RxFlow'
   pod 'Action'		
-  pod 'Moya-ModelMapper/RxSwift', '~> 9.0'
+  pod 'Moya-ModelMapper/RxSwift', '~> 10.0'
   pod 'SwiftLint'
   pod 'Swinject', '2.7.0'
   pod 'SwinjectAutoregistration' , '2.7.0'

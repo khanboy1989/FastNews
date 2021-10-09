@@ -5,10 +5,10 @@
 //  Created by Serhan Khan on 06/10/2021.
 //
 
-
 import Moya
 import Mapper
 import RxSwift
+import Moya_ModelMapper
 
 class CategoryClient {
     private let configuration: CategoryApiConfiguration
@@ -20,17 +20,20 @@ class CategoryClient {
     }
     
     func topHeadlines(categoryType: CategoryType, lang: String) -> Observable<TopHeadLinesModel> {
+        let request = provider.rx.request(.topHeadLines(config: self.configuration, category: categoryType, lang: lang))
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
+            .map({response -> TopHeadLinesModel in
+                let topHeadlines = try response.map(to: TopHeadLinesModel.self)
+                print("topHeadlines:\(topHeadlines)")
+                return topHeadlines
+            })
+            .catchError({ (error) in
+                print("Error:\(error)")
+                throw error
+            })
+            .observeOn(MainScheduler.asyncInstance)
+            .asObservable()
 
-        fatalError("Not implemented yet!!!")
-        
-        //        let request = provider.rx.request(.topHeadLines(config: self.configuration, category: categoryType, lang: lang))
-//            .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
-//            .map({response -> TopHeadLinesModel in
-//
-//
-//            }).asObservable()
-//
-//
-//        return request
+        return request
     }
 }
