@@ -2,26 +2,24 @@ PODS:
   - Action (4.2.0):
     - RxCocoa (< 7.0, >= 5.0)
     - RxSwift (< 7.0, >= 5.0)
-  - Alamofire (4.9.1)
+  - Alamofire (5.4.4)
   - ModelMapper (10.0.1):
     - ModelMapper/Core (= 10.0.1)
   - ModelMapper/Core (10.0.1)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya-ModelMapper/Core (9.0.0):
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya-ModelMapper/Core (10.0.0):
     - ModelMapper (~> 10.0)
-    - Moya (~> 13.0)
-  - Moya-ModelMapper/RxSwift (9.0.0):
+    - Moya (~> 14.0)
+  - Moya-ModelMapper/RxSwift (10.0.0):
     - Moya-ModelMapper/Core
-    - Moya/RxSwift (~> 13.0)
+    - Moya/RxSwift (~> 14.0)
     - RxSwift
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Moya/RxSwift (13.0.1):
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - Result (4.1.0)
   - RxCocoa (5.1.3):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -38,7 +36,7 @@ PODS:
 
 DEPENDENCIES:
   - Action
-  - Moya-ModelMapper/RxSwift (~> 9.0)
+  - Moya-ModelMapper/RxSwift (~> 10.0)
   - Moya/RxSwift (from `./Moya-RxSwift5.podspec`)
   - RxCocoa (~> 5.0)
   - RxFlow
@@ -53,7 +51,6 @@ SPEC REPOS:
     - Alamofire
     - ModelMapper
     - Moya-ModelMapper
-    - Result
     - RxCocoa
     - RxFlow
     - RxRelay
@@ -68,11 +65,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Action: 5dc2194f7a0b77857c82a677b0da655f197c005f
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   ModelMapper: 0f68dd4300d0e27290c70f66492c7f795da21bcf
-  Moya: 713c275235897e34057bc01406b9f75d6c1048ee
-  Moya-ModelMapper: 4948625af7fc5eef41ad9fdfe0c3517170b50960
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Moya: d28ed999615f2cff5128114c437e5a8db55437ee
+  Moya-ModelMapper: e3a478500921e7299804dc1ac550f1ebf3228ade
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
   RxFlow: c5242626a73a03d0a0163f0ab795538c467b791f
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
@@ -81,6 +77,6 @@ SPEC CHECKSUMS:
   Swinject: 18195e17ad6140f994e95e11c7b04b21410598e8
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 4f0134c402bfdc5bda5a1dd3c5e69e5c6cc2ee55
+PODFILE CHECKSUM: 2400b9a6cc59f7894cb1868ea0f69b58aa662852
 
 COCOAPODS: 1.10.2

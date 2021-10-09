@@ -42,7 +42,7 @@ extension CategoryApi: TargetType {
         switch self {
         case .topHeadLines(let config, let categoryType, let lang):
             let urlParameters: [String: Any] = ["apiKey": config.apiKey, "category": categoryType.rawValue, "language": lang]
-            return .requestCompositeData(bodyData: Data(), urlParameters: urlParameters)
+            return .requestParameters(parameters: urlParameters, encoding: URLEncoding.default)
         }
     }
     

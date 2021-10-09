@@ -11,7 +11,6 @@ enum Environment {
     case debug
     case release
     
-    
     static var current: Environment = {
         let result: Environment
         #if DEBUG

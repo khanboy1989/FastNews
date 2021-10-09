@@ -7,12 +7,9 @@
 
 import RxSwift
 
-
-
 class CategoryService: CategoryServiceType {
     
     private let categoryClient: CategoryClient
-   
    
     init(categoryClient: CategoryClient) {
         self.categoryClient = categoryClient
@@ -21,7 +18,4 @@ class CategoryService: CategoryServiceType {
     func topHeadLines(_ categoryType: CategoryType, _ lang: String) -> Observable<TopHeadLinesModel> {
         return categoryClient.topHeadlines(categoryType: categoryType, lang: lang)
     }
-    
-    
 }
-

@@ -27,21 +27,25 @@ class CategoriesViewModel: ViewModelType, Stepper {
     
     private var internalInput: Input!
     private var internalOutput: Output!
+    private let categoryService: CategoryServiceType!
     private let reachabilityService: ReachabilityServiceType
     private let categoryTypes = BehaviorRelay<[CustomSegmentItem]>(value: [])
     private let selectedCategoryType = BehaviorRelay<CategoryType>(value: .business)
-  
+    private let disposeBag = DisposeBag()
     
-    init(reachabilityService: ReachabilityServiceType) {
+    init(reachabilityService: ReachabilityServiceType, categoryService: CategoryServiceType) {
         self.reachabilityService = reachabilityService
+        self.categoryService = categoryService
         categoryTypes.accept(createCategoryTypes(selectedItem: selectedCategoryType.value))
         internalOutput = Output(categoryTypes: categoryTypes.asDriver(), selectedCategoryType: selectedCategoryType.asDriver())
         internalInput = Input(selectedCategoryType: createSelectCategoryAction())
+        test()
     }
     
     private func createCategoryTypes(selectedItem: CategoryType) -> [CustomSegmentItem] {
         return CategoryType.allCases.map({ item -> CustomSegmentItem in
             if item == selectedItem {
+                self.selectedCategoryType.accept(selectedItem)
                 return CustomSegmentItem(title: item.title, isSelected: true)
             } else {
                 return CustomSegmentItem(title: item.title, isSelected: false)
@@ -53,12 +57,18 @@ class CategoriesViewModel: ViewModelType, Stepper {
         return Action<Int, Void>(workFactory: {[weak self] index in
             return Observable.create { observer in
                 if let strongSelf = self, let selectedItem = CategoryType.allCases.first(where: { $0.index == index }) {
-                    strongSelf.selectedCategoryType.accept(selectedItem)
+                   
                     strongSelf.categoryTypes.accept(strongSelf.createCategoryTypes(selectedItem: selectedItem))
                 }
                 observer.onCompleted()
                 return Disposables.create()
             }
         })
+    }
+    
+    private func test(){
+        categoryService.topHeadLines(self.selectedCategoryType.value, "en").subscribe(onNext: {
+            print("OnNext:\($0)")
+        }).disposed(by: disposeBag)
     }
 }
