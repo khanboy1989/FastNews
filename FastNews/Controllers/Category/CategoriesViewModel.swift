@@ -36,10 +36,11 @@ class CategoriesViewModel: ViewModelType, Stepper {
     init(reachabilityService: ReachabilityServiceType, categoryService: CategoryServiceType) {
         self.reachabilityService = reachabilityService
         self.categoryService = categoryService
-        categoryTypes.accept(createCategoryTypes(selectedItem: selectedCategoryType.value))
+        selectedCategoryType.asDriver().drive(onNext: topHeadLines).disposed(by: disposeBag)
         internalOutput = Output(categoryTypes: categoryTypes.asDriver(), selectedCategoryType: selectedCategoryType.asDriver())
         internalInput = Input(selectedCategoryType: createSelectCategoryAction())
-        test()
+        categoryTypes.accept(createCategoryTypes(selectedItem: selectedCategoryType.value))
+        
     }
     
     private func createCategoryTypes(selectedItem: CategoryType) -> [CustomSegmentItem] {
@@ -57,7 +58,6 @@ class CategoriesViewModel: ViewModelType, Stepper {
         return Action<Int, Void>(workFactory: {[weak self] index in
             return Observable.create { observer in
                 if let strongSelf = self, let selectedItem = CategoryType.allCases.first(where: { $0.index == index }) {
-                   
                     strongSelf.categoryTypes.accept(strongSelf.createCategoryTypes(selectedItem: selectedItem))
                 }
                 observer.onCompleted()
@@ -66,9 +66,11 @@ class CategoriesViewModel: ViewModelType, Stepper {
         })
     }
     
-    private func test(){
-        categoryService.topHeadLines(self.selectedCategoryType.value, "en").subscribe(onNext: {
-            print("OnNext:\($0)")
-        }).disposed(by: disposeBag)
+    private func topHeadLines(categoryType: CategoryType) {
+        categoryService.topHeadLines(categoryType, "en")
+            .subscribe(onNext: {
+                print("Items:\($0)")
+            })
+            .disposed(by: disposeBag)
     }
 }

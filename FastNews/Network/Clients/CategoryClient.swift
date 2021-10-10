@@ -24,16 +24,15 @@ class CategoryClient {
             .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
             .map({response -> TopHeadLinesModel in
                 let topHeadlines = try response.map(to: TopHeadLinesModel.self)
-                print("topHeadlines:\(topHeadlines)")
                 return topHeadlines
             })
             .catchError({ (error) in
-                print("Error:\(error)")
-                throw error
+                let clientError = ClientError(fromError: error)
+                throw clientError
             })
             .observeOn(MainScheduler.asyncInstance)
             .asObservable()
-
+        
         return request
     }
 }

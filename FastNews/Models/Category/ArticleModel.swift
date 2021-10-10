@@ -24,7 +24,7 @@ extension ArticleModel: Mappable {
         source = map.optionalFrom("source")
         author = map.optionalFrom("author")
         title = map.optionalFrom("title")
-        description =  map.optionalFrom("description")
+        description = map.optionalFrom("description")
         url = map.optionalFrom("url")
         urlToImage = map.optionalFrom("urlToImage")
         publishedAt = map.optionalFrom("publishedAt")
