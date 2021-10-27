@@ -17,3 +17,10 @@
 "CategoryType.Sports" = "Sports";
 "CategoryType.Technology" = "Tecnology";
 
+//General localisable strings
+"General.NoInternet" = "Please check your connection";
+
+//Networking
+"Networking.Error.Unknown" = "Unknown error occured";
+"Networking.NoInternet" = "Please check your connection";
+

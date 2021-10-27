@@ -29,8 +29,6 @@ case unknown(underlyingError: Error, response: Response?)
         self = clientError
     }
 }
-
-
 extension ClientError {
     static func parseError(_ error: Error, response: Response?) -> ClientError {
         switch error {

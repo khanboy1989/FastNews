@@ -12,6 +12,7 @@ import Alamofire
 
 protocol ReachabilityServiceType {
     func didBecomeReachable()-> Observable<Bool>
+    var isAvailable: Bool { get }
 }
 
 final class ReachabilityService: ReachabilityServiceType {
@@ -48,4 +49,10 @@ final class ReachabilityService: ReachabilityServiceType {
         func didBecomeReachable() -> Observable<Bool> {
             return _didBecomeReachable.asObservable()
         }
+    
+    
+    var isAvailable: Bool {
+        let hasInternet = reachability?.isReachable ?? false
+        return hasInternet
     }
+}

@@ -18,6 +18,16 @@ extension LocalizableType where Self: RawRepresentable, Self.RawValue == String 
 }
 
 struct Localizable {
+    
+    enum General: String, LocalizableType {
+        case noInternet = "General.NoInternet"
+    }
+    
+    enum Networking: String , LocalizableType {
+        case noInternet = "Networking.NoInternet"
+        case unknown = "Networking.Error.Unknown"
+    }
+    
     enum CategoryType: String, LocalizableType {
         case business = "CategoryType.Bussines"
         case entertainment = "CategoryType.Entertainment"

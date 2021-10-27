@@ -11,13 +11,15 @@ import RxSwift
 class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
     
     @IBOutlet private weak var customSegmentsView: CustomSegmentsView!
-   
+    @IBOutlet private weak var tableView: UITableView!
+    
     var viewModel: CategoriesViewModel!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
+        tableView.register(cellType: ArticleTableViewCell.self)
     }
     
     private func bindViewModel() {
@@ -28,4 +30,9 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
             self?.viewModel.input.selectedCategoryType.execute(index)
         }
     }
+    
+    private func configureCell() {
+        
+    }
+
 }
