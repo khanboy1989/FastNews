@@ -13,8 +13,10 @@ import Action
 
 final class ViewModel: ViewModelType, Stepper {
     let steps = PublishRelay<Step>()
+    
+    
     var input: Input { return internalInput }
-    var outPut: Output { return internalOutput }
+    var output: Output { return internalOutput }
     
     struct Input {
         let testAction: Action<String, Void>

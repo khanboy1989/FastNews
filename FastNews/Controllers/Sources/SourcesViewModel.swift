@@ -17,7 +17,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     struct Output {}
     
     var input: Input { return internalInput }
-    var outPut: Output { return internalOutput }
+    var output: Output { return internalOutput }
     
     private var internalInput: Input!
     private var internalOutput: Output!

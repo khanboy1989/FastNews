@@ -12,5 +12,5 @@ protocol ViewModelType {
     associatedtype Output
     
     var input: Input { get }
-    var outPut: Output { get }
+    var output: Output { get }
 }

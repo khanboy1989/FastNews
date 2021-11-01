@@ -23,12 +23,18 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
     }
     
     private func bindViewModel() {
-        viewModel.outPut.categoryTypes.drive(onNext: customSegmentsView.setItems)
+        viewModel.output.categoryTypes.drive(onNext: customSegmentsView.setItems)
             .disposed(by: disposeBag)
         
         customSegmentsView.onWillChangeSelectedIndex = {[weak self] index in
             self?.viewModel.input.selectedCategoryType.execute(index)
         }
+        
+        viewModel.output.loadingState.subscribe(onNext: {
+            print("Result = \($0)")
+        })
+            .disposed(by: disposeBag)
+    
     }
     
     private func configureCell() {

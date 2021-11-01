@@ -27,7 +27,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
     }
     
     var input: Input { return internalInput }
-    var outPut: Output { return internalOutput }
+    var output: Output { return internalOutput }
     
     private var internalInput: Input!
     private var internalOutput: Output!
@@ -35,7 +35,6 @@ class CategoriesViewModel: ViewModelType, Stepper {
     private let reachabilityService: ReachabilityServiceType
     private let categoryTypes = BehaviorRelay<[CustomSegmentItem]>(value: [])
     private let selectedCategoryType = BehaviorRelay<CategoryType>(value: .business)
-    private let loadingState = BehaviorRelay<ArticlesLoadingState>(value: .loading)
     private let articleLoadingState = BehaviorRelay<ArticlesLoadingState>(value: .loading)
     private let articleRequest = PublishSubject<Observable<ArticlesLoadingState>>()
     private let disposeBag = DisposeBag()
@@ -45,7 +44,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
         self.categoryService = categoryService
         
         internalOutput = Output(categoryTypes: categoryTypes.asDriver(), selectedCategoryType: selectedCategoryType.asDriver(),
-                                loadingState: loadingState)
+                                loadingState: articleLoadingState)
         internalInput = Input(selectedCategoryType: createSelectCategoryAction())
         categoryTypes.accept(createCategoryTypes(selectedItem: selectedCategoryType.value))
         
@@ -64,7 +63,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
                 self.articleRequest.onNext(articles)
             })
             .disposed(by: disposeBag)
-        
+
     }
     
     private func createCategoryTypes(selectedItem: CategoryType) -> [CustomSegmentItem] {
@@ -98,9 +97,17 @@ class CategoriesViewModel: ViewModelType, Stepper {
             let items = articles.articles.map({
                 return Article(articleModel: $0)
             })
-            return ArticlesLoadingState.success(items)
+                return ArticlesLoadingState.success(items)
             })
-            .catchErrorJustReturn(ArticlesLoadingState.error(.unknown))
+            .catchError({ [unowned self] error -> Observable<ArticlesLoadingState> in
+                let result: ArticlesLoadingState
+                if self.reachabilityService.isAvailable == false {
+                    result = .error(.noInternet)
+                } else {
+                    result = .error(.custom(error.localizedDescription))
+                }
+                return Observable.just(result)
+            })
     }
     
     struct Article {
