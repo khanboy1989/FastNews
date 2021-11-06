@@ -47,12 +47,7 @@ class ArticleTableViewCell: UITableViewCell, NibReusable {
         titleLabel.text = article?.title
         sourceLabel.text = article?.source
         dateLabel.text = article?.date
-        
-        print("Published At = \(article?.publishedAt)")
-        print("Date = \(article?.date)")
-        
         if let url = article?.imageUrl {
-            
             sourceImageView.kf.setImage(with: URL(string: url))
         }
     }

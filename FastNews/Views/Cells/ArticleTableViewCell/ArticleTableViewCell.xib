@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -62,7 +61,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="CzO-qE-W08" firstAttribute="top" secondItem="tBG-GV-3Nk" secondAttribute="top" id="2hT-P2-T6k"/>
                                             <constraint firstItem="CzO-qE-W08" firstAttribute="leading" secondItem="tBG-GV-3Nk" secondAttribute="leading" id="9v4-aT-PLA"/>
@@ -76,6 +75,7 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Upy-Je-5cA" secondAttribute="bottom" constant="8" id="5n9-1c-bWk"/>
                     <constraint firstAttribute="trailing" secondItem="Upy-Je-5cA" secondAttribute="trailing" constant="14" id="F0c-x7-m2j"/>
@@ -84,6 +84,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="dateLabel" destination="3Ns-G0-bMK" id="9MD-1b-Xgv"/>
                 <outlet property="sourceImageView" destination="vzf-3B-ZaC" id="Uc4-0a-zAx"/>
@@ -93,9 +94,4 @@
             <point key="canvasLocation" x="-33.333333333333336" y="52.901785714285715"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

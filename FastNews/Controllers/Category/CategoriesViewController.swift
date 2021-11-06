@@ -9,16 +9,15 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-
 class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
     
     @IBOutlet private weak var customSegmentsView: CustomSegmentsView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView! {
         willSet {
+            newValue.color = ColorTheme.black.color
             newValue.hidesWhenStopped = true
             newValue.isHidden = true
-            
         }
     }
     
@@ -54,33 +53,21 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
         
         viewModel.output.loadingState
             .subscribe(onNext: {
-            print("Result = \($0)")
             switch $0 {
             case .loading:
                 self.loadingIndicator.isHidden = false
                 self.loadingIndicator.startAnimating()
-                
-                break
-//                            DispatchQueue.main.async {
-//                                SVProgressHUD.show()
-//                            }
-            case let .error (error):
+            case let .error (_):
                 self.loadingIndicator.stopAnimating()
-                break
             case .success:
-                break
+                self.loadingIndicator.stopAnimating()
             }
-            
         })
             .disposed(by: disposeBag)
         
         viewModel.output.sections
-            .do(onNext: {
-            [weak self] sections in
-                self?.loadingIndicator.stopAnimating()
-            
-        }).drive(tableView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+         .drive(tableView.rx.items(dataSource: dataSource))
+         .disposed(by: disposeBag)
     
     }
     
