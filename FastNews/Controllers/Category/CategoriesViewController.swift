@@ -9,10 +9,18 @@ import UIKit
 import RxSwift
 import RxDataSources
 
+
 class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
     
     @IBOutlet private weak var customSegmentsView: CustomSegmentsView!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView! {
+        willSet {
+            newValue.hidesWhenStopped = true
+            newValue.isHidden = true
+            
+        }
+    }
     
     private typealias DataSource = RxTableViewSectionedReloadDataSource<CategoriesViewModel.Section>
     private typealias ConfigureCell = (TableViewSectionedDataSource<CategoriesViewModel.Section>, UITableView, IndexPath, CategoriesViewModel.Item) -> UITableViewCell
@@ -20,6 +28,7 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
     var viewModel: CategoriesViewModel!
     private let disposeBag = DisposeBag()
     private var dataSource: DataSource!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -31,10 +40,11 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .never
+        dataSource = DataSource(configureCell: configureCell())
     }
     
     private func bindViewModel() {
-        dataSource = DataSource(configureCell: configureCell())
+       
         viewModel.output.categoryTypes.drive(onNext: customSegmentsView.setItems)
             .disposed(by: disposeBag)
         
@@ -42,13 +52,33 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
             self?.viewModel.input.selectedCategoryType.execute(index)
         }
         
-        viewModel.output.loadingState.subscribe(onNext: {
+        viewModel.output.loadingState
+            .subscribe(onNext: {
             print("Result = \($0)")
+            switch $0 {
+            case .loading:
+                self.loadingIndicator.isHidden = false
+                self.loadingIndicator.startAnimating()
+                
+                break
+//                            DispatchQueue.main.async {
+//                                SVProgressHUD.show()
+//                            }
+            case let .error (error):
+                self.loadingIndicator.stopAnimating()
+                break
+            case .success:
+                break
+            }
+            
         })
             .disposed(by: disposeBag)
         
-        viewModel.output.sections.do(onNext: {
+        viewModel.output.sections
+            .do(onNext: {
             [weak self] sections in
+                self?.loadingIndicator.stopAnimating()
+            
         }).drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     

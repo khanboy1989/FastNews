@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,21 +34,27 @@
                                     </tableView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mnK-Yf-78v">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="cAppBackground"/>
                         <constraints>
+                            <constraint firstItem="mnK-Yf-78v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1CZ-Ab-zYP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nd-29-Ncv" secondAttribute="trailing" id="4A4-bK-Rfg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qn7-JW-Kp2" secondAttribute="trailing" id="LzN-im-5xF"/>
                             <constraint firstItem="qn7-JW-Kp2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qgo-h9-lht"/>
                             <constraint firstItem="qn7-JW-Kp2" firstAttribute="top" secondItem="4nd-29-Ncv" secondAttribute="bottom" id="SHh-IH-pvT"/>
                             <constraint firstItem="4nd-29-Ncv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xy5-Gp-Hhx"/>
+                            <constraint firstItem="mnK-Yf-78v" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cvl-fZ-1GB"/>
                             <constraint firstItem="qn7-JW-Kp2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o61-hK-AhJ"/>
                             <constraint firstItem="4nd-29-Ncv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="uwW-Pt-4qh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="customSegmentsView" destination="4nd-29-Ncv" id="Z6y-FN-5Fv"/>
+                        <outlet property="loadingIndicator" destination="mnK-Yf-78v" id="GcO-Pl-meS"/>
                         <outlet property="tableView" destination="b3W-tp-YRa" id="i2H-Bf-ype"/>
                     </connections>
                 </viewController>

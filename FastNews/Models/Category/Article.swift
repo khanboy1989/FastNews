@@ -28,8 +28,9 @@ struct Article {
             return nil
         }
         
+        //2021-11-06T14:01:07Z
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
         guard let formattedDate = dateFormatter.date(from: publishedAt) else {
             return nil
         }
@@ -39,7 +40,6 @@ struct Article {
         return converDateFormatter.string(from: formattedDate)
     }
 }
-
 
 extension Article {
     

@@ -95,7 +95,9 @@ class CategoriesViewModel: ViewModelType, Stepper {
     }
     
     private func createSections(loadingState: Observable<ArticlesLoadingState>) -> Observable<[Section]> {
-        return loadingState.map({ state -> [Section] in
+        return loadingState
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
+            .map({ state -> [Section] in
             var sections = [Section]()
             switch state {
             case let .success(articles):

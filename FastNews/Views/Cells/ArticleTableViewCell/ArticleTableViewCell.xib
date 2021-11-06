@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,11 +41,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBG-GV-3Nk">
                                         <rect key="frame" x="0.0" y="74" width="184" height="20"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzO-qE-W08">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CzO-qE-W08">
                                                 <rect key="frame" x="0.0" y="0.0" width="184" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-6w-LTK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="101" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ns-G0-bMK" userLabel="Date label">
+                                                        <rect key="frame" x="109" y="0.0" width="75" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="8eV-VH-Hl1"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -75,6 +85,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="3Ns-G0-bMK" id="9MD-1b-Xgv"/>
                 <outlet property="sourceImageView" destination="vzf-3B-ZaC" id="Uc4-0a-zAx"/>
                 <outlet property="sourceLabel" destination="nyw-6w-LTK" id="gWV-gy-s2H"/>
                 <outlet property="titleLabel" destination="VWV-so-YM1" id="9H8-rR-bUf"/>
