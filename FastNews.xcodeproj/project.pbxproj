@@ -37,6 +37,7 @@
 		543D3615270E1992002E5927 /* CategoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543D3614270E1992002E5927 /* CategoryApi.swift */; };
 		543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543D3616270E1A62002E5927 /* CategoryClient.swift */; };
 		544348892712D85200D7B43B /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544348882712D85200D7B43B /* ClientError.swift */; };
+		5448A1AC2730206E003AF5C4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448A1AB2730206E003AF5C4 /* Article.swift */; };
 		5451AC7E27103D870044F941 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5451AC7D27103D870044F941 /* CategoryService.swift */; };
 		5451AC8027103DBA0044F941 /* CategoryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5451AC7F27103DBA0044F941 /* CategoryServiceType.swift */; };
 		5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457F47026FA00760020C5CB /* AppDelegate.swift */; };
@@ -131,6 +132,7 @@
 		543D3614270E1992002E5927 /* CategoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryApi.swift; sourceTree = "<group>"; };
 		543D3616270E1A62002E5927 /* CategoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClient.swift; sourceTree = "<group>"; };
 		544348882712D85200D7B43B /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		5448A1AB2730206E003AF5C4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5451AC7D27103D870044F941 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		5451AC7F27103DBA0044F941 /* CategoryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceType.swift; sourceTree = "<group>"; };
 		5457F46D26FA00760020C5CB /* FastNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +339,7 @@
 				5403DB132705020100414F28 /* CategoryType.swift */,
 				546B8A012710882A004382F8 /* ArticleModel.swift */,
 				546B8A032710893B004382F8 /* SourceModel.swift */,
+				5448A1AB2730206E003AF5C4 /* Article.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5448A1AC2730206E003AF5C4 /* Article.swift in Sources */,
 				54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */,
 				542202C62704983C009C1D23 /* SourcesViewModel.swift in Sources */,
 				5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */,

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum LoadingState<T> {
     case loading
     case success(T)

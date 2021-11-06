@@ -9,6 +9,7 @@ import RxFlow
 import RxCocoa
 import RxSwift
 import Action
+import RxDataSources
 
 class CategoriesViewModel: ViewModelType, Stepper {
     typealias ArticlesLoadingState = LoadingState<[Article]>
@@ -24,6 +25,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
         let categoryTypes: Driver<[CustomSegmentItem]>
         let selectedCategoryType: Driver<CategoryType>
         let loadingState: BehaviorRelay<ArticlesLoadingState>
+        let sections: Driver<[Section]>
     }
     
     var input: Input { return internalInput }
@@ -43,9 +45,6 @@ class CategoriesViewModel: ViewModelType, Stepper {
         self.reachabilityService = reachabilityService
         self.categoryService = categoryService
         
-        internalOutput = Output(categoryTypes: categoryTypes.asDriver(), selectedCategoryType: selectedCategoryType.asDriver(),
-                                loadingState: articleLoadingState)
-        internalInput = Input(selectedCategoryType: createSelectCategoryAction())
         categoryTypes.accept(createCategoryTypes(selectedItem: selectedCategoryType.value))
         
         articleRequest.do(onNext: { [weak self] _ in
@@ -63,7 +62,13 @@ class CategoriesViewModel: ViewModelType, Stepper {
                 self.articleRequest.onNext(articles)
             })
             .disposed(by: disposeBag)
-
+            
+            internalInput = Input(selectedCategoryType: createSelectCategoryAction())
+            
+            internalOutput = Output(categoryTypes: categoryTypes.asDriver(), selectedCategoryType: selectedCategoryType.asDriver(),
+                                    loadingState: articleLoadingState,
+                                    sections: createSections(loadingState: articleLoadingState.asObservable()).asDriver(onErrorJustReturn: []))
+            
     }
     
     private func createCategoryTypes(selectedItem: CategoryType) -> [CustomSegmentItem] {
@@ -89,6 +94,22 @@ class CategoriesViewModel: ViewModelType, Stepper {
         })
     }
     
+    private func createSections(loadingState: Observable<ArticlesLoadingState>) -> Observable<[Section]> {
+        return loadingState.map({ state -> [Section] in
+            var sections = [Section]()
+            switch state {
+            case let .success(articles):
+                let items = articles.map({
+                    Item.headline($0)
+                })
+                sections.append(.topHeadLines(items: items))
+                return sections
+            default:
+                return []
+            }
+        })
+    }
+    
     private func createTopHeadlinesRequest(categoryType: CategoryType) -> Observable<ArticlesLoadingState> {
         return self.categoryService
             .topHeadLines(categoryType, self.defaultLanguage)
@@ -110,47 +131,40 @@ class CategoriesViewModel: ViewModelType, Stepper {
             })
     }
     
-    struct Article {
-        let title: String?
-        let description: String?
-        let url: String?
-        let imageUrl: String?
-        let source: String?
-        let publishedAt: String?
+    enum Item: IdentifiableType {
+        case headline(Article)
         
-        var image: URL? {
-            guard let urlToImage = imageUrl else {
-                return nil
+        var identity: String {
+            switch self {
+            case .headline(let article):
+                return "headline-\(article.title!)"
             }
-            return URL(string: urlToImage)
-        }
-        
-        var date: String? {
-            guard let publishedAt = publishedAt else {
-                return nil
-            }
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-            guard let formattedDate = dateFormatter.date(from: publishedAt) else {
-                return nil
-            }
-            
-            let converDateFormatter = DateFormatter()
-            converDateFormatter.dateFormat = "MMM dd yyy"
-            return converDateFormatter.string(from: formattedDate)
         }
     }
-}
-
-extension CategoriesViewModel.Article {
     
-    init(articleModel: ArticleModel) {
-        self.title = articleModel.title
-        self.description = articleModel.description
-        self.imageUrl = articleModel.urlToImage
-        self.url = articleModel.url
-        self.publishedAt = articleModel.publishedAt
-        self.source = articleModel.source?.name
+    enum Section: SectionModelType {
+        case topHeadLines(items: [Item])
+        
+        var identity: Int {
+            switch self {
+            case .topHeadLines:
+                return 0
+            }
+        }
+        
+        var items: [Item] {
+            switch self {
+            case let .topHeadLines(items: items):
+                return items
+            }
+        }
+        
+        init(original: CategoriesViewModel.Section, items: [Item]) {
+            switch original {
+            case .topHeadLines:
+                self = .topHeadLines(items: items)
+            }
+        }
     }
+    
 }

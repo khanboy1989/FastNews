@@ -13,8 +13,8 @@ class ArticleTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var sourceImageView: UIImageView!
     @IBOutlet private weak var sourceLabel: UILabel!
     
-    var article: CategoriesViewModel.Article? {
-        didSet{
+    var article: Article? {
+        didSet {
             updateUI(article: article)
         }
     }
@@ -36,8 +36,8 @@ class ArticleTableViewCell: UITableViewCell, NibReusable {
         sourceLabel.font = UIFont.bookFont(size: 12)
     }
     
-    private func updateUI(article: CategoriesViewModel.Article?) {
-        
+    private func updateUI(article: Article?) {
+        titleLabel.text = article?.title
     }
 
 }

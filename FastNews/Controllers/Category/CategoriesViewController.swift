@@ -7,22 +7,34 @@
 
 import UIKit
 import RxSwift
+import RxDataSources
 
 class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
     
     @IBOutlet private weak var customSegmentsView: CustomSegmentsView!
     @IBOutlet private weak var tableView: UITableView!
     
+    private typealias DataSource = RxTableViewSectionedReloadDataSource<CategoriesViewModel.Section>
+    private typealias ConfigureCell = (TableViewSectionedDataSource<CategoriesViewModel.Section>, UITableView, IndexPath, CategoriesViewModel.Item) -> UITableViewCell
+    
     var viewModel: CategoriesViewModel!
     private let disposeBag = DisposeBag()
-    
+    private var dataSource: DataSource!
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         bindViewModel()
+    }
+    
+    private func configureTableView() {
         tableView.register(cellType: ArticleTableViewCell.self)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+        tableView.contentInsetAdjustmentBehavior = .never
     }
     
     private func bindViewModel() {
+        dataSource = DataSource(configureCell: configureCell())
         viewModel.output.categoryTypes.drive(onNext: customSegmentsView.setItems)
             .disposed(by: disposeBag)
         
@@ -34,11 +46,26 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
             print("Result = \($0)")
         })
             .disposed(by: disposeBag)
+        
+        viewModel.output.sections.do(onNext: {
+            [weak self] sections in
+        }).drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     
     }
     
-    private func configureCell() {
-        
+    private func configureCell() -> ConfigureCell {
+        return { (_, tableView, indexPath, item) -> UITableViewCell in
+            let cell: UITableViewCell
+            switch item {
+            case let .headline(article):
+                let articleCell: ArticleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+                articleCell.article = article
+                articleCell.selectionStyle = .none
+                cell = articleCell
+            }
+            return cell
+        }
     }
 
 }

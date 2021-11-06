@@ -23,7 +23,7 @@ struct Localizable {
         case noInternet = "General.NoInternet"
     }
     
-    enum Networking: String , LocalizableType {
+    enum Networking: String, LocalizableType {
         case noInternet = "Networking.NoInternet"
         case unknown = "Networking.Error.Unknown"
     }

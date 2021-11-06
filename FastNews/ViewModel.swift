@@ -14,7 +14,6 @@ import Action
 final class ViewModel: ViewModelType, Stepper {
     let steps = PublishRelay<Step>()
     
-    
     var input: Input { return internalInput }
     var output: Output { return internalOutput }
     
