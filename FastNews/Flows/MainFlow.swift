@@ -51,8 +51,8 @@ class MainFlow: Flow {
         let sourceFlow = SourceFlow(with: resolver)
         
         Flows.use(categoryFlow, sourceFlow, when: .ready, block: {( root1: UIViewController, root2: UIViewController ) in
-            root1.tabBarItem = UITabBarItem(title: "Categories", image: nil, selectedImage: nil)
-            root2.tabBarItem = UITabBarItem(title: "Sources", image: nil, selectedImage: nil)
+            root1.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.homeIcon.originalImage, selectedImage: Asset.Image.homeIconSelected.originalImage)
+            root2.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.sourcesIcon.originalImage, selectedImage: Asset.Image.sourcesIconSelected.originalImage)
             self.rootViewController.setViewControllers([root1, root2], animated: true)
         })
         

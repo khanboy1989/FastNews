@@ -19,6 +19,8 @@
 
 //General localisable strings
 "General.NoInternet" = "Please check your connection";
+"General.OK" = "Ok";
+"General.Error" = "Error";
 
 //Networking
 "Networking.Error.Unknown" = "Unknown error occured";

@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxDataSources
 
-class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased {
+class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBased, Alertable {
     
     @IBOutlet private weak var customSegmentsView: CustomSegmentsView!
     @IBOutlet private weak var tableView: UITableView!
@@ -38,10 +38,10 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
         tableView.register(cellType: ArticleTableViewCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.showsVerticalScrollIndicator = false 
         dataSource = DataSource(configureCell: configureCell())
     }
-    
+
     private func bindViewModel() {
        
         viewModel.output.categoryTypes.drive(onNext: customSegmentsView.setItems)
@@ -57,8 +57,9 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
             case .loading:
                 self.loadingIndicator.isHidden = false
                 self.loadingIndicator.startAnimating()
-            case let .error (_):
+            case let .error(error):
                 self.loadingIndicator.stopAnimating()
+                self.showAlert(title: Localizable.General.error.localized, message: error.description)
             case .success:
                 self.loadingIndicator.stopAnimating()
             }
@@ -68,7 +69,6 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
         viewModel.output.sections
          .drive(tableView.rx.items(dataSource: dataSource))
          .disposed(by: disposeBag)
-    
     }
     
     private func configureCell() -> ConfigureCell {
@@ -84,5 +84,4 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
             return cell
         }
     }
-
 }

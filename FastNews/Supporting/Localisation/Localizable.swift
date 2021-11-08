@@ -20,7 +20,9 @@ extension LocalizableType where Self: RawRepresentable, Self.RawValue == String 
 struct Localizable {
     
     enum General: String, LocalizableType {
+        case ok = "General.OK"
         case noInternet = "General.NoInternet"
+        case error = "General.Error"
     }
     
     enum Networking: String, LocalizableType {
