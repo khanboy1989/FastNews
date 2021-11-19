@@ -35,20 +35,18 @@ class MainFlow: Flow {
     
     func navigate(to step: Step) -> FlowContributors {
         guard let step = step as? AppSteps else { return .none }
-        
         switch step {
         case .main:
             return navigateToHome()
         default:
             return .none
         }
-        
     }
     
     private func navigateToHome() -> FlowContributors {
         
-        let categoryFlow = CategoryFlow(with: resolver)
-        let sourceFlow = SourceFlow(with: resolver)
+        let categoryFlow = CategoryFlow(with: resolver, categoryStepper: categoryStepper)
+        let sourceFlow = SourceFlow(with: resolver, sourceStepper: sourceStepper)
         
         Flows.use(categoryFlow, sourceFlow, when: .ready, block: {( root1: UIViewController, root2: UIViewController ) in
             root1.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.homeIcon.originalImage, selectedImage: Asset.Image.homeIconSelected.originalImage)

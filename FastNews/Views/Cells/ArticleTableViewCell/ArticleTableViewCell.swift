@@ -48,7 +48,8 @@ class ArticleTableViewCell: UITableViewCell, NibReusable {
         sourceLabel.text = article?.source
         dateLabel.text = article?.date
         if let url = article?.imageUrl {
-            sourceImageView.kf.setImage(with: URL(string: url))
+            sourceImageView.kf.setImage(with: URL(string: url), placeholder: Asset.Image.empty.originalImage)
+            
         }
     }
 

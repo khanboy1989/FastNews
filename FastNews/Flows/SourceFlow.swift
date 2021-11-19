@@ -18,7 +18,7 @@ class SourceFlow: Flow {
     private var rootViewController = SourcesViewController.instantiate()
     private let resolver: Dependencies
     
-    init(with resolver: Dependencies) {
+    init(with resolver: Dependencies, sourceStepper: SourceStepper) {
         self.resolver = resolver
     }
     

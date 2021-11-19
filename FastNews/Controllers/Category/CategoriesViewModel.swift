@@ -19,6 +19,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
     
     struct Input {
         let selectedCategoryType: Action<Int, Void>
+        let showArticleDetail: Action<Article, Void>
     }
     
     struct Output {
@@ -63,7 +64,15 @@ class CategoriesViewModel: ViewModelType, Stepper {
             })
             .disposed(by: disposeBag)
             
-            internalInput = Input(selectedCategoryType: createSelectCategoryAction())
+            let selectedItem = Action<Article, Void> { [unowned self] (item) -> Observable<Void> in
+                return Observable.create({ observer in
+                    self.steps.accept(AppSteps.articleDetail)
+                    observer.onCompleted()
+                    return Disposables.create()
+                })
+            }
+            
+            internalInput = Input(selectedCategoryType: createSelectCategoryAction(), showArticleDetail: selectedItem)
             
             internalOutput = Output(categoryTypes: categoryTypes.asDriver(), selectedCategoryType: selectedCategoryType.asDriver(),
                                     loadingState: articleLoadingState,

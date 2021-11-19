@@ -15,7 +15,7 @@ enum Asset {
         case homeIconSelected
         case sourcesIcon
         case sourcesIconSelected
-        
+        case empty
         var image: UIImage? {
             return UIImage(named: self.rawValue)
         }

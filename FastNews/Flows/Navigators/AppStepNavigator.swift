@@ -13,7 +13,7 @@ protocol AppStepNavigator {
 }
 
 extension AppStepNavigator {
-    func dismissedPresented(presenter: UIViewController, animated: Bool) -> FlowContributors {
+    func dismissPresented(presenter: UIViewController, animated: Bool) -> FlowContributors {
         presenter.presentedViewController?.dismiss(animated: animated)
         return .none
     }

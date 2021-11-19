@@ -18,7 +18,7 @@ class CategoryFlow: Flow {
     private var rootViewController = CategoriesViewController.instantiate()
     private let resolver: Dependencies
     
-    init(with resolver: Dependencies) {
+    init(with resolver: Dependencies, categoryStepper: CategoryStepper) {
         self.resolver = resolver
     }
     

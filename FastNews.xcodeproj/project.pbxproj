@@ -52,6 +52,10 @@
 		5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464CFC427024A4F00969B0D /* ColorTheme.swift */; };
 		546B8A022710882A004382F8 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A012710882A004382F8 /* ArticleModel.swift */; };
 		546B8A042710893B004382F8 /* SourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A032710893B004382F8 /* SourceModel.swift */; };
+		54806DF82747AF430061D56D /* CategoryStepNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54806DF72747AF430061D56D /* CategoryStepNavigator.swift */; };
+		548CC249273C5F890092E2A1 /* ArticleDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */; };
+		548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */; };
+		548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */; };
 		5490ACC026FCB48100CC460A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACBF26FCB48100CC460A /* ViewModel.swift */; };
 		5490ACC326FCB55300CC460A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACC226FCB55300CC460A /* ViewModelType.swift */; };
 		5490ACC626FCFB5A00CC460A /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACC526FCFB5A00CC460A /* AppFlow.swift */; };
@@ -156,6 +160,10 @@
 		5464CFC427024A4F00969B0D /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		546B8A012710882A004382F8 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		546B8A032710893B004382F8 /* SourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceModel.swift; sourceTree = "<group>"; };
+		54806DF72747AF430061D56D /* CategoryStepNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStepNavigator.swift; sourceTree = "<group>"; };
+		548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleDetailViewController.storyboard; sourceTree = "<group>"; };
+		548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 		5490ACBF26FCB48100CC460A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5490ACC226FCB55300CC460A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		5490ACC526FCFB5A00CC460A /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
@@ -457,6 +465,7 @@
 		5464CFC12702494A00969B0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				548CC247273C5F730092E2A1 /* ArticleDetail */,
 				542202BE27048D47009C1D23 /* Sources */,
 				54F5F3B427031CA50044A362 /* Tabbar */,
 				5464CFC2270249C000969B0D /* Category */,
@@ -481,6 +490,16 @@
 				54EA0B5B2736F463006647C6 /* Asset.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		548CC247273C5F730092E2A1 /* ArticleDetail */ = {
+			isa = PBXGroup;
+			children = (
+				548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */,
+				548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */,
+				548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */,
+			);
+			path = ArticleDetail;
 			sourceTree = "<group>";
 		};
 		5490ACC126FCB53F00CC460A /* ViewModelType */ = {
@@ -576,6 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */,
+				54806DF72747AF430061D56D /* CategoryStepNavigator.swift */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -748,6 +768,7 @@
 				543B246326FE54C700286616 /* AirbnbCerealLight.ttf in Resources */,
 				54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */,
 				543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */,
+				548CC249273C5F890092E2A1 /* ArticleDetailViewController.storyboard in Resources */,
 				5457F48026FA00770020C5CB /* LaunchScreen.storyboard in Resources */,
 				5457F47D26FA00770020C5CB /* Assets.xcassets in Resources */,
 				542FB53B2705A94C001CF0E6 /* CustomSegmentsView.xib in Resources */,
@@ -896,6 +917,7 @@
 				5403DB12270501C700414F28 /* TopHeadLinesModel.swift in Sources */,
 				542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */,
 				5451AC8027103DBA0044F941 /* CategoryServiceType.swift in Sources */,
+				54806DF82747AF430061D56D /* CategoryStepNavigator.swift in Sources */,
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
 				54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */,
 				54ED10392727DE5B00A562D5 /* ArticleTableViewCell.swift in Sources */,
@@ -925,6 +947,7 @@
 				543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */,
 				54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */,
 				54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */,
+				548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */,
 				542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */,
@@ -933,6 +956,7 @@
 				543D3615270E1992002E5927 /* CategoryApi.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,
 				5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */,
+				548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */,
 				544348892712D85200D7B43B /* ClientError.swift in Sources */,
 				54EA0B5E2736FE9B006647C6 /* UIViewController + Extensions.swift in Sources */,
 				54FE4B5326FA0757005541C5 /* StoryboardBased.swift in Sources */,

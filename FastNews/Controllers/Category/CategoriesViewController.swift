@@ -69,6 +69,17 @@ class CategoriesViewController: UIViewController, StoryboardBased, ViewModelBase
         viewModel.output.sections
          .drive(tableView.rx.items(dataSource: dataSource))
          .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in
+            if let model = try? self.dataSource.model(at: indexPath) as? CategoriesViewModel.Item {
+                switch model {
+                case let .headline(article):
+                    self.viewModel.input.showArticleDetail.execute(article)
+                }
+            }
+            
+        })
+            .disposed(by: disposeBag)
     }
     
     private func configureCell() -> ConfigureCell {
