@@ -16,7 +16,7 @@ final class ArticleDetailViewController: UIViewController, StoryboardBased, View
     private var disposeBag = DisposeBag()
     
     @IBOutlet private weak var webView: WKWebView!
-    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!{
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView! {
         willSet {
             newValue.color = ColorTheme.black.color
             newValue.hidesWhenStopped = true
