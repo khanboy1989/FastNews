@@ -10,6 +10,7 @@
 		2C4E26322DD9337E72E44597 /* libPods-FastNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 997571E3C72D61231F68BE27 /* libPods-FastNewsTests.a */; };
 		5403DB12270501C700414F28 /* TopHeadLinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403DB11270501C700414F28 /* TopHeadLinesModel.swift */; };
 		5403DB142705020100414F28 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403DB132705020100414F28 /* CategoryType.swift */; };
+		541147A8274F7A9F00548530 /* DefaultStyleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541147A7274F7A9F00548530 /* DefaultStyleNavigationController.swift */; };
 		542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BA2704369F009C1D23 /* CategoryFlow.swift */; };
 		542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BC2704374A009C1D23 /* SourceFlow.swift */; };
 		542202C027048D82009C1D23 /* SourcesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542202BF27048D82009C1D23 /* SourcesViewController.storyboard */; };
@@ -25,7 +26,6 @@
 		542FB53E2705A965001CF0E6 /* CustomSegmentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB53D2705A965001CF0E6 /* CustomSegmentItemView.swift */; };
 		542FB5402705A972001CF0E6 /* CustomSegmentItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */; };
 		542FB5422705B95D001CF0E6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */; };
-		5434F593274810BC007DFD98 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434F592274810BC007DFD98 /* MainNavigator.swift */; };
 		5434F5952748110D007DFD98 /* FlowNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434F5942748110D007DFD98 /* FlowNavigator.swift */; };
 		543B246326FE54C700286616 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245D26FE54C700286616 /* AirbnbCerealLight.ttf */; };
 		543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245E26FE54C700286616 /* AirbnbCerealBlack.ttf */; };
@@ -54,7 +54,6 @@
 		5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464CFC427024A4F00969B0D /* ColorTheme.swift */; };
 		546B8A022710882A004382F8 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A012710882A004382F8 /* ArticleModel.swift */; };
 		546B8A042710893B004382F8 /* SourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A032710893B004382F8 /* SourceModel.swift */; };
-		54806DF82747AF430061D56D /* CategoryStepNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54806DF72747AF430061D56D /* CategoryStepNavigator.swift */; };
 		548CC249273C5F890092E2A1 /* ArticleDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */; };
 		548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */; };
 		548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */; };
@@ -114,6 +113,7 @@
 		502933DF23A9285EB903D018 /* Pods-FastNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastNews.release.xcconfig"; path = "Target Support Files/Pods-FastNews/Pods-FastNews.release.xcconfig"; sourceTree = "<group>"; };
 		5403DB11270501C700414F28 /* TopHeadLinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadLinesModel.swift; sourceTree = "<group>"; };
 		5403DB132705020100414F28 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		541147A7274F7A9F00548530 /* DefaultStyleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleNavigationController.swift; sourceTree = "<group>"; };
 		542202BA2704369F009C1D23 /* CategoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFlow.swift; sourceTree = "<group>"; };
 		542202BC2704374A009C1D23 /* SourceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceFlow.swift; sourceTree = "<group>"; };
 		542202BF27048D82009C1D23 /* SourcesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SourcesViewController.storyboard; sourceTree = "<group>"; };
@@ -129,7 +129,6 @@
 		542FB53D2705A965001CF0E6 /* CustomSegmentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentItemView.swift; sourceTree = "<group>"; };
 		542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentItemView.xib; sourceTree = "<group>"; };
 		542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		5434F592274810BC007DFD98 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		5434F5942748110D007DFD98 /* FlowNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigator.swift; sourceTree = "<group>"; };
 		543B245D26FE54C700286616 /* AirbnbCerealLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealLight.ttf; sourceTree = "<group>"; };
 		543B245E26FE54C700286616 /* AirbnbCerealBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBlack.ttf; sourceTree = "<group>"; };
@@ -164,7 +163,6 @@
 		5464CFC427024A4F00969B0D /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		546B8A012710882A004382F8 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		546B8A032710893B004382F8 /* SourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceModel.swift; sourceTree = "<group>"; };
-		54806DF72747AF430061D56D /* CategoryStepNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStepNavigator.swift; sourceTree = "<group>"; };
 		548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleDetailViewController.storyboard; sourceTree = "<group>"; };
 		548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
@@ -492,6 +490,7 @@
 			children = (
 				5464CFC427024A4F00969B0D /* ColorTheme.swift */,
 				54EA0B5B2736F463006647C6 /* Asset.swift */,
+				541147A7274F7A9F00548530 /* DefaultStyleNavigationController.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -599,8 +598,6 @@
 			isa = PBXGroup;
 			children = (
 				54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */,
-				54806DF72747AF430061D56D /* CategoryStepNavigator.swift */,
-				5434F592274810BC007DFD98 /* MainNavigator.swift */,
 				5434F5942748110D007DFD98 /* FlowNavigator.swift */,
 			);
 			path = Navigators;
@@ -923,7 +920,6 @@
 				5403DB12270501C700414F28 /* TopHeadLinesModel.swift in Sources */,
 				542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */,
 				5451AC8027103DBA0044F941 /* CategoryServiceType.swift in Sources */,
-				54806DF82747AF430061D56D /* CategoryStepNavigator.swift in Sources */,
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
 				54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */,
 				54ED10392727DE5B00A562D5 /* ArticleTableViewCell.swift in Sources */,
@@ -949,7 +945,6 @@
 				542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */,
 				5490ACC326FCB55300CC460A /* ViewModelType.swift in Sources */,
 				5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */,
-				5434F593274810BC007DFD98 /* MainNavigator.swift in Sources */,
 				542FB53027059955001CF0E6 /* Localizable.swift in Sources */,
 				543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */,
 				54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */,
@@ -957,6 +952,7 @@
 				548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */,
 				5434F5952748110D007DFD98 /* FlowNavigator.swift in Sources */,
 				542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */,
+				541147A8274F7A9F00548530 /* DefaultStyleNavigationController.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,

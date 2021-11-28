@@ -66,7 +66,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
             
             let selectedItem = Action<Article, Void> { [unowned self] (item) -> Observable<Void> in
                 return Observable.create({ observer in
-                    self.steps.accept(AppSteps.articleDetail)
+                    self.steps.accept(AppSteps.articleDetail(article: item))
                     observer.onCompleted()
                     return Disposables.create()
                 })

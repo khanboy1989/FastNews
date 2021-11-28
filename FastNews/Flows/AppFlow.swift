@@ -35,12 +35,13 @@ class AppFlow: Flow {
     func navigateToMain() -> FlowContributors {
         let mainFlow = MainFlow(withResolve: resolver)
         let mainStepper = OneStepper(withSingleStep: AppSteps.main)
+        let nextStepper = CompositeStepper(steppers: [mainStepper])
         
         Flows.use(mainFlow, when: .ready) {[unowned self] (root) in
             self.rootWindow.rootViewController = root
         }
         
-        return .one(flowContributor: .contribute(withNextPresentable: mainFlow, withNextStepper: mainStepper))
+        return .one(flowContributor: .contribute(withNextPresentable: mainFlow, withNextStepper: nextStepper))
     }
 
 }

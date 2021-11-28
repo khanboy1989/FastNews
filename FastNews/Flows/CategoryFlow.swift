@@ -15,27 +15,43 @@ class CategoryFlow: Flow {
         return self.rootViewController
     }
     
-    private var rootViewController = CategoriesViewController.instantiate()
+    private let rootViewController: CategoriesViewController
+    private let mainNavigationController: DefaultStyleNavigationController
     private let resolver: Dependencies
     
-    init(with resolver: Dependencies, categoryStepper: CategoryStepper) {
+    init(with resolver: Dependencies,
+         mainNavigationController: DefaultStyleNavigationController,
+         categoryStepper: CategoryStepper) {
         self.resolver = resolver
+        self.rootViewController = CategoriesViewController.instantiate()
+        self.mainNavigationController = mainNavigationController
     }
     
     func navigate(to step: Step) -> FlowContributors {
         guard let step = step as? AppSteps else { return .none }
-        
         switch step {
         case .categories:
             return navigateToCategories()
+        case let .articleDetail(article):
+            return navigateToArticleDetails(article: article)
         default:
             return .none
         }
     }
     
     private func navigateToCategories() -> FlowContributors {
-        rootViewController.viewModel = resolver.resolve(CategoriesViewModel.self)
-        return .none
+        self.rootViewController.viewModel = resolver.resolve(CategoriesViewModel.self)
+        let nextStepper = CompositeStepper(steppers: [rootViewController.viewModel])
+        return .one(flowContributor: .contribute(withNextPresentable: rootViewController, withNextStepper: nextStepper))
+    }
+    
+    private func navigateToArticleDetails(article: Article) -> FlowContributors {
+        let viewController = ArticleDetailViewController.instantiate()
+        viewController.viewModel = resolver.resolve(ArticleDetailViewModel.self, argument: article)
+        let nextStepper = CompositeStepper(steppers: [viewController.viewModel])
+        mainNavigationController.setNavigationBarHidden(false, animated: false)
+        mainNavigationController.pushViewController(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: rootViewController, withNextStepper: nextStepper))
     }
     
 }

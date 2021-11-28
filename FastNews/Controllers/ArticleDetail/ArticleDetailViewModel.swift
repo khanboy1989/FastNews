@@ -9,6 +9,7 @@ import RxFlow
 import RxCocoa
 import RxSwift
 import Action
+import Foundation
 
 class ArticleDetailViewModel: ViewModelType, Stepper {
     
@@ -16,7 +17,12 @@ class ArticleDetailViewModel: ViewModelType, Stepper {
     
     struct Input {}
     struct Output {
-        let urlToResource: String?
+        let navigation: Driver<Navigation>
+        let title: String?
+    }
+    
+    struct Navigation {
+        let request: URLRequest?
     }
     
     var input: Input { return internalInput }
@@ -27,11 +33,18 @@ class ArticleDetailViewModel: ViewModelType, Stepper {
     private let reachability: ReachabilityServiceType
     private let article: Article
     
-    init(reachability: ReachabilityServiceType, article: Article) {
+    init(reachability: ReachabilityServiceType,
+         article: Article) {
         self.reachability = reachability
         self.article = article
         
-        internalOutput = Output(urlToResource: article.url)
+        if let stringUrl = article.url, let url = URL(string: stringUrl) {
+            let navigation = Driver.just(url).map({ url -> Navigation in
+                return Navigation(request: URLRequest(url: url))
+            })
+            internalOutput = Output(navigation: navigation, title: article.title)
+        } else {
+            internalOutput = Output(navigation: Driver.just(Navigation(request: nil)), title: article.title)
+        }
     }
-    
 }

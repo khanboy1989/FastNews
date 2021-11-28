@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,22 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8de-Kn-Rhx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTb-Vx-hUW">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
                                     </wkWebView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="unR-Ng-cGR">
+                                        <rect key="frame" x="188.5" y="407.5" width="37" height="37"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="nTb-Vx-hUW" firstAttribute="leading" secondItem="8de-Kn-Rhx" secondAttribute="leading" id="6QW-Bk-EGp"/>
+                                    <constraint firstItem="unR-Ng-cGR" firstAttribute="centerX" secondItem="8de-Kn-Rhx" secondAttribute="centerX" id="PUA-ER-N9y"/>
                                     <constraint firstAttribute="bottom" secondItem="nTb-Vx-hUW" secondAttribute="bottom" id="PjZ-1G-1ac"/>
                                     <constraint firstItem="nTb-Vx-hUW" firstAttribute="top" secondItem="8de-Kn-Rhx" secondAttribute="top" id="hDC-Kt-j1k"/>
+                                    <constraint firstItem="unR-Ng-cGR" firstAttribute="centerY" secondItem="8de-Kn-Rhx" secondAttribute="centerY" id="lGr-Ra-oP8"/>
                                     <constraint firstAttribute="trailing" secondItem="nTb-Vx-hUW" secondAttribute="trailing" id="m8x-hR-AEv"/>
                                 </constraints>
                             </view>
@@ -43,10 +48,14 @@
                         <constraints>
                             <constraint firstItem="8de-Kn-Rhx" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="JgZ-Pw-5Pv"/>
                             <constraint firstItem="8de-Kn-Rhx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Y6a-WY-Z5d"/>
-                            <constraint firstItem="8de-Kn-Rhx" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="bOb-0p-P4j"/>
+                            <constraint firstItem="8de-Kn-Rhx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bOb-0p-P4j"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8de-Kn-Rhx" secondAttribute="trailing" id="wzL-3b-nSw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="unR-Ng-cGR" id="L9K-Sj-xae"/>
+                        <outlet property="webView" destination="nTb-Vx-hUW" id="kEF-uI-qQZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,16 +21,19 @@ class MainFlow: Flow {
         return rootViewController
     }
     
-    private let rootViewController: TabBarController
+    private let rootViewController: DefaultStyleNavigationController
+    private let tabbarViewController: TabBarController
     private let resolver: Dependencies
     private let disposeBag = DisposeBag()
     private let categoryStepper = CategoryStepper()
     private let sourceStepper = SourceStepper()
-    
+
     init(withResolve resolver: Dependencies) {
         self.resolver = resolver
-        self.rootViewController = TabBarController.instantiate()
-        self.rootViewController.viewModel = resolver.resolve(TabBarViewModel.self)
+        self.rootViewController = DefaultStyleNavigationController()
+        self.tabbarViewController = TabBarController.instantiate()
+        self.tabbarViewController.viewModel = resolver.resolve(TabBarViewModel.self)
+        self.rootViewController.viewControllers = [tabbarViewController]
     }
     
     func navigate(to step: Step) -> FlowContributors {
@@ -45,13 +48,14 @@ class MainFlow: Flow {
     
     private func navigateToHome() -> FlowContributors {
         
-        let categoryFlow = CategoryFlow(with: resolver, categoryStepper: categoryStepper)
-        let sourceFlow = SourceFlow(with: resolver, sourceStepper: sourceStepper)
+        let categoryFlow = CategoryFlow(with: resolver, mainNavigationController: rootViewController, categoryStepper: categoryStepper)
+        
+        let sourceFlow = SourceFlow(with: resolver, mainNavigationController: rootViewController, sourceStepper: sourceStepper)
         
         Flows.use(categoryFlow, sourceFlow, when: .ready, block: {( root1: UIViewController, root2: UIViewController ) in
             root1.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.homeIcon.originalImage, selectedImage: Asset.Image.homeIconSelected.originalImage)
             root2.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.sourcesIcon.originalImage, selectedImage: Asset.Image.sourcesIconSelected.originalImage)
-            self.rootViewController.setViewControllers([root1, root2], animated: true)
+            self.tabbarViewController.setViewControllers([root1, root2], animated: true)
         })
         
         let categoryFlowContributor: FlowContributor = .contribute(withNextPresentable: categoryFlow, withNextStepper: categoryStepper)
