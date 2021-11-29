@@ -54,6 +54,11 @@
 		5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464CFC427024A4F00969B0D /* ColorTheme.swift */; };
 		546B8A022710882A004382F8 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A012710882A004382F8 /* ArticleModel.swift */; };
 		546B8A042710893B004382F8 /* SourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A032710893B004382F8 /* SourceModel.swift */; };
+		5489F15927555EB100259AB5 /* SourceServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489F15827555EB100259AB5 /* SourceServiceType.swift */; };
+		5489F15C27555F2500259AB5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489F15B27555F2500259AB5 /* Source.swift */; };
+		5489F15E2755600600259AB5 /* SourceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489F15D2755600600259AB5 /* SourceClient.swift */; };
+		5489F1602755607700259AB5 /* SourceApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489F15F2755607700259AB5 /* SourceApiConfiguration.swift */; };
+		5489F162275560FD00259AB5 /* SourceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5489F161275560FD00259AB5 /* SourceApi.swift */; };
 		548CC249273C5F890092E2A1 /* ArticleDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */; };
 		548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */; };
 		548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */; };
@@ -163,6 +168,11 @@
 		5464CFC427024A4F00969B0D /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		546B8A012710882A004382F8 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		546B8A032710893B004382F8 /* SourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceModel.swift; sourceTree = "<group>"; };
+		5489F15827555EB100259AB5 /* SourceServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceServiceType.swift; sourceTree = "<group>"; };
+		5489F15B27555F2500259AB5 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		5489F15D2755600600259AB5 /* SourceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceClient.swift; sourceTree = "<group>"; };
+		5489F15F2755607700259AB5 /* SourceApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceApiConfiguration.swift; sourceTree = "<group>"; };
+		5489F161275560FD00259AB5 /* SourceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceApi.swift; sourceTree = "<group>"; };
 		548CC248273C5F890092E2A1 /* ArticleDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleDetailViewController.storyboard; sourceTree = "<group>"; };
 		548CC24A273C5FE90092E2A1 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		548CC24C273C606F0092E2A1 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
@@ -246,6 +256,7 @@
 			children = (
 				543D3616270E1A62002E5927 /* CategoryClient.swift */,
 				544348882712D85200D7B43B /* ClientError.swift */,
+				5489F15D2755600600259AB5 /* SourceClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -343,6 +354,7 @@
 		543D360D270E16E6002E5927 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5489F15A27555F1800259AB5 /* Source */,
 				543D360E270E16F1002E5927 /* Category */,
 			);
 			path = Models;
@@ -364,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				543D3614270E1992002E5927 /* CategoryApi.swift */,
+				5489F161275560FD00259AB5 /* SourceApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -373,6 +386,7 @@
 			children = (
 				5451AC7D27103D870044F941 /* CategoryService.swift */,
 				5451AC7F27103DBA0044F941 /* CategoryServiceType.swift */,
+				5489F15827555EB100259AB5 /* SourceServiceType.swift */,
 			);
 			path = NetworkRequestServices;
 			sourceTree = "<group>";
@@ -460,6 +474,7 @@
 				543D3611270E1899002E5927 /* MainApiConfiguration.swift */,
 				54A3ACA8270EBF73006B7A1B /* Environment+Api.swift */,
 				54A3ACAA270EC179006B7A1B /* Environment.swift */,
+				5489F15F2755607700259AB5 /* SourceApiConfiguration.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -493,6 +508,14 @@
 				541147A7274F7A9F00548530 /* DefaultStyleNavigationController.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		5489F15A27555F1800259AB5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5489F15B27555F2500259AB5 /* Source.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		548CC247273C5F730092E2A1 /* ArticleDetail */ = {
@@ -924,6 +947,7 @@
 				54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */,
 				54ED10392727DE5B00A562D5 /* ArticleTableViewCell.swift in Sources */,
 				542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */,
+				5489F1602755607700259AB5 /* SourceApiConfiguration.swift in Sources */,
 				542FB53527059A9C001CF0E6 /* String+news.swift in Sources */,
 				543B246A26FE54D400286616 /* Font.swift in Sources */,
 				542FB5422705B95D001CF0E6 /* UIView+Extensions.swift in Sources */,
@@ -944,7 +968,9 @@
 				546B8A022710882A004382F8 /* ArticleModel.swift in Sources */,
 				542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */,
 				5490ACC326FCB55300CC460A /* ViewModelType.swift in Sources */,
+				5489F15E2755600600259AB5 /* SourceClient.swift in Sources */,
 				5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */,
+				5489F15C27555F2500259AB5 /* Source.swift in Sources */,
 				542FB53027059955001CF0E6 /* Localizable.swift in Sources */,
 				543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */,
 				54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */,
@@ -953,6 +979,7 @@
 				5434F5952748110D007DFD98 /* FlowNavigator.swift in Sources */,
 				542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */,
 				541147A8274F7A9F00548530 /* DefaultStyleNavigationController.swift in Sources */,
+				5489F15927555EB100259AB5 /* SourceServiceType.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,
@@ -960,6 +987,7 @@
 				543D3615270E1992002E5927 /* CategoryApi.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,
 				5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */,
+				5489F162275560FD00259AB5 /* SourceApi.swift in Sources */,
 				548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */,
 				544348892712D85200D7B43B /* ClientError.swift in Sources */,
 				54EA0B5E2736FE9B006647C6 /* UIViewController + Extensions.swift in Sources */,
