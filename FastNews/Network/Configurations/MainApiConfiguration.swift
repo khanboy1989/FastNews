@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MainApiConfiguration: CategoryApiConfiguration {
+struct MainApiConfiguration: CategoryApiConfiguration, SourceApiConfiguration {
    
     let baseUrl: URL = {
         return URL(string: "https://newsapi.org")!

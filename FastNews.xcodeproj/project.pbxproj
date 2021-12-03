@@ -71,6 +71,7 @@
 		54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACAA270EC179006B7A1B /* Environment.swift */; };
 		54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */; };
 		54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFACA26FB17360024BC27 /* Dependencies.swift */; };
+		54E8EFC1275805DB008451B3 /* SourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E8EFC0275805DB008451B3 /* SourceService.swift */; };
 		54EA0B5C2736F463006647C6 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA0B5B2736F463006647C6 /* Asset.swift */; };
 		54EA0B5E2736FE9B006647C6 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA0B5D2736FE9B006647C6 /* UIViewController + Extensions.swift */; };
 		54EA0B6427370253006647C6 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA0B6327370253006647C6 /* Alertable.swift */; };
@@ -185,6 +186,7 @@
 		54A3ACAA270EC179006B7A1B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		54CBFACA26FB17360024BC27 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		54E8EFC0275805DB008451B3 /* SourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceService.swift; sourceTree = "<group>"; };
 		54EA0B5B2736F463006647C6 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		54EA0B5D2736FE9B006647C6 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		54EA0B6327370253006647C6 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				5451AC7D27103D870044F941 /* CategoryService.swift */,
 				5451AC7F27103DBA0044F941 /* CategoryServiceType.swift */,
 				5489F15827555EB100259AB5 /* SourceServiceType.swift */,
+				54E8EFC0275805DB008451B3 /* SourceService.swift */,
 			);
 			path = NetworkRequestServices;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */,
 				5451AC8027103DBA0044F941 /* CategoryServiceType.swift in Sources */,
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
+				54E8EFC1275805DB008451B3 /* SourceService.swift in Sources */,
 				54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */,
 				54ED10392727DE5B00A562D5 /* ArticleTableViewCell.swift in Sources */,
 				542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */,

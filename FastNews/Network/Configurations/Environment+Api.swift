@@ -22,7 +22,15 @@ extension Environment {
         return Configuration.Api.main
     }
     
+    var sourceApiConfiguration: SourceApiConfiguration {
+        return Configuration.Api.main
+    }
+    
     var categoryApiProvider: MoyaProvider<CategoryApi> {
+        return createProvider()
+    }
+
+    var sourceApiProvider: MoyaProvider<SourceApi> {
         return createProvider()
     }
     

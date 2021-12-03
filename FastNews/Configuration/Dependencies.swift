@@ -46,15 +46,25 @@ class Dependencies {
     }
     
     private func configureClients() {
+        //Api configs
         container.register(CategoryApiConfiguration.self) { _ in
             return Environment.current.categoryApiConfiguration
         }
         
+        //Api providers
         container.register(MoyaProvider<CategoryApi>.self) { _ in
             return Environment.current.categoryApiProvider
         }
         
+        container.register(MoyaProvider<SourceApi>.self) { _ in
+            return Environment.current.sourceApiProvider
+        }
+        
+        //Clients
         container.autoregister(CategoryClient.self, initializer: CategoryClient.init)
+        
+        container.autoregister(SourceClient.self,
+            initializer: SourceClient.init)
         
     }
     
