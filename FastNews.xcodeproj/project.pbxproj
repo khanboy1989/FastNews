@@ -71,6 +71,8 @@
 		54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACAA270EC179006B7A1B /* Environment.swift */; };
 		54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */; };
 		54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFACA26FB17360024BC27 /* Dependencies.swift */; };
+		54E69B32275D588E008C9D10 /* SourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E69B30275D588E008C9D10 /* SourceTableViewCell.swift */; };
+		54E69B33275D588E008C9D10 /* SourceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E69B31275D588E008C9D10 /* SourceTableViewCell.xib */; };
 		54E8EFC1275805DB008451B3 /* SourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E8EFC0275805DB008451B3 /* SourceService.swift */; };
 		54EA0B5C2736F463006647C6 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA0B5B2736F463006647C6 /* Asset.swift */; };
 		54EA0B5E2736FE9B006647C6 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA0B5D2736FE9B006647C6 /* UIViewController + Extensions.swift */; };
@@ -186,6 +188,8 @@
 		54A3ACAA270EC179006B7A1B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		54CBFACA26FB17360024BC27 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		54E69B30275D588E008C9D10 /* SourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCell.swift; sourceTree = "<group>"; };
+		54E69B31275D588E008C9D10 /* SourceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceTableViewCell.xib; sourceTree = "<group>"; };
 		54E8EFC0275805DB008451B3 /* SourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceService.swift; sourceTree = "<group>"; };
 		54EA0B5B2736F463006647C6 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		54EA0B5D2736FE9B006647C6 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
@@ -577,6 +581,15 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		54E69B2F275D5522008C9D10 /* SourceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				54E69B30275D588E008C9D10 /* SourceTableViewCell.swift */,
+				54E69B31275D588E008C9D10 /* SourceTableViewCell.xib */,
+			);
+			path = SourceTableViewCell;
+			sourceTree = "<group>";
+		};
 		54EA0B6227370243006647C6 /* Alertable */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +601,7 @@
 		54ED10352727DC1800A562D5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				54E69B2F275D5522008C9D10 /* SourceTableViewCell */,
 				54ED10362727DD3A00A562D5 /* ArticleTableViewCell */,
 			);
 			path = Cells;
@@ -808,6 +822,7 @@
 				542FB52E27059919001CF0E6 /* Localizable.strings in Resources */,
 				543B246726FE54C700286616 /* AirbnbCerealBold.ttf in Resources */,
 				543B246526FE54C700286616 /* AirbnbCerealBook.ttf in Resources */,
+				54E69B33275D588E008C9D10 /* SourceTableViewCell.xib in Resources */,
 				5457F47826FA00760020C5CB /* CategoriesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -999,6 +1014,7 @@
 				5451AC7E27103D870044F941 /* CategoryService.swift in Sources */,
 				54F5F3B827031D410044A362 /* TabBarController.swift in Sources */,
 				54A3ACA9270EBF73006B7A1B /* Environment+Api.swift in Sources */,
+				54E69B32275D588E008C9D10 /* SourceTableViewCell.swift in Sources */,
 				5457F47326FA00760020C5CB /* SceneDelegate.swift in Sources */,
 				54F5F3C6270395780044A362 /* UIViewController+rx.swift in Sources */,
 				54FE4B5526FA0781005541C5 /* StoryboardSceneBased..swift in Sources */,

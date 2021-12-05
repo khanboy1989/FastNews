@@ -9,6 +9,7 @@ import RxFlow
 import RxCocoa
 import RxSwift
 import Action
+import Differentiator
 
 class SourcesViewModel: ViewModelType, Stepper {
     typealias SourcesLoadingState = LoadingState<[Source]>
@@ -19,6 +20,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     }
     struct Output {
         let loadingState: BehaviorRelay<SourcesLoadingState>
+        let sections: Driver<[Section]>
     }
     
     var input: Input { return internalInput }
@@ -37,7 +39,9 @@ class SourcesViewModel: ViewModelType, Stepper {
     init(reachabilityService: ReachabilityServiceType, sourceServiceType: SourceServiceType) {
         self.reachabilityService = reachabilityService
         self.sourceServiceType = sourceServiceType
-        internalOutput = Output(loadingState: sourcesLoadingState)
+        
+        internalOutput = Output(loadingState: sourcesLoadingState, sections: createSections(loadingState: sourcesLoadingState.asObservable()).asDriver(onErrorJustReturn: []))
+        
         internalInput = Input(sources: createSourcesRequestAction())
     }
     
@@ -68,11 +72,64 @@ class SourcesViewModel: ViewModelType, Stepper {
                     .bind(to: self.sourcesLoadingState)
                     .disposed(by: disposeBag)
                     
-                let sources = createSourcesRequest()
-                sourceRequest.onNext(sources)
-                observer.onCompleted()
-                return Disposables.create()
+                    let sources = createSourcesRequest()
+                    sourceRequest.onNext(sources)
+                    observer.onCompleted()
+                    return Disposables.create()
             }
         })
+    }
+    
+    private func createSections(loadingState: Observable<SourcesLoadingState>) -> Observable<[Section]> {
+        return loadingState.debounce(.milliseconds(100), scheduler: MainScheduler.instance)
+            .map({ state -> [Section] in
+                var sections = [Section]()
+                switch state {
+                case let .success(sources):
+                    let items = sources.map({
+                        Item.source($0)
+                    })
+                    sections.append(.sources(items: items))
+                    return sections
+                default:
+                    return sections
+                }
+            })
+    }
+    
+    enum Item: IdentifiableType {
+        case source(Source)
+        
+        var identity: String {
+            switch self {
+            case let .source(source):
+                return "source-\(source.name)"
+            }
+        }
+    }
+    
+    enum Section: SectionModelType {
+        case sources(items: [Item])
+        
+        var identity: Int {
+            switch self {
+            case .sources:
+                return 0
+            }
+        }
+        
+        var items: [Item] {
+            switch self {
+            case let .sources(items: items):
+                return items
+            }
+        }
+        
+        init(original: SourcesViewModel.Section, items: [SourcesViewModel.Item]) {
+            switch original {
+            case .sources:
+                self = .sources(items: items)
+            }
+        }
     }
 }
