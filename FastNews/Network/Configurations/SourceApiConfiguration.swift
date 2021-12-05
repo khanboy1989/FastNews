@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol SourceApiConfiguration {
     var baseUrl: URL { get }
     var proxyPath: String { get }

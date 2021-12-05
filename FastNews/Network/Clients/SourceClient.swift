@@ -23,7 +23,7 @@ class SourceClient {
         let request = provider.rx.request(.sources(config: self.configuration, country: country))
             .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
             .map({response -> [Source] in
-                let sources = try response.map(to: [Source].self)
+                let sources = try response.map(to: [Source].self, keyPath: "sources")
                 return sources
             })
             .catchError({ (error) in
@@ -34,5 +34,23 @@ class SourceClient {
             .asObservable()
         
         return request
+    }
+    
+    static func stringify(json: Any, prettyPrinted: Bool = false) -> String {
+        var options: JSONSerialization.WritingOptions = []
+        if prettyPrinted {
+          options = JSONSerialization.WritingOptions.prettyPrinted
+        }
+
+        do {
+          let data = try JSONSerialization.data(withJSONObject: json, options: options)
+          if let string = String(data: data, encoding: String.Encoding.utf8) {
+            return string
+          }
+        } catch {
+          print("stringify error = \(error)")
+        }
+
+        return ""
     }
 }
