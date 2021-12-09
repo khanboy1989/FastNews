@@ -64,7 +64,6 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
         
         viewModel.input.sources.execute()
         
-        
     }
     
     private func configureCell() -> ConfigureCell {
