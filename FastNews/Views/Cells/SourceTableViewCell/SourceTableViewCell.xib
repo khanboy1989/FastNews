@@ -5,37 +5,67 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SourceTableViewCell" customModule="FastNews" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="KGk-i7-Jjw" customClass="SourceTableViewCell" customModule="FastNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-TB-4bX">
-                        <rect key="frame" x="16" y="0.0" width="288" height="44"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hPE-Ag-Foe">
+                        <rect key="frame" x="16" y="24" width="288" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-TB-4bX">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-gW-GT5" userLabel="Description Label">
+                                <rect key="frame" x="0.0" y="24.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upe-NF-aCD">
+                        <rect key="frame" x="16" y="92" width="288" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bJm-Hc-Cf0"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="1kW-TB-4bX" secondAttribute="bottom" id="2Nh-s2-fTZ"/>
-                    <constraint firstItem="1kW-TB-4bX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HiB-Iu-Zav"/>
-                    <constraint firstItem="1kW-TB-4bX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bmY-or-iZC"/>
-                    <constraint firstAttribute="trailing" secondItem="1kW-TB-4bX" secondAttribute="trailing" constant="16" id="svd-dR-iKd"/>
+                    <constraint firstItem="hPE-Ag-Foe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1XX-me-1ni"/>
+                    <constraint firstItem="upe-NF-aCD" firstAttribute="trailing" secondItem="hPE-Ag-Foe" secondAttribute="trailing" id="9wJ-oa-0np"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hPE-Ag-Foe" secondAttribute="bottom" constant="16" id="KLS-Z0-g94"/>
+                    <constraint firstAttribute="trailing" secondItem="hPE-Ag-Foe" secondAttribute="trailing" constant="16" id="KxG-yI-zVA"/>
+                    <constraint firstItem="hPE-Ag-Foe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OGV-um-9Zh"/>
+                    <constraint firstAttribute="bottom" secondItem="upe-NF-aCD" secondAttribute="bottom" id="Xeu-CR-DEr"/>
+                    <constraint firstItem="upe-NF-aCD" firstAttribute="leading" secondItem="hPE-Ag-Foe" secondAttribute="leading" id="xZ0-8x-54C"/>
+                    <constraint firstItem="hPE-Ag-Foe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zzY-e1-2Xd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="descriptionLabel" destination="Mdr-gW-GT5" id="Gdv-pS-ctD"/>
+                <outlet property="seperatorView" destination="upe-NF-aCD" id="XCB-T6-inH"/>
                 <outlet property="titleLabel" destination="1kW-TB-4bX" id="FoL-ea-6OG"/>
             </connections>
-            <point key="canvasLocation" x="208.69565217391306" y="98.4375"/>
+            <point key="canvasLocation" x="-45" y="101"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -40,6 +40,7 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        
         dataSource = DataSource(configureCell: configureCell())
     }
     
