@@ -12,6 +12,7 @@ enum ColorTheme {
     case appBackground
     case black
     case grey
+    case seperator
     
     var color: UIColor {
         switch self {
@@ -21,6 +22,8 @@ enum ColorTheme {
             return UIColor(named: "black")!
         case .grey:
             return UIColor(named: "grey")!
+        case .seperator:
+            return UIColor(named: "seperatorColor")!
         }
     }
 }

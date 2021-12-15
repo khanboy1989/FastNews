@@ -34,7 +34,7 @@ class SourceTableViewCell: UITableViewCell, NibReusable {
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .left
         
-        seperatorView.backgroundColor = ColorTheme.grey.color
+        seperatorView.backgroundColor = ColorTheme.seperator.color
     }
     
     private func updateUI(source: Source?) {

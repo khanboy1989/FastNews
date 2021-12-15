@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,25 +36,27 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upe-NF-aCD">
-                        <rect key="frame" x="16" y="92" width="288" height="1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="frame" x="16" y="92" width="304" height="1"/>
+                        <color key="backgroundColor" name="seperatorColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="bJm-Hc-Cf0"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="hPE-Ag-Foe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="1XX-me-1ni"/>
-                    <constraint firstItem="upe-NF-aCD" firstAttribute="trailing" secondItem="hPE-Ag-Foe" secondAttribute="trailing" id="9wJ-oa-0np"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hPE-Ag-Foe" secondAttribute="bottom" constant="16" id="KLS-Z0-g94"/>
                     <constraint firstAttribute="trailing" secondItem="hPE-Ag-Foe" secondAttribute="trailing" constant="16" id="KxG-yI-zVA"/>
                     <constraint firstItem="hPE-Ag-Foe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OGV-um-9Zh"/>
                     <constraint firstAttribute="bottom" secondItem="upe-NF-aCD" secondAttribute="bottom" id="Xeu-CR-DEr"/>
+                    <constraint firstAttribute="trailing" secondItem="upe-NF-aCD" secondAttribute="trailing" id="sUL-ao-xLp"/>
                     <constraint firstItem="upe-NF-aCD" firstAttribute="leading" secondItem="hPE-Ag-Foe" secondAttribute="leading" id="xZ0-8x-54C"/>
                     <constraint firstItem="hPE-Ag-Foe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zzY-e1-2Xd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="descriptionLabel" destination="Mdr-gW-GT5" id="Gdv-pS-ctD"/>
                 <outlet property="seperatorView" destination="upe-NF-aCD" id="XCB-T6-inH"/>
@@ -64,8 +66,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="seperatorColor">
+            <color red="0.78431372549019607" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

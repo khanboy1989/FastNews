@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 protocol DefaultStyleNavigationProtocol {
     func configureNavBar()
 }
