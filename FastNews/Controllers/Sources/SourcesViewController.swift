@@ -23,7 +23,11 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
         }
     }
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView! {
+        willSet {
+            newValue.keyboardDismissMode = .onDrag
+        }
+    }
     
     private typealias DataSource = RxTableViewSectionedReloadDataSource<SourcesViewModel.Section>
     private typealias ConfigureCell = (TableViewSectionedDataSource<SourcesViewModel.Section>, UITableView, IndexPath, SourcesViewModel.Item) -> UITableViewCell
@@ -66,7 +70,7 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
             if let model = try? self.dataSource.model(at: indexPath) as? SourcesViewModel.Item {
                 switch model {
                 case let .source(source):
-                    break
+                    self.viewModel.input.itemSelected.execute(source)
                 }
             }
             

@@ -14,4 +14,5 @@ enum AppSteps: Step {
     case categories
     case sources
     case articleDetail(article: Article)
+    case sourceMain(source: Source)
 }

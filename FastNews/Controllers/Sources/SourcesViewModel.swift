@@ -17,6 +17,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     
     struct Input {
         let sources: Action<Void, Void>
+        let itemSelected: Action<Source, Void>
     }
     struct Output {
         let loadingState: BehaviorRelay<SourcesLoadingState>
@@ -42,7 +43,7 @@ class SourcesViewModel: ViewModelType, Stepper {
         
         internalOutput = Output(loadingState: sourcesLoadingState, sections: createSections(loadingState: sourcesLoadingState.asObservable()).asDriver(onErrorJustReturn: []))
         
-        internalInput = Input(sources: createSourcesRequestAction())
+        internalInput = Input(sources: createSourcesRequestAction(), itemSelected: itemSelectedAction())
     }
     
     private func createSourcesRequest() -> Observable<SourcesLoadingState> {
@@ -78,6 +79,17 @@ class SourcesViewModel: ViewModelType, Stepper {
                     return Disposables.create()
             }
         })
+    }
+    
+    private func itemSelectedAction() -> Action<Source, Void> {
+        return Action<Source, Void> { [unowned self] (item) -> Observable<Void> in
+            return Observable.create({ observer in
+                print("selected item = \(item)")
+                observer.onCompleted()
+                return Disposables.create()
+            })
+        }
+        
     }
     
     private func createSections(loadingState: Observable<SourcesLoadingState>) -> Observable<[Section]> {
