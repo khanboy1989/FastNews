@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +33,7 @@
                                         <rect key="frame" x="188.5" y="407.5" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="cAppBackground"/>
                                 <constraints>
                                     <constraint firstItem="nTb-Vx-hUW" firstAttribute="leading" secondItem="8de-Kn-Rhx" secondAttribute="leading" id="6QW-Bk-EGp"/>
                                     <constraint firstItem="unR-Ng-cGR" firstAttribute="centerX" secondItem="8de-Kn-Rhx" secondAttribute="centerX" id="PUA-ER-N9y"/>
@@ -63,6 +64,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="cAppBackground">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

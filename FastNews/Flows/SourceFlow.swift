@@ -46,7 +46,12 @@ class SourceFlow: Flow {
     }
     
     private func navigateToSourceMain(source: Source) -> FlowContributors {
-        return .none
+        let viewController = SourceMainViewController.instantiate()
+        viewController.viewModel =  resolver.resolve(SourceMainViewModel.self, argument: source)
+        let nextStepper = CompositeStepper(steppers: [viewController.viewModel])
+        mainNavigationController.setNavigationBarHidden(false, animated: false)
+        mainNavigationController.pushViewController(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: rootViewController, withNextStepper: nextStepper))
     }
     
 }

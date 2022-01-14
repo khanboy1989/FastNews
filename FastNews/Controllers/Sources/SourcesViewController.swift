@@ -29,6 +29,8 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
         }
     }
     
+    @IBOutlet private weak var sourceHeaderView: SourceHeaderView!
+    
     private typealias DataSource = RxTableViewSectionedReloadDataSource<SourcesViewModel.Section>
     private typealias ConfigureCell = (TableViewSectionedDataSource<SourcesViewModel.Section>, UITableView, IndexPath, SourcesViewModel.Item) -> UITableViewCell
     private var dataSource: DataSource!
@@ -79,6 +81,10 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
         
         viewModel.input.sources.execute()
         
+        sourceHeaderView.searchTerm.asObservable().subscribe(onNext: {
+            query in
+            print("search query = \(query)")
+        }).disposed(by: disposeBag)
     }
     
     private func configureCell() -> ConfigureCell {

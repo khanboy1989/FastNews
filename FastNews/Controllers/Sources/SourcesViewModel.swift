@@ -84,7 +84,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     private func itemSelectedAction() -> Action<Source, Void> {
         return Action<Source, Void> { [unowned self] (item) -> Observable<Void> in
             return Observable.create({ observer in
-                print("selected item = \(item)")
+                self.steps.accept(AppSteps.sourceMain(source: item))
                 observer.onCompleted()
                 return Disposables.create()
             })
