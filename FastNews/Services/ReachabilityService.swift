@@ -22,9 +22,9 @@ final class ReachabilityService: ReachabilityServiceType {
     init() {
         if let reachability = reachability {
             reachability.startListening(onUpdatePerforming: { status in
-#if DEBUG
+                #if DEBUG
                 print("ReachabilityService interent:\(status)")
-#endif
+                #endif
                 switch status {
                 case .notReachable:
                     self._didBecomeReachable.onNext(false)

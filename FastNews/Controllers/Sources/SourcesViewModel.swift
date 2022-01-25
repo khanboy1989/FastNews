@@ -32,16 +32,16 @@ class SourcesViewModel: ViewModelType, Stepper {
     private var internalOutput: Output!
     private let reachabilityService: ReachabilityServiceType
     private let disposeBag = DisposeBag()
-    private let sourceServiceType: SourceServiceType
+    private let sourceService: SourceServiceType
     private let defaultCountry: String = "us"
     private let sourcesLoadingState = BehaviorRelay
     <SourcesLoadingState>(value: .loading)
     private let sourceRequest = PublishSubject<Observable<SourcesLoadingState>>()
     private let searchText = BehaviorRelay<String?>(value: "")
     
-    init(reachabilityService: ReachabilityServiceType, sourceServiceType: SourceServiceType) {
+    init(reachabilityService: ReachabilityServiceType, sourceService: SourceServiceType) {
         self.reachabilityService = reachabilityService
-        self.sourceServiceType = sourceServiceType
+        self.sourceService = sourceService
         
         let sections = Observable.combineLatest(searchText, sourcesLoadingState).map({ [unowned self] (searchText, sourcesLoadingState) ->
             [SourcesViewModel.Section] in
@@ -55,7 +55,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     }
     
     private func createSourcesRequest() -> Observable<SourcesLoadingState> {
-        return sourceServiceType.sources(defaultCountry)
+        return sourceService.sources(defaultCountry)
             .asObservable()
             .map({ sources in
                 return SourcesLoadingState.success(sources)

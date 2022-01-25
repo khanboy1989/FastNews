@@ -11,6 +11,9 @@
 		5403DB12270501C700414F28 /* TopHeadLinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403DB11270501C700414F28 /* TopHeadLinesModel.swift */; };
 		5403DB142705020100414F28 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403DB132705020100414F28 /* CategoryType.swift */; };
 		541147A8274F7A9F00548530 /* DefaultStyleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541147A7274F7A9F00548530 /* DefaultStyleNavigationController.swift */; };
+		5415873E27A009E20058EA09 /* SourcesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415873D27A009E20058EA09 /* SourcesViewModelTests.swift */; };
+		5415874127A00D960058EA09 /* ReachabilityServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415874027A00D960058EA09 /* ReachabilityServiceMock.swift */; };
+		5415874327A02E3B0058EA09 /* SourceServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415874227A02E3B0058EA09 /* SourceServiceMock.swift */; };
 		542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BA2704369F009C1D23 /* CategoryFlow.swift */; };
 		542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BC2704374A009C1D23 /* SourceFlow.swift */; };
 		542202C027048D82009C1D23 /* SourcesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542202BF27048D82009C1D23 /* SourcesViewController.storyboard */; };
@@ -127,6 +130,9 @@
 		5403DB11270501C700414F28 /* TopHeadLinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadLinesModel.swift; sourceTree = "<group>"; };
 		5403DB132705020100414F28 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		541147A7274F7A9F00548530 /* DefaultStyleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleNavigationController.swift; sourceTree = "<group>"; };
+		5415873D27A009E20058EA09 /* SourcesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewModelTests.swift; sourceTree = "<group>"; };
+		5415874027A00D960058EA09 /* ReachabilityServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityServiceMock.swift; sourceTree = "<group>"; };
+		5415874227A02E3B0058EA09 /* SourceServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceServiceMock.swift; sourceTree = "<group>"; };
 		542202BA2704369F009C1D23 /* CategoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFlow.swift; sourceTree = "<group>"; };
 		542202BC2704374A009C1D23 /* SourceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceFlow.swift; sourceTree = "<group>"; };
 		542202BF27048D82009C1D23 /* SourcesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SourcesViewController.storyboard; sourceTree = "<group>"; };
@@ -280,8 +286,18 @@
 		5415873C27A0080C0058EA09 /* ViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
+				5415873D27A009E20058EA09 /* SourcesViewModelTests.swift */,
 			);
 			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		5415873F27A00D790058EA09 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5415874027A00D960058EA09 /* ReachabilityServiceMock.swift */,
+				5415874227A02E3B0058EA09 /* SourceServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		542202BE27048D47009C1D23 /* Sources */ = {
@@ -467,6 +483,7 @@
 		5457F48926FA00780020C5CB /* FastNewsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5415873F27A00D790058EA09 /* Mocks */,
 				5415873C27A0080C0058EA09 /* ViewModelTests */,
 				5457F48A26FA00780020C5CB /* FastNewsTests.swift */,
 				5457F48C26FA00780020C5CB /* Info.plist */,
@@ -1070,6 +1087,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5457F48B26FA00780020C5CB /* FastNewsTests.swift in Sources */,
+				5415873E27A009E20058EA09 /* SourcesViewModelTests.swift in Sources */,
+				5415874327A02E3B0058EA09 /* SourceServiceMock.swift in Sources */,
+				5415874127A00D960058EA09 /* ReachabilityServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

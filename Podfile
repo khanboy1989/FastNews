@@ -27,6 +27,8 @@ target 'FastNews' do
  target 'FastNewsTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '~> 5.0'
+    pod 'RxTest', '~> 5.0'	
   end
 
   target 'FastNewsUITests' do
