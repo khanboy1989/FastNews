@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 
-
 protocol SourceServiceType {
     func sources(_ country: String) -> Observable<[Source]>
 }

@@ -19,7 +19,7 @@ struct Source {
 
 enum Category: String {
     
-    //swiftlint:disable redundant_string_enum_value
+    // swiftlint:disable redundant_string_enum_value
     case business = "business"
     case entertainment = "entertainment"
     case general = "general"
@@ -27,7 +27,7 @@ enum Category: String {
     case science = "science"
     case sports = "sports"
     case technology = "technology"
-    //swiftlint:enable redundant_string_enum_value
+    // swiftlint:enable redundant_string_enum_value
 }
 
 extension Source: Mappable {

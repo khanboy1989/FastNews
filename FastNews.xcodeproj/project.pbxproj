@@ -277,6 +277,13 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
+		5415873C27A0080C0058EA09 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		542202BE27048D47009C1D23 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +467,7 @@
 		5457F48926FA00780020C5CB /* FastNewsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5415873C27A0080C0058EA09 /* ViewModelTests */,
 				5457F48A26FA00780020C5CB /* FastNewsTests.swift */,
 				5457F48C26FA00780020C5CB /* Info.plist */,
 			);

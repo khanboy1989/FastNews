@@ -17,7 +17,7 @@ class SourceMainViewController: UIViewController, StoryboardBased, ViewModelBase
     
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView! {
-        willSet{
+        willSet {
             newValue.color = ColorTheme.black.color
             newValue.hidesWhenStopped = true
             newValue.isHidden = true

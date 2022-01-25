@@ -43,8 +43,7 @@ class SourcesViewModel: ViewModelType, Stepper {
         self.reachabilityService = reachabilityService
         self.sourceServiceType = sourceServiceType
         
-        let sections = Observable.combineLatest(searchText, sourcesLoadingState).map({
-            [unowned self] (searchText, sourcesLoadingState) ->
+        let sections = Observable.combineLatest(searchText, sourcesLoadingState).map({ [unowned self] (searchText, sourcesLoadingState) ->
             [SourcesViewModel.Section] in
             return self.createSections(sourceLoadingState: sourcesLoadingState, searchText: searchText ?? "")
         })
@@ -131,7 +130,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     }
     
     private func createSourceItems(sources: [Source], searchText: String) -> [Item] {
-        let filteredSources = sources.filter({$0.name.lowercased().hasPrefix(searchText.lowercased())})
+        let filteredSources = sources.filter({ $0.name.lowercased().hasPrefix(searchText.lowercased()) })
         return filteredSources.map({ item -> Item in
             Item.source(item)
         })
