@@ -32,7 +32,6 @@ enum Category: String {
 
 extension Source: Mappable {
     init(map: Mapper) throws {
-        print("json = \(map)")
         id = try map.from("id")
         name = try map.from("name")
         description = try map.from("description")

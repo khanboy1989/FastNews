@@ -81,10 +81,8 @@ class SourcesViewController: UIViewController, StoryboardBased, ViewModelBased, 
         
         viewModel.input.sources.execute()
         
-        sourceHeaderView.searchTerm.asObservable().subscribe(onNext: {
-            query in
-            print("search query = \(query)")
-        }).disposed(by: disposeBag)
+        sourceHeaderView.searchTerm
+            .drive(viewModel.input.searchText).disposed(by: disposeBag)
     }
     
     private func configureCell() -> ConfigureCell {

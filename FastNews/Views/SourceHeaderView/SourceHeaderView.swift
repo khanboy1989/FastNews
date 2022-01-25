@@ -44,6 +44,7 @@ class SourceHeaderView: UIView, NibOwnerLoadable {
     
     private func updateUI() {
       backgroundColor = ColorTheme.appBackground.color
+     searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
     }
     
     private func configureRx() {

@@ -18,6 +18,7 @@ class SourcesViewModel: ViewModelType, Stepper {
     struct Input {
         let sources: Action<Void, Void>
         let itemSelected: Action<Source, Void>
+        let searchText: BehaviorRelay<String?>
     }
     struct Output {
         let loadingState: BehaviorRelay<SourcesLoadingState>
@@ -36,14 +37,22 @@ class SourcesViewModel: ViewModelType, Stepper {
     private let sourcesLoadingState = BehaviorRelay
     <SourcesLoadingState>(value: .loading)
     private let sourceRequest = PublishSubject<Observable<SourcesLoadingState>>()
+    private let searchText = BehaviorRelay<String?>(value: "")
     
     init(reachabilityService: ReachabilityServiceType, sourceServiceType: SourceServiceType) {
         self.reachabilityService = reachabilityService
         self.sourceServiceType = sourceServiceType
         
-        internalOutput = Output(loadingState: sourcesLoadingState, sections: createSections(loadingState: sourcesLoadingState.asObservable()).asDriver(onErrorJustReturn: []))
+        let sections = Observable.combineLatest(searchText, sourcesLoadingState).map({
+            [unowned self] (searchText, sourcesLoadingState) ->
+            [SourcesViewModel.Section] in
+            return self.createSections(sourceLoadingState: sourcesLoadingState, searchText: searchText ?? "")
+        })
         
-        internalInput = Input(sources: createSourcesRequestAction(), itemSelected: itemSelectedAction())
+        internalOutput = Output(loadingState: sourcesLoadingState, sections: sections.asDriver(onErrorJustReturn: []))
+        
+        internalInput = Input(sources: createSourcesRequestAction(), itemSelected: itemSelectedAction(), searchText: searchText)
+                
     }
     
     private func createSourcesRequest() -> Observable<SourcesLoadingState> {
@@ -89,7 +98,6 @@ class SourcesViewModel: ViewModelType, Stepper {
                 return Disposables.create()
             })
         }
-        
     }
     
     private func createSections(loadingState: Observable<SourcesLoadingState>) -> Observable<[Section]> {
@@ -107,6 +115,26 @@ class SourcesViewModel: ViewModelType, Stepper {
                     return sections
                 }
             })
+    }
+    
+    private func createSections(sourceLoadingState: SourcesLoadingState, searchText: String) -> [Section] {
+        var sections: [Section] = []
+        
+        switch sourceLoadingState {
+        case let .success(sources):
+            let sourceItems = createSourceItems(sources: sources, searchText: searchText)
+            sections = [.sources(items: sourceItems)]
+        default:
+            return sections
+        }
+        return sections
+    }
+    
+    private func createSourceItems(sources: [Source], searchText: String) -> [Item] {
+        let filteredSources = sources.filter({$0.name.lowercased().hasPrefix(searchText.lowercased())})
+        return filteredSources.map({ item -> Item in
+            Item.source(item)
+        })
     }
     
     enum Item: IdentifiableType {
