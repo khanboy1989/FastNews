@@ -20,7 +20,6 @@ target 'FastNews' do
   pod 'SwinjectAutoregistration' , '2.7.0'
   pod 'Moya/RxSwift', :podspec => './Moya-RxSwift5.podspec'
   pod 'RxDataSources', '~> 4.0'
- 
   pod 'Kingfisher', '~> 5.0'
  end
 
@@ -28,7 +27,8 @@ target 'FastNews' do
     inherit! :search_paths
     # Pods for testing
     pod 'RxBlocking', '~> 5.0'
-    pod 'RxTest', '~> 5.0'	
+    pod 'RxTest', '~> 5.0'
+    pod 'Moya/RxSwift', :podspec => './Moya-RxSwift5.podspec'	
   end
 
   target 'FastNewsUITests' do

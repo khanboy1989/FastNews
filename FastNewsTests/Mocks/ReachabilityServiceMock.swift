@@ -6,6 +6,9 @@
 //
 
 import RxSwift
+import RxCocoa
+import Action
+
 @testable import FastNews
 
 class ReachabilityServiceMock: ReachabilityServiceType {
