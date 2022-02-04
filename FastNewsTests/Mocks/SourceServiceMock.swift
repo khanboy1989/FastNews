@@ -14,6 +14,13 @@ import RxCocoa
 class SourceServiceMock: SourceServiceType {
     
     func sources(_ country: String) -> Observable<[Source]> {
-        return Observable.empty()
+        return Observable.of(createSources())
+    }
+    
+    private func createSources() -> [Source] {
+        if let array = SourceModelTest(jsonFile: .sourcesData)?.sources {
+            return array
+        }
+        return []
     }
 }

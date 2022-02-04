@@ -21,19 +21,22 @@ target 'FastNews' do
   pod 'Moya/RxSwift', :podspec => './Moya-RxSwift5.podspec'
   pod 'RxDataSources', '~> 4.0'
   pod 'Kingfisher', '~> 5.0'
- end
 
- target 'FastNewsTests' do
+
+target 'FastNewsTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'RxBlocking', '~> 5.0'
-    pod 'RxTest', '~> 5.0'
-    pod 'Moya/RxSwift', :podspec => './Moya-RxSwift5.podspec'	
+    pod 'RxTest', '~> 5.0'	
   end
 
   target 'FastNewsUITests' do
     # Pods for testing
   end
+	
+ end
+
+ 
 
 
 

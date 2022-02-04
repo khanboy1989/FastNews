@@ -29,7 +29,8 @@ extension SourceModelTest {
 }
 
 struct SourceModelTest: Mappable {
-    var sources: [Source]
+    let sources: [Source]
+    
     init(map: Mapper) throws {
         sources = try map.from("sources")
     }
