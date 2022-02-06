@@ -125,6 +125,30 @@ class SourceViewModelTests: XCTestCase {
             }
             
         }
-        
     }
+    
+    func testSearchSourceItem() {
+        let exp: XCTestExpectation = expectation(description: "testSearchSourceItem")
+        var sourceItems: [SourcesViewModel.Item] = []
+        
+        viewModel.input.sources.execute()
+        viewModel.input.searchText.accept("abc")
+        
+        viewModel.output.sections.do(onNext: { sections in
+            sections.forEach { sec in
+                sec.items.forEach { item in
+                    sourceItems.append(item)
+                }
+            }
+            exp.fulfill()
+        })
+            .drive()
+            .disposed(by: disposeBag)
+        
+        wait(for: [exp], timeout: 5)
+    
+        XCTAssertNotNil(sourceItems)
+        XCTAssertEqual(sourceItems.count, 1)
+    }
+    
 }

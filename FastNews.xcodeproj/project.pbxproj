@@ -53,6 +53,8 @@
 		5457F48026FA00770020C5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5457F47E26FA00770020C5CB /* LaunchScreen.storyboard */; };
 		5457F48B26FA00780020C5CB /* FastNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457F48A26FA00780020C5CB /* FastNewsTests.swift */; };
 		5457F49626FA00780020C5CB /* FastNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457F49526FA00780020C5CB /* FastNewsUITests.swift */; };
+		5458229B27B043B200496092 /* CategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5458229A27B043B200496092 /* CategoriesViewModelTests.swift */; };
+		5458229D27B045C900496092 /* CategoryServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5458229C27B045C900496092 /* CategoryServiceMock.swift */; };
 		5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464CFC427024A4F00969B0D /* ColorTheme.swift */; };
 		546B8A022710882A004382F8 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A012710882A004382F8 /* ArticleModel.swift */; };
 		546B8A042710893B004382F8 /* SourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B8A032710893B004382F8 /* SourceModel.swift */; };
@@ -183,6 +185,8 @@
 		5457F49126FA00780020C5CB /* FastNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5457F49526FA00780020C5CB /* FastNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastNewsUITests.swift; sourceTree = "<group>"; };
 		5457F49726FA00780020C5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5458229A27B043B200496092 /* CategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModelTests.swift; sourceTree = "<group>"; };
+		5458229C27B045C900496092 /* CategoryServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceMock.swift; sourceTree = "<group>"; };
 		5464CFC427024A4F00969B0D /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		546B8A012710882A004382F8 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		546B8A032710893B004382F8 /* SourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceModel.swift; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				5415873D27A009E20058EA09 /* SourcesViewModelTests.swift */,
+				5458229A27B043B200496092 /* CategoriesViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			children = (
 				5415874027A00D960058EA09 /* ReachabilityServiceMock.swift */,
 				5415874227A02E3B0058EA09 /* SourceServiceMock.swift */,
+				5458229C27B045C900496092 /* CategoryServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1154,8 +1160,10 @@
 			files = (
 				5457F48B26FA00780020C5CB /* FastNewsTests.swift in Sources */,
 				54739D2A27A9C238008D66AB /* SourceModel+TestData.swift in Sources */,
+				5458229B27B043B200496092 /* CategoriesViewModelTests.swift in Sources */,
 				5415873E27A009E20058EA09 /* SourcesViewModelTests.swift in Sources */,
 				5415874327A02E3B0058EA09 /* SourceServiceMock.swift in Sources */,
+				5458229D27B045C900496092 /* CategoryServiceMock.swift in Sources */,
 				5415874127A00D960058EA09 /* ReachabilityServiceMock.swift in Sources */,
 				54739D2C27A9C32A008D66AB /* Bundle+TestData.swift in Sources */,
 			);
