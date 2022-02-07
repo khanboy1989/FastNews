@@ -14,7 +14,13 @@ import RxCocoa
 class CategoryServiceMock: CategoryServiceType {
     
     func topHeadLines(_ categoryType: CategoryType, _ lang: String) -> Observable<TopHeadLinesModel> {
-        return Observable.empty()
+        return Observable.of(TopHeadLinesModel(status: nil, totalResults: nil, articles: createArticles()))
+    }
+    
+    private func createArticles() -> [ArticleModel] {
+        if let array = ArticlesModelTest(jsonFile: .articleData)?.articles {
+            return array
+        }
+        return []
     }
 }
-

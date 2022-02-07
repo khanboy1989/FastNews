@@ -61,5 +61,4 @@ class CustomSegmentsView: UIView, NibOwnerLoadable {
     func setItems(items: [CustomSegmentItem]) {
         self.items = items
     }
-    
 }
