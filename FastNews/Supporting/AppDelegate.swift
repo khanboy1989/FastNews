@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
+        
+        //swiftlint:disable unused_closure_parameter
         let container = NSPersistentContainer(name: "FastNews")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -58,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    //swiftlint:enble unused_closure_parameter
 
     // MARK: - Core Data Saving support
 

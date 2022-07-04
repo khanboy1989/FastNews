@@ -10,9 +10,11 @@ import Mapper
 @testable import FastNews
 
 enum ArticlesJsonFile: String {
-    // swiftlint:disable redundant_string_enum_value
+    //swiftlint:disable superfluous_disable_command
+    //swiftlint:disable redundant_string_enum_value
     case articleData = "articlesData"
     // swiftlint:enable redundant_string_enum_value
+    //swiftlint:enable superfluous_disable_command
 }
 
 extension ArticlesModelTest {

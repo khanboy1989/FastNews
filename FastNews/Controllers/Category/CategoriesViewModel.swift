@@ -131,7 +131,7 @@ class CategoriesViewModel: ViewModelType, Stepper {
             })
                 return ArticlesLoadingState.success(items)
             })
-            .catchError({ [unowned self] error -> Observable<ArticlesLoadingState> in
+            .catch({ [unowned self] error -> Observable<ArticlesLoadingState> in
                 let result: ArticlesLoadingState
                 if self.reachabilityService.isAvailable == false {
                     result = .error(.noInternet)

@@ -8,7 +8,6 @@
 import Moya
 import Mapper
 import RxSwift
-import Moya_ModelMapper
 
 class CategoryClient {
     private let configuration: CategoryApiConfiguration
@@ -21,16 +20,16 @@ class CategoryClient {
     
     func topHeadlines(categoryType: CategoryType, lang: String) -> Observable<TopHeadLinesModel> {
         let request = provider.rx.request(.topHeadLines(config: self.configuration, category: categoryType, lang: lang))
-            .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
+            .observe(on: ConcurrentDispatchQueueScheduler(qos: .utility))
             .map({response -> TopHeadLinesModel in
                 let topHeadlines = try response.map(to: TopHeadLinesModel.self)
                 return topHeadlines
             })
-            .catchError({ (error) in
+            .catch({ (error) in
                 let clientError = ClientError(fromError: error)
                 throw clientError
             })
-            .observeOn(MainScheduler.asyncInstance)
+                .observe(on: MainScheduler.asyncInstance)
             .asObservable()
         
         return request

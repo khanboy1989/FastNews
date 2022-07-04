@@ -8,7 +8,6 @@
 import Moya
 import Mapper
 import RxSwift
-import Moya_ModelMapper
 
 class SourceClient {
     private let configuration: SourceApiConfiguration
@@ -21,16 +20,16 @@ class SourceClient {
     }
     func sources(country: String) -> Observable<[Source]> {
         let request = provider.rx.request(.sources(config: self.configuration, country: country))
-            .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
+            .observe(on: ConcurrentDispatchQueueScheduler(qos: .utility))
             .map({response -> [Source] in
                 let sources = try response.map(to: [Source].self, keyPath: "sources")
                 return sources
             })
-            .catchError({ (error) in
+            .catch({ (error) in
                 let clientError = ClientError(fromError: error)
                 throw clientError
             })
-            .observeOn(MainScheduler.asyncInstance)
+            .observe(on: MainScheduler.asyncInstance)
             .asObservable()
         
         return request
