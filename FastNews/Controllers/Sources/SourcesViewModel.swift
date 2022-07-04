@@ -60,7 +60,7 @@ class SourcesViewModel: ViewModelType, Stepper {
             .map({ sources in
                 return SourcesLoadingState.success(sources)
             })
-            .catchError({ [unowned self] error -> Observable<SourcesLoadingState> in
+            .catch({ [unowned self] error -> Observable<SourcesLoadingState> in
                 let result: SourcesLoadingState
                 if self.reachabilityService.isAvailable == false {
                     result = .error(.noInternet)
@@ -79,10 +79,10 @@ class SourcesViewModel: ViewModelType, Stepper {
                 })
                     .switchLatest()
                     .bind(to: self.sourcesLoadingState)
-                    .disposed(by: disposeBag)
+                    .disposed(by: self.disposeBag)
                     
-                    let sources = createSourcesRequest()
-                    sourceRequest.onNext(sources)
+                    let sources = self.createSourcesRequest()
+                    self.sourceRequest.onNext(sources)
                     observer.onCompleted()
                     return Disposables.create()
             }
