@@ -78,6 +78,14 @@
 		5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACC726FCFCC100CC460A /* AppSteps.swift */; };
 		5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACCA26FD017600CC460A /* ViewModelBased.swift */; };
 		5494039E295B6E1700C09C7C /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5494039D295B6E1700C09C7C /* NSObject+Extensions.swift */; };
+		549403A1295B73B900C09C7C /* ShareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403A0295B73B900C09C7C /* ShareRequest.swift */; };
+		549403A4295B778200C09C7C /* BackgroundImportServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403A3295B778200C09C7C /* BackgroundImportServiceType.swift */; };
+		549403A7295B77F600C09C7C /* ManagedImportServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403A6295B77F600C09C7C /* ManagedImportServiceType.swift */; };
+		549403A9295B784D00C09C7C /* BackgroundImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403A8295B784D00C09C7C /* BackgroundImportService.swift */; };
+		549403AC295B793000C09C7C /* AppInformationServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403AB295B793000C09C7C /* AppInformationServiceType.swift */; };
+		549403AE295B8BA000C09C7C /* AppInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403AD295B8BA000C09C7C /* AppInformationService.swift */; };
+		549403B1295B8E8A00C09C7C /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403B0295B8E8A00C09C7C /* Bootstrapper.swift */; };
+		549403B3295B941300C09C7C /* JsonPlaceHolderApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549403B2295B941300C09C7C /* JsonPlaceHolderApiConfiguration.swift */; };
 		54A3ACA9270EBF73006B7A1B /* Environment+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACA8270EBF73006B7A1B /* Environment+Api.swift */; };
 		54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACAA270EC179006B7A1B /* Environment.swift */; };
 		54B3A23227B1ADC7009168E5 /* articlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54B3A23127B1ADC7009168E5 /* articlesData.json */; };
@@ -211,6 +219,14 @@
 		5490ACC726FCFCC100CC460A /* AppSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSteps.swift; sourceTree = "<group>"; };
 		5490ACCA26FD017600CC460A /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
 		5494039D295B6E1700C09C7C /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		549403A0295B73B900C09C7C /* ShareRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareRequest.swift; sourceTree = "<group>"; };
+		549403A3295B778200C09C7C /* BackgroundImportServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImportServiceType.swift; sourceTree = "<group>"; };
+		549403A6295B77F600C09C7C /* ManagedImportServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedImportServiceType.swift; sourceTree = "<group>"; };
+		549403A8295B784D00C09C7C /* BackgroundImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImportService.swift; sourceTree = "<group>"; };
+		549403AB295B793000C09C7C /* AppInformationServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformationServiceType.swift; sourceTree = "<group>"; };
+		549403AD295B8BA000C09C7C /* AppInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformationService.swift; sourceTree = "<group>"; };
+		549403B0295B8E8A00C09C7C /* Bootstrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
+		549403B2295B941300C09C7C /* JsonPlaceHolderApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPlaceHolderApiConfiguration.swift; sourceTree = "<group>"; };
 		54A3ACA8270EBF73006B7A1B /* Environment+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Api.swift"; sourceTree = "<group>"; };
 		54A3ACAA270EC179006B7A1B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		54B3A23127B1ADC7009168E5 /* articlesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articlesData.json; sourceTree = "<group>"; };
@@ -476,6 +492,8 @@
 		5457F46F26FA00760020C5CB /* FastNews */ = {
 			isa = PBXGroup;
 			children = (
+				549403AF295B8E4300C09C7C /* Bootstrapper */,
+				549403A5295B77E400C09C7C /* Imports */,
 				543D360D270E16E6002E5927 /* Models */,
 				5464CFC12702494A00969B0D /* Controllers */,
 				542FB5362705A56D001CF0E6 /* Views */,
@@ -538,6 +556,7 @@
 				54A3ACA8270EBF73006B7A1B /* Environment+Api.swift */,
 				54A3ACAA270EC179006B7A1B /* Environment.swift */,
 				5489F15F2755607700259AB5 /* SourceApiConfiguration.swift */,
+				549403B2295B941300C09C7C /* JsonPlaceHolderApiConfiguration.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -641,9 +660,54 @@
 			path = ViewModelBased;
 			sourceTree = "<group>";
 		};
+		5494039F295B737F00C09C7C /* SharedRequestService */ = {
+			isa = PBXGroup;
+			children = (
+				549403A0295B73B900C09C7C /* ShareRequest.swift */,
+			);
+			path = SharedRequestService;
+			sourceTree = "<group>";
+		};
+		549403A2295B76A300C09C7C /* BackgroundImportServices */ = {
+			isa = PBXGroup;
+			children = (
+				549403A3295B778200C09C7C /* BackgroundImportServiceType.swift */,
+				549403A8295B784D00C09C7C /* BackgroundImportService.swift */,
+			);
+			path = BackgroundImportServices;
+			sourceTree = "<group>";
+		};
+		549403A5295B77E400C09C7C /* Imports */ = {
+			isa = PBXGroup;
+			children = (
+				549403A6295B77F600C09C7C /* ManagedImportServiceType.swift */,
+			);
+			path = Imports;
+			sourceTree = "<group>";
+		};
+		549403AA295B791B00C09C7C /* AppStateServiceType */ = {
+			isa = PBXGroup;
+			children = (
+				549403AB295B793000C09C7C /* AppInformationServiceType.swift */,
+				549403AD295B8BA000C09C7C /* AppInformationService.swift */,
+			);
+			path = AppStateServiceType;
+			sourceTree = "<group>";
+		};
+		549403AF295B8E4300C09C7C /* Bootstrapper */ = {
+			isa = PBXGroup;
+			children = (
+				549403B0295B8E8A00C09C7C /* Bootstrapper.swift */,
+			);
+			path = Bootstrapper;
+			sourceTree = "<group>";
+		};
 		54CBFAC626FA63780024BC27 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				549403AA295B791B00C09C7C /* AppStateServiceType */,
+				549403A2295B76A300C09C7C /* BackgroundImportServices */,
+				5494039F295B737F00C09C7C /* SharedRequestService */,
 				5451AC7C27103D760044F941 /* NetworkRequestServices */,
 				54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */,
 			);
@@ -1121,11 +1185,14 @@
 				54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */,
 				54EA0B5C2736F463006647C6 /* Asset.swift in Sources */,
 				5457F47B26FA00760020C5CB /* FastNews.xcdatamodeld in Sources */,
+				549403AE295B8BA000C09C7C /* AppInformationService.swift in Sources */,
 				54EA0B6427370253006647C6 /* Alertable.swift in Sources */,
 				5403DB142705020100414F28 /* CategoryType.swift in Sources */,
 				54ED103D2728043500A562D5 /* LoadingState.swift in Sources */,
+				549403A1295B73B900C09C7C /* ShareRequest.swift in Sources */,
 				54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */,
 				5494039E295B6E1700C09C7C /* NSObject+Extensions.swift in Sources */,
+				549403A4295B778200C09C7C /* BackgroundImportServiceType.swift in Sources */,
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
 				5490ACC026FCB48100CC460A /* ViewModel.swift in Sources */,
@@ -1133,10 +1200,12 @@
 				54FE4B5026FA0721005541C5 /* UITableView+Reusable.swift in Sources */,
 				542FB53E2705A965001CF0E6 /* CustomSegmentItemView.swift in Sources */,
 				542FB5392705A941001CF0E6 /* CustomSegmentsView.swift in Sources */,
+				549403A9295B784D00C09C7C /* BackgroundImportService.swift in Sources */,
 				546B8A022710882A004382F8 /* ArticleModel.swift in Sources */,
 				542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */,
 				5490ACC326FCB55300CC460A /* ViewModelType.swift in Sources */,
 				54EE5CB7278B6B650007333E /* SourceHeaderView.swift in Sources */,
+				549403A7295B77F600C09C7C /* ManagedImportServiceType.swift in Sources */,
 				5489F15E2755600600259AB5 /* SourceClient.swift in Sources */,
 				5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */,
 				5489F15C27555F2500259AB5 /* Source.swift in Sources */,
@@ -1150,15 +1219,18 @@
 				542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */,
 				541147A8274F7A9F00548530 /* DefaultStyleNavigationController.swift in Sources */,
 				5489F15927555EB100259AB5 /* SourceServiceType.swift in Sources */,
+				549403AC295B793000C09C7C /* AppInformationServiceType.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,
 				546B8A042710893B004382F8 /* SourceModel.swift in Sources */,
+				549403B3295B941300C09C7C /* JsonPlaceHolderApiConfiguration.swift in Sources */,
 				543D3615270E1992002E5927 /* CategoryApi.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,
 				5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */,
 				5489F162275560FD00259AB5 /* SourceApi.swift in Sources */,
 				548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */,
+				549403B1295B8E8A00C09C7C /* Bootstrapper.swift in Sources */,
 				544348892712D85200D7B43B /* ClientError.swift in Sources */,
 				54EA0B5E2736FE9B006647C6 /* UIViewController + Extensions.swift in Sources */,
 				54FE4B5326FA0757005541C5 /* StoryboardBased.swift in Sources */,

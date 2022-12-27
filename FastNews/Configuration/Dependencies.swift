@@ -76,6 +76,10 @@ class Dependencies {
         container.autoregister(ReachabilityServiceType.self, initializer: ReachabilityService.init)
         container.autoregister(CategoryServiceType.self, initializer: CategoryService.init)
         container.autoregister(SourceServiceType.self, initializer: SourceService.init)
+        container.autoregister(BackgroundImportServiceType.self, initializer: BackgroundImportService.init)
+            .inObjectScope(.container)
+        container.autoregister(AppInformationServiceType.self, initializer: AppInformationService.init)
+            .inObjectScope(.container)
     }
     
     private func configureViewModels() {
