@@ -77,6 +77,7 @@
 		5490ACC626FCFB5A00CC460A /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACC526FCFB5A00CC460A /* AppFlow.swift */; };
 		5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACC726FCFCC100CC460A /* AppSteps.swift */; };
 		5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490ACCA26FD017600CC460A /* ViewModelBased.swift */; };
+		5494039E295B6E1700C09C7C /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5494039D295B6E1700C09C7C /* NSObject+Extensions.swift */; };
 		54A3ACA9270EBF73006B7A1B /* Environment+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACA8270EBF73006B7A1B /* Environment+Api.swift */; };
 		54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACAA270EC179006B7A1B /* Environment.swift */; };
 		54B3A23227B1ADC7009168E5 /* articlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54B3A23127B1ADC7009168E5 /* articlesData.json */; };
@@ -209,6 +210,7 @@
 		5490ACC526FCFB5A00CC460A /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		5490ACC726FCFCC100CC460A /* AppSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSteps.swift; sourceTree = "<group>"; };
 		5490ACCA26FD017600CC460A /* ViewModelBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBased.swift; sourceTree = "<group>"; };
+		5494039D295B6E1700C09C7C /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		54A3ACA8270EBF73006B7A1B /* Environment+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+Api.swift"; sourceTree = "<group>"; };
 		54A3ACAA270EC179006B7A1B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		54B3A23127B1ADC7009168E5 /* articlesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articlesData.json; sourceTree = "<group>"; };
@@ -744,6 +746,7 @@
 				542FB53427059A9C001CF0E6 /* String+news.swift */,
 				542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */,
 				54EA0B5D2736FE9B006647C6 /* UIViewController + Extensions.swift */,
+				5494039D295B6E1700C09C7C /* NSObject+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1122,6 +1125,7 @@
 				5403DB142705020100414F28 /* CategoryType.swift in Sources */,
 				54ED103D2728043500A562D5 /* LoadingState.swift in Sources */,
 				54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */,
+				5494039E295B6E1700C09C7C /* NSObject+Extensions.swift in Sources */,
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
 				5490ACC026FCB48100CC460A /* ViewModel.swift in Sources */,
