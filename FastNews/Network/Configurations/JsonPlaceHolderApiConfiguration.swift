@@ -7,7 +7,16 @@
 
 import Foundation
 
-
-struct JsonPlaceHolderApiConfiguration {
+struct JsonPlaceHolderApiConfiguration: PostsJsonPlaceHolderApiConfiguration {
+    let baseUrl: URL = {
+        return URL(string: "https://jsonplaceholder.typicode.com")!
+    }()
     
+    let proxyPath: String = {
+        return ""
+    }()
+    
+    let apiKey: String = {
+        return ""
+    }()
 }
