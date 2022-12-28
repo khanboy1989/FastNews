@@ -14,8 +14,7 @@ final class Bootstrapper {
     
     private static func initBackgroundImports(dependencies: Dependencies) {
         let backgroundImportService = dependencies.resolve(BackgroundImportServiceType.self)
-        
-//        let configurationImportService = dependencies.resolve(ConfigurationImportServiceType.self)
-//        backgroundImportService.registerImportService(configurationImportService.managedImportService)
+        let postsImportService = dependencies.resolve(PostImportServiceType.self)
+        backgroundImportService.registerImportService(postsImportService.managedImportService)
     }
 }

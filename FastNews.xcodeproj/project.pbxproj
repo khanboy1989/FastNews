@@ -15,6 +15,11 @@
 		5415873E27A009E20058EA09 /* SourcesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415873D27A009E20058EA09 /* SourcesViewModelTests.swift */; };
 		5415874127A00D960058EA09 /* ReachabilityServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415874027A00D960058EA09 /* ReachabilityServiceMock.swift */; };
 		5415874327A02E3B0058EA09 /* SourceServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415874227A02E3B0058EA09 /* SourceServiceMock.swift */; };
+		541929BE295C939200947F8D /* PostApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929BD295C939200947F8D /* PostApi.swift */; };
+		541929C0295C948100947F8D /* PostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929BF295C948100947F8D /* PostClient.swift */; };
+		541929C3295C995E00947F8D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929C2295C995E00947F8D /* Post.swift */; };
+		541929C6295C9B1100947F8D /* PostImportServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929C5295C9B1100947F8D /* PostImportServiceType.swift */; };
+		541929C8295C9BD100947F8D /* PostImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929C7295C9BD100947F8D /* PostImportService.swift */; };
 		541CE15A2873179F00B4857C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CE1592873179F00B4857C /* Mapper.swift */; };
 		542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BA2704369F009C1D23 /* CategoryFlow.swift */; };
 		542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BC2704374A009C1D23 /* SourceFlow.swift */; };
@@ -151,6 +156,11 @@
 		5415873D27A009E20058EA09 /* SourcesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewModelTests.swift; sourceTree = "<group>"; };
 		5415874027A00D960058EA09 /* ReachabilityServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityServiceMock.swift; sourceTree = "<group>"; };
 		5415874227A02E3B0058EA09 /* SourceServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceServiceMock.swift; sourceTree = "<group>"; };
+		541929BD295C939200947F8D /* PostApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApi.swift; sourceTree = "<group>"; };
+		541929BF295C948100947F8D /* PostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostClient.swift; sourceTree = "<group>"; };
+		541929C2295C995E00947F8D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		541929C5295C9B1100947F8D /* PostImportServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImportServiceType.swift; sourceTree = "<group>"; };
+		541929C7295C9BD100947F8D /* PostImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImportService.swift; sourceTree = "<group>"; };
 		541CE1592873179F00B4857C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		542202BA2704369F009C1D23 /* CategoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFlow.swift; sourceTree = "<group>"; };
 		542202BC2704374A009C1D23 /* SourceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceFlow.swift; sourceTree = "<group>"; };
@@ -305,6 +315,7 @@
 				543D3616270E1A62002E5927 /* CategoryClient.swift */,
 				544348882712D85200D7B43B /* ClientError.swift */,
 				5489F15D2755600600259AB5 /* SourceClient.swift */,
+				541929BF295C948100947F8D /* PostClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -326,6 +337,23 @@
 				5458229C27B045C900496092 /* CategoryServiceMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		541929C1295C994D00947F8D /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				541929C2295C995E00947F8D /* Post.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		541929C4295C9AFB00947F8D /* PostImportService */ = {
+			isa = PBXGroup;
+			children = (
+				541929C5295C9B1100947F8D /* PostImportServiceType.swift */,
+				541929C7295C9BD100947F8D /* PostImportService.swift */,
+			);
+			path = PostImportService;
 			sourceTree = "<group>";
 		};
 		541CE1582873179300B4857C /* Mapper */ = {
@@ -430,6 +458,7 @@
 		543D360D270E16E6002E5927 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				541929C1295C994D00947F8D /* Post */,
 				5489F15A27555F1800259AB5 /* Source */,
 				543D360E270E16F1002E5927 /* Category */,
 			);
@@ -453,6 +482,7 @@
 			children = (
 				543D3614270E1992002E5927 /* CategoryApi.swift */,
 				5489F161275560FD00259AB5 /* SourceApi.swift */,
+				541929BD295C939200947F8D /* PostApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -708,6 +738,7 @@
 		54CBFAC626FA63780024BC27 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				541929C4295C9AFB00947F8D /* PostImportService */,
 				549403AA295B791B00C09C7C /* AppStateServiceType */,
 				549403A2295B76A300C09C7C /* BackgroundImportServices */,
 				5494039F295B737F00C09C7C /* SharedRequestService */,
@@ -1174,6 +1205,7 @@
 				5490ACC626FCFB5A00CC460A /* AppFlow.swift in Sources */,
 				54EE5CB4278B3BA50007333E /*  SourceMainViewModel.swift in Sources */,
 				5403DB12270501C700414F28 /* TopHeadLinesModel.swift in Sources */,
+				541929C8295C9BD100947F8D /* PostImportService.swift in Sources */,
 				542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */,
 				5451AC8027103DBA0044F941 /* CategoryServiceType.swift in Sources */,
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
@@ -1198,7 +1230,9 @@
 				549403A4295B778200C09C7C /* BackgroundImportServiceType.swift in Sources */,
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
+				541929C3295C995E00947F8D /* Post.swift in Sources */,
 				5490ACC026FCB48100CC460A /* ViewModel.swift in Sources */,
+				541929C6295C9B1100947F8D /* PostImportServiceType.swift in Sources */,
 				543D3610270E17C4002E5927 /* CategoryApiConfiguration.swift in Sources */,
 				54FE4B5026FA0721005541C5 /* UITableView+Reusable.swift in Sources */,
 				542FB53E2705A965001CF0E6 /* CustomSegmentItemView.swift in Sources */,
@@ -1209,6 +1243,8 @@
 				5490ACC326FCB55300CC460A /* ViewModelType.swift in Sources */,
 				54EE5CB7278B6B650007333E /* SourceHeaderView.swift in Sources */,
 				549403A7295B77F600C09C7C /* ManagedImportServiceType.swift in Sources */,
+				541929BE295C939200947F8D /* PostApi.swift in Sources */,
+				541929C0295C948100947F8D /* PostClient.swift in Sources */,
 				5489F15E2755600600259AB5 /* SourceClient.swift in Sources */,
 				5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */,
 				549403B5295B946600C09C7C /* PostsJsonPlaceHolderApiConfiguration.swift in Sources */,

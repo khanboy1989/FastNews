@@ -55,6 +55,10 @@ class Dependencies {
             return Environment.current.sourceApiConfiguration
         }
         
+        container.register(PostsJsonPlaceHolderApiConfiguration.self) { _ in
+            return Environment.current.postsJsonApiConfiguration
+        }
+        
         // Api providers
         container.register(MoyaProvider<CategoryApi>.self) { _ in
             return Environment.current.categoryApiProvider
@@ -64,12 +68,17 @@ class Dependencies {
             return Environment.current.sourceApiProvider
         }
         
+        container.register(MoyaProvider<PostApi>.self) { _ in
+            return Environment.current.postApiProvider
+        }
+        
         // Clients
         container.autoregister(CategoryClient.self, initializer: CategoryClient.init)
         
         container.autoregister(SourceClient.self,
             initializer: SourceClient.init)
         
+        container.autoregister(PostClient.self, initializer: PostClient.init)
     }
     
     private func configureServices() {
@@ -80,6 +89,7 @@ class Dependencies {
             .inObjectScope(.container)
         container.autoregister(AppInformationServiceType.self, initializer: AppInformationService.init)
             .inObjectScope(.container)
+        container.autoregister(PostImportServiceType.self, initializer: PostImportService.init)
     }
     
     private func configureViewModels() {

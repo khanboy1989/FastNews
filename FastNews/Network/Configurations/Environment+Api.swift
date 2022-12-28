@@ -42,6 +42,10 @@ extension Environment {
         return createProvider()
     }
     
+    var postApiProvider: MoyaProvider<PostApi> {
+        return createProvider()
+    }
+    
     private func createProvider<T>() -> MoyaProvider<T> {
         let configuration = URLSessionConfiguration.default
         let session = Session(configuration: configuration)
