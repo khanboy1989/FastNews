@@ -112,6 +112,7 @@
 		54EE5CB4278B3BA50007333E /*  SourceMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE5CB3278B3BA50007333E /*  SourceMainViewModel.swift */; };
 		54EE5CB7278B6B650007333E /* SourceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE5CB6278B6B650007333E /* SourceHeaderView.swift */; };
 		54EE5CB9278B6B6F0007333E /* SourceHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EE5CB8278B6B6F0007333E /* SourceHeaderView.xib */; };
+		54EED47E295D8CFE00C83626 /* PostStorageServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EED47D295D8CFE00C83626 /* PostStorageServiceType.swift */; };
 		54F5F3B627031CC50044A362 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F5F3B527031CC50044A362 /* TabBarController.storyboard */; };
 		54F5F3B827031D410044A362 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3B727031D410044A362 /* TabBarController.swift */; };
 		54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3B927032D780044A362 /* MainFlow.swift */; };
@@ -259,6 +260,7 @@
 		54EE5CB3278B3BA50007333E /*  SourceMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " SourceMainViewModel.swift"; sourceTree = "<group>"; };
 		54EE5CB6278B6B650007333E /* SourceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceHeaderView.swift; sourceTree = "<group>"; };
 		54EE5CB8278B6B6F0007333E /* SourceHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceHeaderView.xib; sourceTree = "<group>"; };
+		54EED47D295D8CFE00C83626 /* PostStorageServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStorageServiceType.swift; sourceTree = "<group>"; };
 		54F5F3B527031CC50044A362 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
 		54F5F3B727031D410044A362 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		54F5F3B927032D780044A362 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				541929C5295C9B1100947F8D /* PostImportServiceType.swift */,
 				541929C7295C9BD100947F8D /* PostImportService.swift */,
+				54EED47D295D8CFE00C83626 /* PostStorageServiceType.swift */,
 			);
 			path = PostImportService;
 			sourceTree = "<group>";
@@ -1226,6 +1229,7 @@
 				54ED103D2728043500A562D5 /* LoadingState.swift in Sources */,
 				549403A1295B73B900C09C7C /* ShareRequest.swift in Sources */,
 				54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */,
+				54EED47E295D8CFE00C83626 /* PostStorageServiceType.swift in Sources */,
 				5494039E295B6E1700C09C7C /* NSObject+Extensions.swift in Sources */,
 				549403A4295B778200C09C7C /* BackgroundImportServiceType.swift in Sources */,
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
