@@ -119,6 +119,17 @@
 		54F5F3BC270332150044A362 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3BB270332150044A362 /* TabBarViewModel.swift */; };
 		54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */; };
 		54F5F3C6270395780044A362 /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5F3C5270395780044A362 /* UIViewController+rx.swift */; };
+		54FBC68C2968B58E0054D7A0 /* PostsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FBC68B2968B58E0054D7A0 /* PostsViewController.storyboard */; };
+		54FBC68E2968B6100054D7A0 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC68D2968B6100054D7A0 /* PostsViewController.swift */; };
+		54FBC6902968B64D0054D7A0 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC68F2968B64D0054D7A0 /* PostsViewModel.swift */; };
+		54FBC6922968B9390054D7A0 /* PostsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6912968B9390054D7A0 /* PostsFlow.swift */; };
+		54FBC6942968BC530054D7A0 /* PostStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6932968BC530054D7A0 /* PostStorageService.swift */; };
+		54FBC6962968C1D60054D7A0 /* UserDefaults+news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6952968C1D60054D7A0 /* UserDefaults+news.swift */; };
+		54FBC6982968C29A0054D7A0 /* NSKeyedArchiver+news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6972968C29A0054D7A0 /* NSKeyedArchiver+news.swift */; };
+		54FBC69A2968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6992968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift */; };
+		54FBC69D2968CB600054D7A0 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 54FBC69C2968CB600054D7A0 /* posts.json */; };
+		54FBC6A02968D0C40054D7A0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC69F2968D0C40054D7A0 /* PostTableViewCell.swift */; };
+		54FBC6A22968D0D50054D7A0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBC6A12968D0D50054D7A0 /* PostTableViewCell.xib */; };
 		54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54FE4B4226FA04BA005541C5 /* .swiftlint.yml */; };
 		54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */; };
 		54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4926FA06A3005541C5 /* Reusable.swift */; };
@@ -267,6 +278,17 @@
 		54F5F3BB270332150044A362 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		54F5F3C027034EFE0044A362 /* AppStepNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepNavigator.swift; sourceTree = "<group>"; };
 		54F5F3C5270395780044A362 /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+rx.swift"; sourceTree = "<group>"; };
+		54FBC68B2968B58E0054D7A0 /* PostsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsViewController.storyboard; sourceTree = "<group>"; };
+		54FBC68D2968B6100054D7A0 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		54FBC68F2968B64D0054D7A0 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		54FBC6912968B9390054D7A0 /* PostsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFlow.swift; sourceTree = "<group>"; };
+		54FBC6932968BC530054D7A0 /* PostStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStorageService.swift; sourceTree = "<group>"; };
+		54FBC6952968C1D60054D7A0 /* UserDefaults+news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+news.swift"; sourceTree = "<group>"; };
+		54FBC6972968C29A0054D7A0 /* NSKeyedArchiver+news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSKeyedArchiver+news.swift"; sourceTree = "<group>"; };
+		54FBC6992968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSKeyedUnArchiver+news.swift"; sourceTree = "<group>"; };
+		54FBC69C2968CB600054D7A0 /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		54FBC69F2968D0C40054D7A0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		54FBC6A12968D0D50054D7A0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		54FE4B4226FA04BA005541C5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		54FE4B4926FA06A3005541C5 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -355,6 +377,7 @@
 				541929C5295C9B1100947F8D /* PostImportServiceType.swift */,
 				541929C7295C9BD100947F8D /* PostImportService.swift */,
 				54EED47D295D8CFE00C83626 /* PostStorageServiceType.swift */,
+				54FBC6932968BC530054D7A0 /* PostStorageService.swift */,
 			);
 			path = PostImportService;
 			sourceTree = "<group>";
@@ -453,6 +476,7 @@
 		543B246C26FE570900286616 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54FBC69B2968CB220054D7A0 /* Bundled */,
 				543B245C26FE54AD00286616 /* Fonts */,
 			);
 			path = Resources;
@@ -600,6 +624,7 @@
 		5464CFC12702494A00969B0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				54FBC68A2968B5460054D7A0 /* Posts */,
 				54EE5CAE278B26B00007333E /* SourceMain */,
 				548CC247273C5F730092E2A1 /* ArticleDetail */,
 				542202BE27048D47009C1D23 /* Sources */,
@@ -684,6 +709,7 @@
 				54F5F3B927032D780044A362 /* MainFlow.swift */,
 				542202BA2704369F009C1D23 /* CategoryFlow.swift */,
 				542202BC2704374A009C1D23 /* SourceFlow.swift */,
+				54FBC6912968B9390054D7A0 /* PostsFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -779,6 +805,7 @@
 		54ED10352727DC1800A562D5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				54FBC69E2968D0AB0054D7A0 /* PostTableViewCell */,
 				54E69B2F275D5522008C9D10 /* SourceTableViewCell */,
 				54ED10362727DD3A00A562D5 /* ArticleTableViewCell */,
 			);
@@ -848,8 +875,38 @@
 				542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */,
 				54EA0B5D2736FE9B006647C6 /* UIViewController + Extensions.swift */,
 				5494039D295B6E1700C09C7C /* NSObject+Extensions.swift */,
+				54FBC6952968C1D60054D7A0 /* UserDefaults+news.swift */,
+				54FBC6972968C29A0054D7A0 /* NSKeyedArchiver+news.swift */,
+				54FBC6992968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		54FBC68A2968B5460054D7A0 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				54FBC68B2968B58E0054D7A0 /* PostsViewController.storyboard */,
+				54FBC68D2968B6100054D7A0 /* PostsViewController.swift */,
+				54FBC68F2968B64D0054D7A0 /* PostsViewModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		54FBC69B2968CB220054D7A0 /* Bundled */ = {
+			isa = PBXGroup;
+			children = (
+				54FBC69C2968CB600054D7A0 /* posts.json */,
+			);
+			path = Bundled;
+			sourceTree = "<group>";
+		};
+		54FBC69E2968D0AB0054D7A0 /* PostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				54FBC69F2968D0C40054D7A0 /* PostTableViewCell.swift */,
+				54FBC6A12968D0D50054D7A0 /* PostTableViewCell.xib */,
+			);
+			path = PostTableViewCell;
 			sourceTree = "<group>";
 		};
 		54FE4B4526FA0602005541C5 /* Utility */ = {
@@ -1021,13 +1078,16 @@
 				543B246326FE54C700286616 /* AirbnbCerealLight.ttf in Resources */,
 				54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */,
 				543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */,
+				54FBC68C2968B58E0054D7A0 /* PostsViewController.storyboard in Resources */,
 				548CC249273C5F890092E2A1 /* ArticleDetailViewController.storyboard in Resources */,
 				5457F48026FA00770020C5CB /* LaunchScreen.storyboard in Resources */,
 				5457F47D26FA00770020C5CB /* Assets.xcassets in Resources */,
 				542FB53B2705A94C001CF0E6 /* CustomSegmentsView.xib in Resources */,
+				54FBC6A22968D0D50054D7A0 /* PostTableViewCell.xib in Resources */,
 				543B246626FE54C700286616 /* AirbnbCerealMedium.ttf in Resources */,
 				54EE5CB9278B6B6F0007333E /* SourceHeaderView.xib in Resources */,
 				542FB5402705A972001CF0E6 /* CustomSegmentItemView.xib in Resources */,
+				54FBC69D2968CB600054D7A0 /* posts.json in Resources */,
 				543B246826FE54C700286616 /* AirbnbCerealExtraBold.ttf in Resources */,
 				54F5F3B627031CC50044A362 /* TabBarController.storyboard in Resources */,
 				54EE5CB0278B27140007333E /* SourceMainViewController.storyboard in Resources */,
@@ -1203,6 +1263,7 @@
 				5448A1AC2730206E003AF5C4 /* Article.swift in Sources */,
 				54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */,
 				542202C62704983C009C1D23 /* SourcesViewModel.swift in Sources */,
+				54FBC6982968C29A0054D7A0 /* NSKeyedArchiver+news.swift in Sources */,
 				5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */,
 				54F5F3BC270332150044A362 /* TabBarViewModel.swift in Sources */,
 				5490ACC626FCFB5A00CC460A /* AppFlow.swift in Sources */,
@@ -1218,6 +1279,7 @@
 				542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */,
 				5489F1602755607700259AB5 /* SourceApiConfiguration.swift in Sources */,
 				542FB53527059A9C001CF0E6 /* String+news.swift in Sources */,
+				54FBC69A2968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift in Sources */,
 				543B246A26FE54D400286616 /* Font.swift in Sources */,
 				542FB5422705B95D001CF0E6 /* UIView+Extensions.swift in Sources */,
 				54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */,
@@ -1232,6 +1294,7 @@
 				54EED47E295D8CFE00C83626 /* PostStorageServiceType.swift in Sources */,
 				5494039E295B6E1700C09C7C /* NSObject+Extensions.swift in Sources */,
 				549403A4295B778200C09C7C /* BackgroundImportServiceType.swift in Sources */,
+				54FBC6922968B9390054D7A0 /* PostsFlow.swift in Sources */,
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
 				541929C3295C995E00947F8D /* Post.swift in Sources */,
@@ -1256,6 +1319,7 @@
 				542FB53027059955001CF0E6 /* Localizable.swift in Sources */,
 				543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */,
 				54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */,
+				54FBC6A02968D0C40054D7A0 /* PostTableViewCell.swift in Sources */,
 				54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */,
 				541CE15A2873179F00B4857C /* Mapper.swift in Sources */,
 				548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */,
@@ -1263,8 +1327,10 @@
 				542FB53327059A2A001CF0E6 /* NewsCompatible.swift in Sources */,
 				541147A8274F7A9F00548530 /* DefaultStyleNavigationController.swift in Sources */,
 				5489F15927555EB100259AB5 /* SourceServiceType.swift in Sources */,
+				54FBC68E2968B6100054D7A0 /* PostsViewController.swift in Sources */,
 				549403AC295B793000C09C7C /* AppInformationServiceType.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
+				54FBC6962968C1D60054D7A0 /* UserDefaults+news.swift in Sources */,
 				543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,
 				546B8A042710893B004382F8 /* SourceModel.swift in Sources */,
@@ -1281,8 +1347,10 @@
 				5451AC7E27103D870044F941 /* CategoryService.swift in Sources */,
 				54F5F3B827031D410044A362 /* TabBarController.swift in Sources */,
 				54A3ACA9270EBF73006B7A1B /* Environment+Api.swift in Sources */,
+				54FBC6942968BC530054D7A0 /* PostStorageService.swift in Sources */,
 				54E69B32275D588E008C9D10 /* SourceTableViewCell.swift in Sources */,
 				5457F47326FA00760020C5CB /* SceneDelegate.swift in Sources */,
+				54FBC6902968B64D0054D7A0 /* PostsViewModel.swift in Sources */,
 				54F5F3C6270395780044A362 /* UIViewController+rx.swift in Sources */,
 				54FE4B5526FA0781005541C5 /* StoryboardSceneBased..swift in Sources */,
 				54EE5CB2278B272C0007333E /* SourceMainViewController.swift in Sources */,

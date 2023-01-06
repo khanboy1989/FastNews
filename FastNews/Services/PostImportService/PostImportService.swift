@@ -12,9 +12,11 @@ class PostImportService: PostImportServiceType, ManagedImportServiceType {
     
     private let postClient: PostClient
     private let disposeBag = DisposeBag()
-        
-    init(postClient: PostClient) {
+    private let postStorageService: PostStorageServiceType
+    
+    init(postClient: PostClient, postStorageService: PostStorageServiceType) {
         self.postClient = postClient
+        self.postStorageService = postStorageService
     }
     
     var managedImportService: ManagedImportServiceType {
@@ -25,16 +27,17 @@ class PostImportService: PostImportServiceType, ManagedImportServiceType {
         return String(describing: self)
     }
     
-    func runManagedImport() -> Observable<Void> {
-        return runImport().map({ _ in () })
-    }
     
     func runImport() -> Observable<[Post]> {
         return postClient
             .posts()
-            .map { posts in
-                print("posts = \(posts)")
-                return posts
+            .flatMap { posts in
+                self.postStorageService.updateOrCreate(posts: posts)
             }
     }
+    
+    func runManagedImport() -> Observable<Void> {
+        return runImport().map({ _ in () })
+    }
+    
 }

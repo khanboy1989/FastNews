@@ -8,7 +8,7 @@
 import Foundation
 import Mapper
 
-struct Post {
+struct Post: Codable {
     let userId: Int
     let id: Int
     let title: String
@@ -24,4 +24,3 @@ extension Post: Mappable {
         body = try map.from("body")
     }
 }
-

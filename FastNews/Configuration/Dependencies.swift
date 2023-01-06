@@ -90,6 +90,9 @@ class Dependencies {
         container.autoregister(AppInformationServiceType.self, initializer: AppInformationService.init)
             .inObjectScope(.container)
         container.autoregister(PostImportServiceType.self, initializer: PostImportService.init)
+        container.autoregister(PostStorageServiceType.self, initializer: PostStorageService.init)
+        container.autoregister(PostStorageServiceType.self, initializer: PostStorageService.init)
+            .inObjectScope(.container)
     }
     
     private func configureViewModels() {
@@ -99,6 +102,7 @@ class Dependencies {
         container.autoregister(SourcesViewModel.self, initializer: SourcesViewModel.init)
         container.autoregister(ArticleDetailViewModel.self, argument: Article.self, initializer: ArticleDetailViewModel.init)
         container.autoregister(SourceMainViewModel.self, argument: Source.self, initializer: SourceMainViewModel.init)
+        container.autoregister(PostsViewModel.self, initializer: PostsViewModel.init)
     }
     
     private func configureSteppers() {

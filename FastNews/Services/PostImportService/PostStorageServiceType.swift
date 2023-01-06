@@ -9,6 +9,6 @@ import Foundation
 import RxSwift
 
 protocol PostStorageServiceType {
-    func updateOrCreate(configuration: [Post]) -> Observable<[Post]>
+    func updateOrCreate(posts: [Post]) -> Observable<[Post]>
     func allPosts() -> Observable<[Post]>
 }
