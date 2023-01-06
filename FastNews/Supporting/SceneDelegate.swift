@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         dependencies = Dependencies()
         dependencies.configure()
+        Bootstrapper.run(dependencies: dependencies)
         
         appFlow = AppFlow(with: window, resolver: dependencies)
         let appStepper = OneStepper(withSingleStep: AppSteps.initial)

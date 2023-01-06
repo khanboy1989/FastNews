@@ -55,6 +55,10 @@ class Dependencies {
             return Environment.current.sourceApiConfiguration
         }
         
+        container.register(PostsJsonPlaceHolderApiConfiguration.self) { _ in
+            return Environment.current.postsJsonApiConfiguration
+        }
+        
         // Api providers
         container.register(MoyaProvider<CategoryApi>.self) { _ in
             return Environment.current.categoryApiProvider
@@ -64,18 +68,31 @@ class Dependencies {
             return Environment.current.sourceApiProvider
         }
         
+        container.register(MoyaProvider<PostApi>.self) { _ in
+            return Environment.current.postApiProvider
+        }
+        
         // Clients
         container.autoregister(CategoryClient.self, initializer: CategoryClient.init)
         
         container.autoregister(SourceClient.self,
             initializer: SourceClient.init)
         
+        container.autoregister(PostClient.self, initializer: PostClient.init)
     }
     
     private func configureServices() {
         container.autoregister(ReachabilityServiceType.self, initializer: ReachabilityService.init)
         container.autoregister(CategoryServiceType.self, initializer: CategoryService.init)
         container.autoregister(SourceServiceType.self, initializer: SourceService.init)
+        container.autoregister(BackgroundImportServiceType.self, initializer: BackgroundImportService.init)
+            .inObjectScope(.container)
+        container.autoregister(AppInformationServiceType.self, initializer: AppInformationService.init)
+            .inObjectScope(.container)
+        container.autoregister(PostImportServiceType.self, initializer: PostImportService.init)
+        container.autoregister(PostStorageServiceType.self, initializer: PostStorageService.init)
+        container.autoregister(PostStorageServiceType.self, initializer: PostStorageService.init)
+            .inObjectScope(.container)
     }
     
     private func configureViewModels() {
@@ -85,6 +102,7 @@ class Dependencies {
         container.autoregister(SourcesViewModel.self, initializer: SourcesViewModel.init)
         container.autoregister(ArticleDetailViewModel.self, argument: Article.self, initializer: ArticleDetailViewModel.init)
         container.autoregister(SourceMainViewModel.self, argument: Source.self, initializer: SourceMainViewModel.init)
+        container.autoregister(PostsViewModel.self, initializer: PostsViewModel.init)
     }
     
     private func configureSteppers() {

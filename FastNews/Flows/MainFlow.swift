@@ -15,6 +15,7 @@ class MainFlow: Flow {
     enum SubFlow: Int {
         case categories = 0
         case sources = 1
+        case posts = 2
     }
     
     var root: Presentable {
@@ -27,6 +28,7 @@ class MainFlow: Flow {
     private let disposeBag = DisposeBag()
     private let categoryStepper = CategoryStepper()
     private let sourceStepper = SourceStepper()
+    private let postsStepper = PostsStepper()
 
     init(withResolve resolver: Dependencies) {
         self.resolver = resolver
@@ -52,17 +54,23 @@ class MainFlow: Flow {
         
         let sourceFlow = SourceFlow(with: resolver, mainNavigationController: rootViewController, sourceStepper: sourceStepper)
         
-        Flows.use(categoryFlow, sourceFlow, when: .ready, block: {( root1: UIViewController, root2: UIViewController) in
+        let postsFlow = PostsFlow(with: resolver, mainNavigationController: rootViewController, postsStepper: postsStepper)
+        
+        Flows.use(categoryFlow, sourceFlow, postsFlow, when: .ready, block: {( root1: UIViewController, root2: UIViewController, root3: UIViewController) in
             root1.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.homeIcon.originalImage, selectedImage: Asset.Image.homeIconSelected.originalImage)
             root2.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.sourcesIcon.originalImage, selectedImage: Asset.Image.sourcesIconSelected.originalImage)
-            self.tabbarViewController.setViewControllers([root1, root2], animated: true)
+            root3.tabBarItem = UITabBarItem(title: nil, image: Asset.Image.sourcesIcon.originalImage, selectedImage: Asset.Image.sourcesIconSelected.originalImage)
+            
+            self.tabbarViewController.setViewControllers([root1, root2, root3], animated: true)
         })
         
         let categoryFlowContributor: FlowContributor = .contribute(withNextPresentable: categoryFlow, withNextStepper: categoryStepper)
         
         let sourceFlowContributor: FlowContributor = .contribute(withNextPresentable: sourceFlow, withNextStepper: sourceStepper)
         
-        let flowContributors: [FlowContributor] = [categoryFlowContributor, sourceFlowContributor]
+        let postsFlowContributor: FlowContributor = .contribute(withNextPresentable: postsFlow, withNextStepper: postsStepper)
+        
+        let flowContributors: [FlowContributor] = [categoryFlowContributor, sourceFlowContributor, postsFlowContributor]
         
         return .multiple(flowContributors: flowContributors)
     }

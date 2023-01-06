@@ -13,6 +13,7 @@ enum AppSteps: Step {
     case main
     case categories
     case sources
+    case posts 
     case articleDetail(article: Article)
     case sourceMain(source: Source)
 }

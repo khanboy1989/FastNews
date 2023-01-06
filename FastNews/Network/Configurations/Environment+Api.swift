@@ -13,6 +13,10 @@ private struct Configuration {
         static var main: MainApiConfiguration = {
             return MainApiConfiguration()
         }()
+        
+        static var jsonPlaceHolder: JsonPlaceHolderApiConfiguration = {
+            return JsonPlaceHolderApiConfiguration()
+        }()
     }
 }
 
@@ -26,11 +30,19 @@ extension Environment {
         return Configuration.Api.main
     }
     
+    var postsJsonApiConfiguration: JsonPlaceHolderApiConfiguration {
+        return Configuration.Api.jsonPlaceHolder
+    }
+    
     var categoryApiProvider: MoyaProvider<CategoryApi> {
         return createProvider()
     }
 
     var sourceApiProvider: MoyaProvider<SourceApi> {
+        return createProvider()
+    }
+    
+    var postApiProvider: MoyaProvider<PostApi> {
         return createProvider()
     }
     
