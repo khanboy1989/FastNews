@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSegmentsView" customModule="FastNews" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="e45-3b-I1g" id="0SZ-7y-lm5"/>
+                <outlet property="stackView" destination="qih-7X-260" id="3du-GM-3lt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e45-3b-I1g">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qih-7X-260">
+                            <rect key="frame" x="10" y="0.0" width="320" height="72"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="qih-7X-260" firstAttribute="top" secondItem="e45-3b-I1g" secondAttribute="top" id="TVZ-uR-U2X"/>
+                        <constraint firstAttribute="trailing" secondItem="qih-7X-260" secondAttribute="trailing" constant="10" id="f7S-Uz-c2H"/>
+                        <constraint firstItem="qih-7X-260" firstAttribute="height" secondItem="e45-3b-I1g" secondAttribute="height" constant="-10" id="mjf-uF-lGq"/>
+                        <constraint firstAttribute="bottom" secondItem="qih-7X-260" secondAttribute="bottom" constant="10" id="q6d-9F-8Ur"/>
+                        <constraint firstItem="qih-7X-260" firstAttribute="leading" secondItem="e45-3b-I1g" secondAttribute="leading" constant="10" id="snY-KL-UxG"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e45-3b-I1g" secondAttribute="trailing" id="FKi-DO-f0t"/>
+                <constraint firstItem="e45-3b-I1g" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rv6-Ah-JAL"/>
+                <constraint firstItem="e45-3b-I1g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xX1-aP-gO4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="e45-3b-I1g" secondAttribute="bottom" id="ySL-xL-hyu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="37.5" y="-27.464788732394368"/>
+        </view>
+    </objects>
+</document>
