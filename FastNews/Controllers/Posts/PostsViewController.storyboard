@@ -4,31 +4,56 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posts View Controller-->
+        <!--Posts-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="PostsViewController" customModule="FastNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Posts" id="Y6W-OH-hqX" customClass="PostsViewController" customModule="FastNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="47I-kd-tFZ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-QE-9VC">
+                                <rect key="frame" x="0.0" y="103" width="393" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OA-Tf-csA">
+                                        <rect key="frame" x="169" y="2.3333333333333286" width="55.333333333333343" height="25.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="cAppBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NpG-Nc-Psb"/>
+                                    <constraint firstItem="6OA-Tf-csA" firstAttribute="centerY" secondItem="k8o-QE-9VC" secondAttribute="centerY" id="X2L-SY-Fid"/>
+                                    <constraint firstItem="6OA-Tf-csA" firstAttribute="centerX" secondItem="k8o-QE-9VC" secondAttribute="centerX" id="ibo-oL-10W"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e1a-HV-HvH">
+                                <rect key="frame" x="0.0" y="133" width="393" height="685"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="47I-kd-tFZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="685"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="cAppBackground"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="47I-kd-tFZ" secondAttribute="bottom" id="BQH-QQ-dMy"/>
-                            <constraint firstItem="47I-kd-tFZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="J74-GP-k7f"/>
-                            <constraint firstItem="47I-kd-tFZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Knz-HN-NZK"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="47I-kd-tFZ" secondAttribute="trailing" id="Y00-mE-oEL"/>
+                            <constraint firstItem="k8o-QE-9VC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Eae-5v-eZo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="k8o-QE-9VC" secondAttribute="trailing" id="FP3-Aj-79t"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="e1a-HV-HvH" secondAttribute="trailing" id="VwF-Sl-4dA"/>
+                            <constraint firstItem="k8o-QE-9VC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="44" id="mdb-MS-sIa"/>
+                            <constraint firstItem="e1a-HV-HvH" firstAttribute="top" secondItem="k8o-QE-9VC" secondAttribute="bottom" id="p4V-8G-iua"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="e1a-HV-HvH" secondAttribute="bottom" id="pMD-VF-bPQ"/>
+                            <constraint firstItem="e1a-HV-HvH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xtr-XE-eXu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -37,12 +62,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="77" y="-120"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="cAppBackground">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
