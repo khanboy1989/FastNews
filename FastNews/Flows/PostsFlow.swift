@@ -41,9 +41,12 @@ class PostsFlow: Flow {
         rootViewController.viewModel = resolver.resolve(PostsViewModel.self)
         let nextStepper = CompositeStepper(steppers: [rootViewController.viewModel])
         return .one(flowContributor: .contribute(withNextPresentable: rootViewController, withNextStepper: nextStepper))
+        
+//        rootViewController.viewModel = resolver.resolve(SourcesViewModel.self)
+//        let nextStepper = CompositeStepper(steppers: [rootViewController.viewModel])
+//        return .one(flowContributor: .contribute(withNextPresentable: rootViewController, withNextStepper: nextStepper))
     }
 }
-
 
 class PostsStepper: Stepper {
     let steps = PublishRelay<Step>()

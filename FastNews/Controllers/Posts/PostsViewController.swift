@@ -34,7 +34,7 @@ class PostsViewController: UIViewController, StoryboardBased, ViewModelBased {
     }
     
     private func configureTableView() {
-        tableView.register(cellType: PostTableViewCell.self)
+        tableView.register(cellType: PostItemTableViewCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
@@ -46,7 +46,7 @@ class PostsViewController: UIViewController, StoryboardBased, ViewModelBased {
             let cell: UITableViewCell
             switch item {
             case let .post(post):
-                let sourceCell: PostTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+                let sourceCell: PostItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
                 sourceCell.post = post
                 sourceCell.selectionStyle = .none
                 cell = sourceCell

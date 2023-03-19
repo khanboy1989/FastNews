@@ -98,6 +98,9 @@
 		54B3A23427B1AE25009168E5 /* ArticleModel+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3A23327B1AE25009168E5 /* ArticleModel+TestData.swift */; };
 		54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */; };
 		54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFACA26FB17360024BC27 /* Dependencies.swift */; };
+		54D2590C29C74AFD006A7535 /* PostItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2590A29C74AFD006A7535 /* PostItemTableViewCell.swift */; };
+		54D2590D29C74AFE006A7535 /* PostItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D2590B29C74AFD006A7535 /* PostItemTableViewCell.xib */; };
+		54D2590F29C76061006A7535 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2590E29C76061006A7535 /* UITextField+Extensions.swift */; };
 		54E69B32275D588E008C9D10 /* SourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E69B30275D588E008C9D10 /* SourceTableViewCell.swift */; };
 		54E69B33275D588E008C9D10 /* SourceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E69B31275D588E008C9D10 /* SourceTableViewCell.xib */; };
 		54E8EFC1275805DB008451B3 /* SourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E8EFC0275805DB008451B3 /* SourceService.swift */; };
@@ -128,8 +131,6 @@
 		54FBC6982968C29A0054D7A0 /* NSKeyedArchiver+news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6972968C29A0054D7A0 /* NSKeyedArchiver+news.swift */; };
 		54FBC69A2968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC6992968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift */; };
 		54FBC69D2968CB600054D7A0 /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 54FBC69C2968CB600054D7A0 /* posts.json */; };
-		54FBC6A02968D0C40054D7A0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FBC69F2968D0C40054D7A0 /* PostTableViewCell.swift */; };
-		54FBC6A22968D0D50054D7A0 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FBC6A12968D0D50054D7A0 /* PostTableViewCell.xib */; };
 		54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 54FE4B4226FA04BA005541C5 /* .swiftlint.yml */; };
 		54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */; };
 		54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE4B4926FA06A3005541C5 /* Reusable.swift */; };
@@ -257,6 +258,9 @@
 		54B3A23327B1AE25009168E5 /* ArticleModel+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleModel+TestData.swift"; sourceTree = "<group>"; };
 		54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		54CBFACA26FB17360024BC27 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		54D2590A29C74AFD006A7535 /* PostItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemTableViewCell.swift; sourceTree = "<group>"; };
+		54D2590B29C74AFD006A7535 /* PostItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostItemTableViewCell.xib; sourceTree = "<group>"; };
+		54D2590E29C76061006A7535 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		54E69B30275D588E008C9D10 /* SourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableViewCell.swift; sourceTree = "<group>"; };
 		54E69B31275D588E008C9D10 /* SourceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceTableViewCell.xib; sourceTree = "<group>"; };
 		54E8EFC0275805DB008451B3 /* SourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceService.swift; sourceTree = "<group>"; };
@@ -287,8 +291,6 @@
 		54FBC6972968C29A0054D7A0 /* NSKeyedArchiver+news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSKeyedArchiver+news.swift"; sourceTree = "<group>"; };
 		54FBC6992968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSKeyedUnArchiver+news.swift"; sourceTree = "<group>"; };
 		54FBC69C2968CB600054D7A0 /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
-		54FBC69F2968D0C40054D7A0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		54FBC6A12968D0D50054D7A0 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		54FE4B4226FA04BA005541C5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		54FE4B4726FA0667005541C5 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		54FE4B4926FA06A3005541C5 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -878,6 +880,7 @@
 				54FBC6952968C1D60054D7A0 /* UserDefaults+news.swift */,
 				54FBC6972968C29A0054D7A0 /* NSKeyedArchiver+news.swift */,
 				54FBC6992968C35A0054D7A0 /* NSKeyedUnArchiver+news.swift */,
+				54D2590E29C76061006A7535 /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -903,8 +906,8 @@
 		54FBC69E2968D0AB0054D7A0 /* PostTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				54FBC69F2968D0C40054D7A0 /* PostTableViewCell.swift */,
-				54FBC6A12968D0D50054D7A0 /* PostTableViewCell.xib */,
+				54D2590A29C74AFD006A7535 /* PostItemTableViewCell.swift */,
+				54D2590B29C74AFD006A7535 /* PostItemTableViewCell.xib */,
 			);
 			path = PostTableViewCell;
 			sourceTree = "<group>";
@@ -1083,7 +1086,7 @@
 				5457F48026FA00770020C5CB /* LaunchScreen.storyboard in Resources */,
 				5457F47D26FA00770020C5CB /* Assets.xcassets in Resources */,
 				542FB53B2705A94C001CF0E6 /* CustomSegmentsView.xib in Resources */,
-				54FBC6A22968D0D50054D7A0 /* PostTableViewCell.xib in Resources */,
+				54D2590D29C74AFE006A7535 /* PostItemTableViewCell.xib in Resources */,
 				543B246626FE54C700286616 /* AirbnbCerealMedium.ttf in Resources */,
 				54EE5CB9278B6B6F0007333E /* SourceHeaderView.xib in Resources */,
 				542FB5402705A972001CF0E6 /* CustomSegmentItemView.xib in Resources */,
@@ -1288,6 +1291,7 @@
 				549403AE295B8BA000C09C7C /* AppInformationService.swift in Sources */,
 				54EA0B6427370253006647C6 /* Alertable.swift in Sources */,
 				5403DB142705020100414F28 /* CategoryType.swift in Sources */,
+				54D2590F29C76061006A7535 /* UITextField+Extensions.swift in Sources */,
 				54ED103D2728043500A562D5 /* LoadingState.swift in Sources */,
 				549403A1295B73B900C09C7C /* ShareRequest.swift in Sources */,
 				54F5F3BA27032D780044A362 /* MainFlow.swift in Sources */,
@@ -1316,10 +1320,10 @@
 				5490ACCB26FD017600CC460A /* ViewModelBased.swift in Sources */,
 				549403B5295B946600C09C7C /* PostsJsonPlaceHolderApiConfiguration.swift in Sources */,
 				5489F15C27555F2500259AB5 /* Source.swift in Sources */,
+				54D2590C29C74AFD006A7535 /* PostItemTableViewCell.swift in Sources */,
 				542FB53027059955001CF0E6 /* Localizable.swift in Sources */,
 				543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */,
 				54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */,
-				54FBC6A02968D0C40054D7A0 /* PostTableViewCell.swift in Sources */,
 				54FE4B4826FA0667005541C5 /* UICollectionView+Reusable.swift in Sources */,
 				541CE15A2873179F00B4857C /* Mapper.swift in Sources */,
 				548CC24B273C5FEA0092E2A1 /* ArticleDetailViewController.swift in Sources */,
