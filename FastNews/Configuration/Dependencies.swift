@@ -103,6 +103,11 @@ class Dependencies {
         container.autoregister(ArticleDetailViewModel.self, argument: Article.self, initializer: ArticleDetailViewModel.init)
         container.autoregister(SourceMainViewModel.self, argument: Source.self, initializer: SourceMainViewModel.init)
         container.autoregister(PostsViewModel.self, initializer: PostsViewModel.init)
+        
+        container.autoregister(PostDetailViewModel.self, initializer: PostDetailViewModel.init)
+            .inObjectScope(.container)
+        
+        container.autoregister(SecondPostDetailViewModel.self, initializer: SecondPostDetailViewModel.init)
     }
     
     private func configureSteppers() {

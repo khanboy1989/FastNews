@@ -31,6 +31,18 @@ class PostsViewController: UIViewController, StoryboardBased, ViewModelBased {
         viewModel.output.sections
          .drive(tableView.rx.items(dataSource: dataSource))
          .disposed(by: disposeBag)
+        
+        
+        tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in
+            if let model = try? self.dataSource.model(at: indexPath) as? PostsViewModel.Item {
+                switch model {
+                case let .post(post):
+                    self.viewModel.input.showPostDetail.execute(post)
+                }
+            }
+            
+        })
+            .disposed(by: disposeBag)
     }
     
     private func configureTableView() {

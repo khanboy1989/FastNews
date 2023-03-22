@@ -39,4 +39,8 @@ struct Localizable {
         case sports = "CategoryType.Sports"
         case technology = "CategoryType.Technology"
     }
+    
+    enum Post: String, LocalizableType {
+        case postDetailTitle = "Post.Detail.Title"
+    }
 }

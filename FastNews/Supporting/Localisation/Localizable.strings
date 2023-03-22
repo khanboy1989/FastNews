@@ -26,3 +26,5 @@
 "Networking.Error.Unknown" = "Unknown error occured";
 "Networking.NoInternet" = "Please check your connection";
 
+// Post
+"Post.Detail.Title" = "Post Detail";

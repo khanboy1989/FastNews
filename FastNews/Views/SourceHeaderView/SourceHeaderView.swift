@@ -49,7 +49,7 @@ class SourceHeaderView: UIView, NibOwnerLoadable {
         searchBar.tintColor = .black
         searchBar.searchTextField.textColor = .black
         searchBar.searchTextField.clearButtonTintColor = .black
-        searchBar.searchTextField.attributedPlaceholder =  NSAttributedString.init(string: "Search for news source", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        searchBar.searchTextField.attributedPlaceholder =  NSAttributedString.init(string:"Search for news source", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     
     private func configureRx() {

@@ -37,6 +37,8 @@
 		542FB5402705A972001CF0E6 /* CustomSegmentItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */; };
 		542FB5422705B95D001CF0E6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */; };
 		5434F5952748110D007DFD98 /* FlowNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434F5942748110D007DFD98 /* FlowNavigator.swift */; };
+		543A4A4A29C8ED83009DC2C5 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543A4A4929C8ED83009DC2C5 /* PostDetailView.swift */; };
+		543A4A4C29C8EEAC009DC2C5 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543A4A4B29C8EEAC009DC2C5 /* PostDetailViewModel.swift */; };
 		543B246326FE54C700286616 /* AirbnbCerealLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245D26FE54C700286616 /* AirbnbCerealLight.ttf */; };
 		543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245E26FE54C700286616 /* AirbnbCerealBlack.ttf */; };
 		543B246526FE54C700286616 /* AirbnbCerealBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B245F26FE54C700286616 /* AirbnbCerealBook.ttf */; };
@@ -48,6 +50,8 @@
 		543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543D3611270E1899002E5927 /* MainApiConfiguration.swift */; };
 		543D3615270E1992002E5927 /* CategoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543D3614270E1992002E5927 /* CategoryApi.swift */; };
 		543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543D3616270E1A62002E5927 /* CategoryClient.swift */; };
+		543EEBBF29C9F53500336B84 /* BaseHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EEBBE29C9F53500336B84 /* BaseHostingController.swift */; };
+		543EEBC229CA0DD900336B84 /* PostDetailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EEBC129CA0DD900336B84 /* PostDetailHostingController.swift */; };
 		544348892712D85200D7B43B /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544348882712D85200D7B43B /* ClientError.swift */; };
 		5448A1AC2730206E003AF5C4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448A1AB2730206E003AF5C4 /* Article.swift */; };
 		5451AC7E27103D870044F941 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5451AC7D27103D870044F941 /* CategoryService.swift */; };
@@ -96,6 +100,9 @@
 		54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3ACAA270EC179006B7A1B /* Environment.swift */; };
 		54B3A23227B1ADC7009168E5 /* articlesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 54B3A23127B1ADC7009168E5 /* articlesData.json */; };
 		54B3A23427B1AE25009168E5 /* ArticleModel+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3A23327B1AE25009168E5 /* ArticleModel+TestData.swift */; };
+		54C86E1E29CA58E3009E75BF /* SecondPostDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C86E1D29CA58E3009E75BF /* SecondPostDetailViewController.storyboard */; };
+		54C86E2029CA58F4009E75BF /* SecondPostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C86E1F29CA58F4009E75BF /* SecondPostDetailViewController.swift */; };
+		54C86E2229CA590B009E75BF /* SecondPostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C86E2129CA590B009E75BF /* SecondPostDetailViewModel.swift */; };
 		54CBFAC826FB0DD80024BC27 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */; };
 		54CBFACB26FB17360024BC27 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBFACA26FB17360024BC27 /* Dependencies.swift */; };
 		54D2590C29C74AFD006A7535 /* PostItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2590A29C74AFD006A7535 /* PostItemTableViewCell.swift */; };
@@ -191,6 +198,8 @@
 		542FB53F2705A972001CF0E6 /* CustomSegmentItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentItemView.xib; sourceTree = "<group>"; };
 		542FB5412705B95D001CF0E6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5434F5942748110D007DFD98 /* FlowNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowNavigator.swift; sourceTree = "<group>"; };
+		543A4A4929C8ED83009DC2C5 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		543A4A4B29C8EEAC009DC2C5 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		543B245D26FE54C700286616 /* AirbnbCerealLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealLight.ttf; sourceTree = "<group>"; };
 		543B245E26FE54C700286616 /* AirbnbCerealBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBlack.ttf; sourceTree = "<group>"; };
 		543B245F26FE54C700286616 /* AirbnbCerealBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AirbnbCerealBook.ttf; sourceTree = "<group>"; };
@@ -202,6 +211,8 @@
 		543D3611270E1899002E5927 /* MainApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApiConfiguration.swift; sourceTree = "<group>"; };
 		543D3614270E1992002E5927 /* CategoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryApi.swift; sourceTree = "<group>"; };
 		543D3616270E1A62002E5927 /* CategoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryClient.swift; sourceTree = "<group>"; };
+		543EEBBE29C9F53500336B84 /* BaseHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHostingController.swift; sourceTree = "<group>"; };
+		543EEBC129CA0DD900336B84 /* PostDetailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailHostingController.swift; sourceTree = "<group>"; };
 		544348882712D85200D7B43B /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		5448A1AB2730206E003AF5C4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5451AC7D27103D870044F941 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
@@ -256,6 +267,9 @@
 		54A3ACAA270EC179006B7A1B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		54B3A23127B1ADC7009168E5 /* articlesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articlesData.json; sourceTree = "<group>"; };
 		54B3A23327B1AE25009168E5 /* ArticleModel+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleModel+TestData.swift"; sourceTree = "<group>"; };
+		54C86E1D29CA58E3009E75BF /* SecondPostDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondPostDetailViewController.storyboard; sourceTree = "<group>"; };
+		54C86E1F29CA58F4009E75BF /* SecondPostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPostDetailViewController.swift; sourceTree = "<group>"; };
+		54C86E2129CA590B009E75BF /* SecondPostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPostDetailViewModel.swift; sourceTree = "<group>"; };
 		54CBFAC726FB0DD80024BC27 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		54CBFACA26FB17360024BC27 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		54D2590A29C74AFD006A7535 /* PostItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -448,6 +462,16 @@
 			path = CustomSegmentItem;
 			sourceTree = "<group>";
 		};
+		543A4A4829C8ED5D009DC2C5 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				543A4A4929C8ED83009DC2C5 /* PostDetailView.swift */,
+				543A4A4B29C8EEAC009DC2C5 /* PostDetailViewModel.swift */,
+				543EEBC129CA0DD900336B84 /* PostDetailHostingController.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
 		543B245C26FE54AD00286616 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +538,14 @@
 				541929BD295C939200947F8D /* PostApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		543EEBBD29C9F4F600336B84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				543EEBBE29C9F53500336B84 /* BaseHostingController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5451AC7C27103D760044F941 /* NetworkRequestServices */ = {
@@ -626,6 +658,8 @@
 		5464CFC12702494A00969B0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				54C86E1C29CA58C6009E75BF /* SecondPostDetail */,
+				543A4A4829C8ED5D009DC2C5 /* PostDetail */,
 				54FBC68A2968B5460054D7A0 /* Posts */,
 				54EE5CAE278B26B00007333E /* SourceMain */,
 				548CC247273C5F730092E2A1 /* ArticleDetail */,
@@ -764,6 +798,16 @@
 				549403B0295B8E8A00C09C7C /* Bootstrapper.swift */,
 			);
 			path = Bootstrapper;
+			sourceTree = "<group>";
+		};
+		54C86E1C29CA58C6009E75BF /* SecondPostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				54C86E1D29CA58E3009E75BF /* SecondPostDetailViewController.storyboard */,
+				54C86E1F29CA58F4009E75BF /* SecondPostDetailViewController.swift */,
+				54C86E2129CA590B009E75BF /* SecondPostDetailViewModel.swift */,
+			);
+			path = SecondPostDetail;
 			sourceTree = "<group>";
 		};
 		54CBFAC626FA63780024BC27 /* Services */ = {
@@ -915,6 +959,7 @@
 		54FE4B4526FA0602005541C5 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				543EEBBD29C9F4F600336B84 /* Controller */,
 				54EA0B6227370243006647C6 /* Alertable */,
 				54FE4B5126FA0746005541C5 /* Storyboard */,
 				54FE4B4626FA0626005541C5 /* View */,
@@ -1080,6 +1125,7 @@
 				542202C027048D82009C1D23 /* SourcesViewController.storyboard in Resources */,
 				543B246326FE54C700286616 /* AirbnbCerealLight.ttf in Resources */,
 				54FE4B4326FA04BA005541C5 /* .swiftlint.yml in Resources */,
+				54C86E1E29CA58E3009E75BF /* SecondPostDetailViewController.storyboard in Resources */,
 				543B246426FE54C700286616 /* AirbnbCerealBlack.ttf in Resources */,
 				54FBC68C2968B58E0054D7A0 /* PostsViewController.storyboard in Resources */,
 				548CC249273C5F890092E2A1 /* ArticleDetailViewController.storyboard in Resources */,
@@ -1266,6 +1312,7 @@
 				5448A1AC2730206E003AF5C4 /* Article.swift in Sources */,
 				54FE4B4A26FA06A3005541C5 /* Reusable.swift in Sources */,
 				542202C62704983C009C1D23 /* SourcesViewModel.swift in Sources */,
+				543A4A4A29C8ED83009DC2C5 /* PostDetailView.swift in Sources */,
 				54FBC6982968C29A0054D7A0 /* NSKeyedArchiver+news.swift in Sources */,
 				5464CFC527024A4F00969B0D /* ColorTheme.swift in Sources */,
 				54F5F3BC270332150044A362 /* TabBarViewModel.swift in Sources */,
@@ -1274,6 +1321,7 @@
 				5403DB12270501C700414F28 /* TopHeadLinesModel.swift in Sources */,
 				541929C8295C9BD100947F8D /* PostImportService.swift in Sources */,
 				542202C4270497DA009C1D23 /* CategoriesViewModel.swift in Sources */,
+				54C86E2229CA590B009E75BF /* SecondPostDetailViewModel.swift in Sources */,
 				5451AC8027103DBA0044F941 /* CategoryServiceType.swift in Sources */,
 				54FE4B4E26FA06ED005541C5 /* NibOwnerLoadable.swift in Sources */,
 				54E8EFC1275805DB008451B3 /* SourceService.swift in Sources */,
@@ -1321,6 +1369,7 @@
 				549403B5295B946600C09C7C /* PostsJsonPlaceHolderApiConfiguration.swift in Sources */,
 				5489F15C27555F2500259AB5 /* Source.swift in Sources */,
 				54D2590C29C74AFD006A7535 /* PostItemTableViewCell.swift in Sources */,
+				54C86E2029CA58F4009E75BF /* SecondPostDetailViewController.swift in Sources */,
 				542FB53027059955001CF0E6 /* Localizable.swift in Sources */,
 				543D3612270E1899002E5927 /* MainApiConfiguration.swift in Sources */,
 				54A3ACAB270EC179006B7A1B /* Environment.swift in Sources */,
@@ -1335,6 +1384,7 @@
 				549403AC295B793000C09C7C /* AppInformationServiceType.swift in Sources */,
 				54F5F3C127034EFE0044A362 /* AppStepNavigator.swift in Sources */,
 				54FBC6962968C1D60054D7A0 /* UserDefaults+news.swift in Sources */,
+				543EEBBF29C9F53500336B84 /* BaseHostingController.swift in Sources */,
 				543D3617270E1A62002E5927 /* CategoryClient.swift in Sources */,
 				5457F47526FA00760020C5CB /* CategoriesViewController.swift in Sources */,
 				546B8A042710893B004382F8 /* SourceModel.swift in Sources */,
@@ -1342,6 +1392,7 @@
 				543D3615270E1992002E5927 /* CategoryApi.swift in Sources */,
 				5457F47126FA00760020C5CB /* AppDelegate.swift in Sources */,
 				5490ACC826FCFCC100CC460A /* AppSteps.swift in Sources */,
+				543A4A4C29C8EEAC009DC2C5 /* PostDetailViewModel.swift in Sources */,
 				5489F162275560FD00259AB5 /* SourceApi.swift in Sources */,
 				548CC24D273C606F0092E2A1 /* ArticleDetailViewModel.swift in Sources */,
 				549403B1295B8E8A00C09C7C /* Bootstrapper.swift in Sources */,
@@ -1349,6 +1400,7 @@
 				54EA0B5E2736FE9B006647C6 /* UIViewController + Extensions.swift in Sources */,
 				54FE4B5326FA0757005541C5 /* StoryboardBased.swift in Sources */,
 				5451AC7E27103D870044F941 /* CategoryService.swift in Sources */,
+				543EEBC229CA0DD900336B84 /* PostDetailHostingController.swift in Sources */,
 				54F5F3B827031D410044A362 /* TabBarController.swift in Sources */,
 				54A3ACA9270EBF73006B7A1B /* Environment+Api.swift in Sources */,
 				54FBC6942968BC530054D7A0 /* PostStorageService.swift in Sources */,
