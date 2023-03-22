@@ -26,3 +26,5 @@ class BaseHostingController<Content: View>: UIHostingController<Content> {
     }
     
 }
+
+

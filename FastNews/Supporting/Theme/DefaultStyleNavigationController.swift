@@ -43,7 +43,5 @@ class DefaultStyleNavigationController: UINavigationController, DefaultStyleNavi
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
-    }
+    
 }

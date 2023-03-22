@@ -20,6 +20,7 @@
 		541929C3295C995E00947F8D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929C2295C995E00947F8D /* Post.swift */; };
 		541929C6295C9B1100947F8D /* PostImportServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929C5295C9B1100947F8D /* PostImportServiceType.swift */; };
 		541929C8295C9BD100947F8D /* PostImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541929C7295C9BD100947F8D /* PostImportService.swift */; };
+		541C25D329CB860900A2D655 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541C25D229CB860900A2D655 /* BaseViewController.swift */; };
 		541CE15A2873179F00B4857C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CE1592873179F00B4857C /* Mapper.swift */; };
 		542202BB2704369F009C1D23 /* CategoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BA2704369F009C1D23 /* CategoryFlow.swift */; };
 		542202BD2704374A009C1D23 /* SourceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542202BC2704374A009C1D23 /* SourceFlow.swift */; };
@@ -181,6 +182,7 @@
 		541929C2295C995E00947F8D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		541929C5295C9B1100947F8D /* PostImportServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImportServiceType.swift; sourceTree = "<group>"; };
 		541929C7295C9BD100947F8D /* PostImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImportService.swift; sourceTree = "<group>"; };
+		541C25D229CB860900A2D655 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		541CE1592873179F00B4857C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		542202BA2704369F009C1D23 /* CategoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFlow.swift; sourceTree = "<group>"; };
 		542202BC2704374A009C1D23 /* SourceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceFlow.swift; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				543EEBBE29C9F53500336B84 /* BaseHostingController.swift */,
+				541C25D229CB860900A2D655 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1350,6 +1353,7 @@
 				542202C227048E78009C1D23 /* SourcesViewController.swift in Sources */,
 				54FE4B4C26FA06BB005541C5 /* NibLoadable.swift in Sources */,
 				541929C3295C995E00947F8D /* Post.swift in Sources */,
+				541C25D329CB860900A2D655 /* BaseViewController.swift in Sources */,
 				5490ACC026FCB48100CC460A /* ViewModel.swift in Sources */,
 				541929C6295C9B1100947F8D /* PostImportServiceType.swift in Sources */,
 				543D3610270E17C4002E5927 /* CategoryApiConfiguration.swift in Sources */,
