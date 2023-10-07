@@ -10,8 +10,4 @@ import UIKit
 
 class TabBarController: UITabBarController, StoryboardBased, ViewModelBased {
     var viewModel: TabBarViewModel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import SwiftUI
 
-
 class TraitsViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

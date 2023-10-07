@@ -43,5 +43,4 @@ class DefaultStyleNavigationController: UINavigationController, DefaultStyleNavi
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
     
-    
 }

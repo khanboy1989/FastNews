@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-    //swiftlint:enble unused_closure_parameter
+    //swiftlint:enable unused_closure_parameter
 
     // MARK: - Core Data Saving support
 

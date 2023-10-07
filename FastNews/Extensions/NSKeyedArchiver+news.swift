@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension News where Base: NSKeyedArchiver {
     static func encodeEncodable<T>(_ value: T) throws -> Data where T: Encodable {
         let data = NSMutableData()

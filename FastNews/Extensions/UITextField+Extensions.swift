@@ -8,7 +8,7 @@
 import UIKit
 
 
-extension UITextField{
+extension UITextField {
     var clearButton : UIButton? {
         return self.value(forKey: "_clearButton") as? UIButton
     }
@@ -20,11 +20,11 @@ extension UITextField{
            set {
              var image = clearButton?.imageView?.image
                 
-            if image == nil{
+            if image == nil {
                 image = UIImage(named: "clear_field")//this is custom image
             }
         
-                image =  image?.withRenderingMode(.alwaysTemplate)
+                image = image?.withRenderingMode(.alwaysTemplate)
                clearButton?.setImage(image, for: .normal)
                clearButton?.tintColor = newValue
          
