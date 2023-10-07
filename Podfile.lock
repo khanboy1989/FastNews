@@ -4,9 +4,7 @@ PODS:
     - RxSwift (~> 6.0)
   - Alamofire (5.8.0)
   - Differentiator (5.0.0)
-  - Kingfisher (5.15.8):
-    - Kingfisher/Core (= 5.15.8)
-  - Kingfisher/Core (5.15.8)
+  - Kingfisher (7.8.1)
   - ModelMapper (10.0.1):
     - ModelMapper/Core (= 10.0.1)
   - ModelMapper/Core (10.0.1)
@@ -39,7 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Action
-  - Kingfisher (~> 5.0)
+  - Kingfisher (~> 7.8.1)
   - ModelMapper (~> 10.0)
   - Moya/RxSwift (~> 15.0)
   - RxBlocking (~> 6.5.0)
@@ -75,7 +73,7 @@ SPEC CHECKSUMS:
   Action: 47f1825511907b4fcd79dd7a7db9526c20f78018
   Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
-  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
   ModelMapper: 0f68dd4300d0e27290c70f66492c7f795da21bcf
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
@@ -89,6 +87,6 @@ SPEC CHECKSUMS:
   Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
   SwinjectAutoregistration: e3ee378dc458acf78d176fc7fec3902603452667
 
-PODFILE CHECKSUM: 20b9324b1d5671571300b27aa7123f81d4565056
+PODFILE CHECKSUM: 3e8ca791ee7de8fde60c3bab981ce7d754a9931a
 
 COCOAPODS: 1.12.1

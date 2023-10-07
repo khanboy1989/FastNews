@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
+platform :ios, '15.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -20,7 +20,7 @@ target 'FastNews' do
   pod 'ModelMapper',  '~> 10.0'
   pod 'Moya/RxSwift',  '~> 15.0'
   pod 'RxDataSources', '~> 5.0'
-  pod 'Kingfisher', '~> 5.0'
+  pod 'Kingfisher', '~> 7.8.1'
 
 
 target 'FastNewsTests' do
