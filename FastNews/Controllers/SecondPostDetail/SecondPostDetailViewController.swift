@@ -8,12 +8,10 @@
 import Foundation
 import RxSwift
 
-
 class SecondPostDetailViewController: UIViewController, ViewModelBased, StoryboardBased {
     
     var viewModel: SecondPostDetailViewModel!
     private var disposeBag = DisposeBag()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

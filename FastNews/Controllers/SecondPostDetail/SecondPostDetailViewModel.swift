@@ -10,7 +10,6 @@ import RxFlow
 import RxSwift
 import RxCocoa
 
-
 class SecondPostDetailViewModel: ViewModelType, Stepper {
     
     let steps = PublishRelay<Step>()

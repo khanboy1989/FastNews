@@ -7,9 +7,8 @@
 
 import UIKit
 
-
 extension UITextField {
-    var clearButton : UIButton? {
+    var clearButton: UIButton? {
         return self.value(forKey: "_clearButton") as? UIButton
     }
     

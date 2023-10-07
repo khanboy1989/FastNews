@@ -24,7 +24,4 @@ class BaseHostingController<Content: View>: UIHostingController<Content> {
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
-
-

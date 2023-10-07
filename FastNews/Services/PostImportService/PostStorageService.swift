@@ -34,7 +34,6 @@ class PostStorageService: PostStorageServiceType {
             posts = BehaviorRelay<[Post]>(value: [])
         }
         
-
         // configuration storage
         posts.asObservable()
             .skip(1)

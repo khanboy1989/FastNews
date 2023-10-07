@@ -48,9 +48,8 @@ class PostDetailViewModel: ViewModelType, Stepper, ObservableObject {
     }
     
     private func createNavigateToStoryBoarded() -> CocoaAction {
-        return CocoaAction { [unowned self] in
-            return Observable.create( { observer in
-                
+        return CocoaAction { _ in
+            return Observable.create({ observer in
                 observer.onCompleted()
                 return Disposables.create()
             })

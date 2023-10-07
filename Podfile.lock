@@ -13,11 +13,11 @@ PODS:
   - Moya/RxSwift (15.0.0):
     - Moya/Core
     - RxSwift (~> 6.0)
-  - RxBlocking (6.5.0):
-    - RxSwift (= 6.5.0)
-  - RxCocoa (6.5.0):
-    - RxRelay (= 6.5.0)
-    - RxSwift (= 6.5.0)
+  - RxBlocking (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
   - RxDataSources (5.0.0):
     - Differentiator (~> 5.0)
     - RxCocoa (~> 6.0)
@@ -25,11 +25,11 @@ PODS:
   - RxFlow (2.13.0):
     - RxCocoa (>= 6.0.0)
     - RxSwift (>= 6.0.0)
-  - RxRelay (6.5.0):
-    - RxSwift (= 6.5.0)
-  - RxSwift (6.5.0)
-  - RxTest (6.5.0):
-    - RxSwift (= 6.5.0)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
+  - RxTest (6.6.0):
+    - RxSwift (= 6.6.0)
   - SwiftLint (0.53.0)
   - Swinject (2.8.3)
   - SwinjectAutoregistration (2.8.3):
@@ -40,12 +40,12 @@ DEPENDENCIES:
   - Kingfisher (~> 7.8.1)
   - ModelMapper (~> 10.0)
   - Moya/RxSwift (~> 15.0)
-  - RxBlocking (~> 6.5.0)
-  - RxCocoa (~> 6.5.0)
+  - RxBlocking (~> 6.6.0)
+  - RxCocoa (~> 6.6.0)
   - RxDataSources (~> 5.0)
   - RxFlow
-  - RxSwift (~> 6.5.0)
-  - RxTest (~> 6.5.0)
+  - RxSwift (~> 6.6.0)
+  - RxTest (~> 6.6.0)
   - SwiftLint
   - Swinject (= 2.8.3)
   - SwinjectAutoregistration (= 2.8.3)
@@ -76,17 +76,17 @@ SPEC CHECKSUMS:
   Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
   ModelMapper: 0f68dd4300d0e27290c70f66492c7f795da21bcf
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
-  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxBlocking: fbd1f8501443024f686e556f36dac79b0d5f4d7c
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxFlow: 52f6f6379918392c1ea8cb62d8dcf2df9a5463dd
-  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
-  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
-  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  RxTest: a23f26bb53a5e146a0a69db4f0fa0b69001ce7f4
   SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
   Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
   SwinjectAutoregistration: e3ee378dc458acf78d176fc7fec3902603452667
 
-PODFILE CHECKSUM: 3e8ca791ee7de8fde60c3bab981ce7d754a9931a
+PODFILE CHECKSUM: b1dbfecac49b22d981b32141cdd4db482c4961c2
 
 COCOAPODS: 1.12.1

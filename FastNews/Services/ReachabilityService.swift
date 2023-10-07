@@ -11,7 +11,7 @@ import RxCocoa
 import Alamofire
 
 protocol ReachabilityServiceType {
-    func didBecomeReachable()-> Observable<Bool>
+    func didBecomeReachable() -> Observable<Bool>
     var isAvailable: Bool { get }
 }
 
