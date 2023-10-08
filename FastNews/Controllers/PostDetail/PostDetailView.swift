@@ -25,8 +25,7 @@ struct PostDetailView: View {
             VStack(alignment: .center) {
                 Button(action: {
                    viewModel.input.navigateBack.execute()
-                })
-                {
+                }) {
                     Text("Navigate to UIKit Screen")
                         .font(.system(size: 21.0))
                         .bold()

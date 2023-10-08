@@ -23,7 +23,7 @@ opt_in_rules:
   - unavailable_function
 
 excluded:
-  - ${PWD}/Pods
+  - Pods
   - build*/
 
 # Custom Rules

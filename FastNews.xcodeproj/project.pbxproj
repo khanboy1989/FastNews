@@ -565,8 +565,8 @@
 		5457F46426FA00760020C5CB = {
 			isa = PBXGroup;
 			children = (
-				5457F46F26FA00760020C5CB /* FastNews */,
 				54FE4B4226FA04BA005541C5 /* .swiftlint.yml */,
+				5457F46F26FA00760020C5CB /* FastNews */,
 				5457F48926FA00780020C5CB /* FastNewsTests */,
 				5457F49426FA00780020C5CB /* FastNewsUITests */,
 				5457F46E26FA00760020C5CB /* Products */,
@@ -1186,7 +1186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Swiftlint/swiftlint\"\n";
 		};
 		9A31B2D4C83B5A1BD1AE8AB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

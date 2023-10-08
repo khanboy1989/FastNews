@@ -27,7 +27,6 @@ class PostImportService: PostImportServiceType, ManagedImportServiceType {
         return String(describing: self)
     }
     
-    
     func runImport() -> Observable<[Post]> {
         return postClient
             .posts()

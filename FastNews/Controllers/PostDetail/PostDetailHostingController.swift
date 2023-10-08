@@ -8,12 +8,20 @@
 import Foundation
 import SwiftUI
 
-final class PostDetailHostingController: BaseHostingController<PostDetailView>,
-                                            ViewModelBased {
+final class PostDetailHostingController: BaseHostingController<PostDetailView>, ViewModelBased {
     var viewModel: PostDetailViewModel!
+    
+    init(viewModel: PostDetailViewModel, content: PostDetailView) {
+        self.viewModel = viewModel
+        super.init(content: content)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(viewModel.output.title)
+       print(viewModel.output.title)
     }
 }

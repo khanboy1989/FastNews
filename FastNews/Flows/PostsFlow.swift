@@ -52,14 +52,11 @@ class PostsFlow: Flow {
     
     private func navigateToPostDetail(post: Post) -> FlowContributors {
         let viewModel = resolver.resolve(PostDetailViewModel.self)
-        let viewController = PostDetailHostingController(content: PostDetailView.init(viewModel: viewModel))
-        viewController.viewModel = viewModel
-        
+        let viewController = PostDetailHostingController(viewModel: viewModel, content: PostDetailView.init(viewModel: viewModel))
         mainNavigationController.setNavigationBarHidden(false, animated: false)
         mainNavigationController.pushViewController(viewController, animated: true)
-        
         return .one(flowContributor: .contribute(withNextPresentable: viewController,
-                                                 withNextStepper: viewController.viewModel))
+                                                 withNextStepper: viewModel))
     }
     
     private func navigateToSecondPostDetail(post: Post) -> FlowContributors {
