@@ -15,7 +15,7 @@ enum SourceApi {
 extension SourceApi: TargetType {
     var baseURL: URL {
         switch self {
-        case let .sources(config, _) :
+        case let .sources(config, _):
             return config.baseUrl
         }
     }

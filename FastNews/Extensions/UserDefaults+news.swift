@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension News where Base == UserDefaults {
     static func set(value: Any, forKey key: String) {
         UserDefaults.standard.set(value, forKey: key)

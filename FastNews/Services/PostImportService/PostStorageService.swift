@@ -12,7 +12,6 @@ import RxCocoa
 class PostStorageService: PostStorageServiceType {
     
     private static let postsOldKeys = ["com.serhankhan.FastNews.data"]
-    
     private static let postsDataKey = "com.serhankhan.FastNews.data.v1"
     
     private let disposeBag = DisposeBag()
@@ -34,7 +33,6 @@ class PostStorageService: PostStorageServiceType {
             posts = BehaviorRelay<[Post]>(value: [])
         }
         
-
         // configuration storage
         posts.asObservable()
             .skip(1)

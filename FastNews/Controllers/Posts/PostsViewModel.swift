@@ -15,7 +15,7 @@ class PostsViewModel: ViewModelType, Stepper {
     let steps = PublishRelay<Step>()
     
     struct Input {
-        
+        let showPostDetail: Action<Post, Void>
     }
     struct Output {
         let sections: Driver<[Section]>
@@ -36,7 +36,15 @@ class PostsViewModel: ViewModelType, Stepper {
             return self.createSections(posts: posts)
         })
         
-        internalInput = Input()
+        let selectedItem = Action<Post, Void> { [unowned self] (item) -> Observable<Void> in
+            return Observable.create({ observer in
+                self.steps.accept(AppSteps.postDetail(post: item))
+                observer.onCompleted()
+                return Disposables.create()
+            })
+        }
+        
+        internalInput = Input(showPostDetail: selectedItem)
         internalOutput = Output(sections: sections.asDriver(onErrorJustReturn: []))
     }
     

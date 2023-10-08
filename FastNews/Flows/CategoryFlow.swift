@@ -43,6 +43,7 @@ class CategoryFlow: Flow {
         self.rootViewController.viewModel = resolver.resolve(CategoriesViewModel.self)
         let nextStepper = CompositeStepper(steppers: [rootViewController.viewModel])
         return .one(flowContributor: .contribute(withNextPresentable: rootViewController, withNextStepper: nextStepper))
+        
     }
     
     private func navigateToArticleDetails(article: Article) -> FlowContributors {

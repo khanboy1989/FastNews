@@ -8,17 +8,15 @@
 import Foundation
 import Moya
 
-
 enum PostApi {
     case posts(config: PostsJsonPlaceHolderApiConfiguration)
 }
-
 
 extension PostApi: TargetType {
     
     var baseURL: URL {
         switch self {
-        case let .posts(config) :
+        case let .posts(config):
             return config.baseUrl
         }
     }
@@ -51,7 +49,5 @@ extension PostApi: TargetType {
     var headers: [String: String]? {
         return ["Content-Type": "application/json"]
     }
-    
-    
-    
+
 }

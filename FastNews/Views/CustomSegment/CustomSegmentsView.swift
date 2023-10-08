@@ -13,7 +13,7 @@ class CustomSegmentsView: UIView, NibOwnerLoadable {
     @IBOutlet private weak var stackView: UIStackView!
     
     private var itemViews: [CustomSegmentItemView] = []
-    var onWillChangeSelectedIndex:( (Int) -> Void )?
+    var onWillChangeSelectedIndex: ((Int) -> Void )?
    
     var items = [CustomSegmentItem]() {
         didSet {

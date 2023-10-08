@@ -48,12 +48,12 @@ class AppInformationService: AppInformationServiceType {
         ]
         
         NotificationCenter.default.rx.notification(UIApplication.didBecomeActiveNotification)
-            .map({ _ in AppState.active})
+            .map({ _ in AppState.active })
             .bind(to: internalAppState)
             .disposed(by: disposeBag)
         
         Observable.merge(enterBackground)
-            .map{ _ in AppState.background }
+            .map { _ in AppState.background }
             .bind(to: internalAppState)
             .disposed(by: disposeBag)
     }

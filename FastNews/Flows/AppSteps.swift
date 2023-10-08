@@ -16,4 +16,7 @@ enum AppSteps: Step {
     case posts 
     case articleDetail(article: Article)
     case sourceMain(source: Source)
+    case postDetail(post: Post)
+    case didFinishPostDetail
+    case secondPostDetail(post: Post)
 }

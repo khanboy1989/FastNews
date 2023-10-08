@@ -1,15 +1,14 @@
 //
-//  PostTableViewCell.swift
+//  PostItemTableViewCell.swift
 //  FastNews
 //
-//  Created by Serhan Khan on 06.01.23.
+//  Created by Serhan Khan on 19.03.23.
 //
 
-import Foundation
 import UIKit
 
-class PostTableViewCell: UITableViewCell, NibReusable {
-    
+class PostItemTableViewCell: UITableViewCell, NibReusable {
+
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var seperatorView: UIView!
@@ -24,7 +23,6 @@ class PostTableViewCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
         commonSetup()
     }
-    
     
     private func commonSetup() {
         titleLabel.font = UIFont.mediumFont(size: 16)
@@ -43,4 +41,5 @@ class PostTableViewCell: UITableViewCell, NibReusable {
         titleLabel.text = post?.title
         descriptionLabel.text = post?.body
     }
+    
 }

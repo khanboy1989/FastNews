@@ -31,10 +31,21 @@ class PostsViewController: UIViewController, StoryboardBased, ViewModelBased {
         viewModel.output.sections
          .drive(tableView.rx.items(dataSource: dataSource))
          .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.subscribe(onNext: { [unowned self] indexPath in
+            if let model = try? self.dataSource.model(at: indexPath) as? PostsViewModel.Item {
+                switch model {
+                case let .post(post):
+                    self.viewModel.input.showPostDetail.execute(post)
+                }
+            }
+            
+        })
+            .disposed(by: disposeBag)
     }
     
     private func configureTableView() {
-        tableView.register(cellType: PostTableViewCell.self)
+        tableView.register(cellType: PostItemTableViewCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
@@ -46,7 +57,7 @@ class PostsViewController: UIViewController, StoryboardBased, ViewModelBased {
             let cell: UITableViewCell
             switch item {
             case let .post(post):
-                let sourceCell: PostTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+                let sourceCell: PostItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
                 sourceCell.post = post
                 sourceCell.selectionStyle = .none
                 cell = sourceCell

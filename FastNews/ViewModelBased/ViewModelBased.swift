@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 protocol ViewModelBased: AnyObject {
     associatedtype ViewModelType
@@ -18,5 +19,20 @@ extension ViewModelBased where Self: UIViewController & StoryboardBased {
         let viewController = Self.instantiate()
         viewController.viewModel = viewModel
         return viewController
+    }
+}
+
+extension ViewModelBased where Self: UIView {
+    static func instantiate(with viewModel: ViewModelType) -> Self {
+        let view = Self.init()
+        view.viewModel = viewModel
+        return view
+    }
+}
+
+extension View {
+    var hostingController: UIViewController {
+        let hostingController = UIHostingController(rootView: self)
+        return hostingController
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PostsJsonPlaceHolderApiConfiguration{
+protocol PostsJsonPlaceHolderApiConfiguration {
     var baseUrl: URL { get }
     var proxyPath: String { get }
     var apiKey: String { get }
