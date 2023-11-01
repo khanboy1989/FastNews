@@ -44,7 +44,7 @@ class CategoriesViewModelTest: XCTestCase {
             
             XCTAssertEqual(customSegmentItems?.count, 7)
             XCTAssertNotNil(customSegmentItems)
-            }
+    }
     
     func testDefaultSelectedCategoryType() {
         let exp: XCTestExpectation = expectation(description: "wait testDefaultSelectedCategoryType")

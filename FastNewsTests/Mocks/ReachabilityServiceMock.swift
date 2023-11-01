@@ -15,6 +15,6 @@ class ReachabilityServiceMock: ReachabilityServiceType {
     func didBecomeReachable() -> Observable<Bool> {
         return isAvailable ? Observable.just(true) : Observable.just(false)
     }
-    
+    //computed property
     var isAvailable: Bool = true
 }
