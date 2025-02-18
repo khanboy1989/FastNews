@@ -32,6 +32,12 @@ FastNews is a news application built using **MVVM-C** (Model-View-ViewModel-Coor
 - **UserDefaults** – Storing fetched posts locally.
 - **SwiftLint** – Enforcing coding style best practices.
 
+## 📂 Branches & Package Management
+
+- The `main` branch uses **CocoaPods** for dependency management.
+- The `task/migrate-to-spm` branch contains migration to **Swift Package Manager (SPM)**.
+- **Minimum Deployment Target:** iOS **17.6** in `task/migrate-to-spm` 
+
 ## 📷 Screenshots
 
 | Posts Tab | Sources Tab | Categories Tab |
