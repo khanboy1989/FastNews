@@ -1,19 +1,47 @@
-# FastNews
+# 📱 FastNews
 
-This project is created in order to demonstrate how to use RxSwift within MVVM-C pattern. 
+FastNews is a news application built using **MVVM-C** (Model-View-ViewModel-Coordinator) architecture with **RxSwift**. This project serves as a demonstration of integrating **RxSwift** within an MVVM-C pattern while showcasing dependency injection, navigation handling, and synchronized API calls.
 
-Project has 3 different tabs on the tabbar and it has a minor implementation for UserDefaults, where it saves the posts from the URL : 
-https://jsonplaceholder.typicode.com/posts
+## 🚀 Features
 
-Basically, posts tab recently added to show how to have a synchronized call within an RxSwift project and how to lock App Launch (Splash) screen and wait until the posts arrive and then we store them locally. 
+- **Three TabBar Sections**:
+  - **Posts**: Fetches and displays posts from [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts).
+  - **Sources**: Allows users to select different news sources.
+  - **Categories**: Enables category-based filtering for news.
+  
+- **RxSwift & Concurrency Handling**
+  - The **Posts tab** demonstrates a synchronized API call to fetch posts at launch.
+  - The **Splash Screen** is locked until the data is fully retrieved and stored in `UserDefaults`.
 
-Sources and Categories tab includes category selection and source selection for the news. Dependecies are injected by using Swinject. Steppers in the viewmodel sends command to Flow and Stepper classes to handle the navigation. Please refer the screeen shots and the source code.
+- **Dependency Injection**  
+  - Implemented using **Swinject** for better modularity and testability.
 
-Further imporocements can be done for UI. 
-![Simulator Screen Shot - iPhone 14 Pro - 2023-01-07 at 13 09 54](https://user-images.githubusercontent.com/11138262/211149982-774a7ad5-979f-44c8-b030-8896cd6c8698.png)
-![Simulator Screen Shot - iPhone 14 Pro - 2023-01-07 at 13 09 59](https://user-images.githubusercontent.com/11138262/211149987-2be63252-e497-4486-a566-581666900c46.png)
-![Simulator Screen Shot - iPhone 14 Pro - 2023-01-07 at 13 10 04](https://user-images.githubusercontent.com/11138262/211149995-596b1baf-0a65-497e-aa2b-f503eea7cee1.png)
+- **Navigation with RxFlow**  
+  - **Steppers** in the ViewModel communicate with `Flow` and `Stepper` classes for seamless navigation.
 
+- **Code Quality & Best Practices**
+  - **SwiftLint** ensures consistent and clean coding style.
+  - **RxDataSources** is used for efficiently managing UI updates.
 
+## 🛠 Technologies & Frameworks
 
+- **RxSwift** & **RxCocoa** – Reactive programming for handling asynchronous tasks and data binding.
+- **RxDataSources** – Efficiently managing and updating UITableView & UICollectionView.
+- **Swinject** – Lightweight dependency injection framework.
+- **RxFlow** – Coordinating navigation flow within the MVVM-C pattern.
+- **UserDefaults** – Storing fetched posts locally.
+- **SwiftLint** – Enforcing coding style best practices.
 
+## 📷 Screenshots
+
+| Posts Tab | Sources Tab | Categories Tab |
+|-----------|------------|---------------|
+| ![Posts](https://user-images.githubusercontent.com/11138262/211149982-774a7ad5-979f-44c8-b030-8896cd6c8698.png) | ![Sources](https://user-images.githubusercontent.com/11138262/211149987-2be63252-e497-4486-a566-581666900c46.png) | ![Categories](https://user-images.githubusercontent.com/11138262/211149995-596b1baf-0a65-497e-aa2b-f503eea7cee1.png) |
+
+## 🔧 Future Improvements
+
+- UI/UX Enhancements for a more visually appealing experience.
+- Implement offline mode using CoreData or Realm.
+- Expand the news API integration for real-world data.
+
+---
