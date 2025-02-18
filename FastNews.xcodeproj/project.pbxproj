@@ -161,6 +161,11 @@
 		EB4062B92D648BEA00E9879F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EB4062B82D648BEA00E9879F /* Kingfisher */; };
 		EB4062BC2D648C5000E9879F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = EB4062BB2D648C5000E9879F /* Swinject */; };
 		EB4062BF2D648C7100E9879F /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = EB4062BE2D648C7100E9879F /* SwinjectAutoregistration */; };
+		EB9E70592D64B34A008224DF /* Mapper in Frameworks */ = {isa = PBXBuildFile; productRef = EB9E70582D64B34A008224DF /* Mapper */; };
+		EB9E705C2D64B3A7008224DF /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EB9E705B2D64B3A7008224DF /* CombineMoya */; };
+		EB9E705E2D64B3A7008224DF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EB9E705D2D64B3A7008224DF /* Moya */; };
+		EB9E70602D64B3A7008224DF /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EB9E705F2D64B3A7008224DF /* ReactiveMoya */; };
+		EB9E70622D64B3A7008224DF /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EB9E70612D64B3A7008224DF /* RxMoya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,9 +337,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9E705E2D64B3A7008224DF /* Moya in Frameworks */,
+				EB9E70592D64B34A008224DF /* Mapper in Frameworks */,
 				EB4062B92D648BEA00E9879F /* Kingfisher in Frameworks */,
 				EB4062A82D648A2900E9879F /* Action in Frameworks */,
 				EB4062A52D64898600E9879F /* RxFlow in Frameworks */,
+				EB9E70602D64B3A7008224DF /* ReactiveMoya in Frameworks */,
 				EB4062B22D648B4C00E9879F /* Moya in Frameworks */,
 				EB4062B62D648B4C00E9879F /* RxMoya in Frameworks */,
 				EB4062B42D648B4C00E9879F /* ReactiveMoya in Frameworks */,
@@ -344,7 +352,9 @@
 				EB4062AD2D648AF200E9879F /* RxDataSources in Frameworks */,
 				EB4062AB2D648AF200E9879F /* Differentiator in Frameworks */,
 				EB4062B02D648B4C00E9879F /* CombineMoya in Frameworks */,
+				EB9E70622D64B3A7008224DF /* RxMoya in Frameworks */,
 				EB40629C2D64894E00E9879F /* RxCocoa in Frameworks */,
+				EB9E705C2D64B3A7008224DF /* CombineMoya in Frameworks */,
 				EB4062BC2D648C5000E9879F /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1099,10 +1109,11 @@
 				EB4062A32D64898600E9879F /* XCRemoteSwiftPackageReference "RxFlow" */,
 				EB4062A62D648A2900E9879F /* XCRemoteSwiftPackageReference "Action" */,
 				EB4062A92D648AF200E9879F /* XCRemoteSwiftPackageReference "RxDataSources" */,
-				EB4062AE2D648B4C00E9879F /* XCRemoteSwiftPackageReference "Moya" */,
 				EB4062B72D648BEA00E9879F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				EB4062BA2D648C5000E9879F /* XCRemoteSwiftPackageReference "Swinject" */,
 				EB4062BD2D648C7100E9879F /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				EB9E70572D64B349008224DF /* XCRemoteSwiftPackageReference "mapper" */,
+				EB9E705A2D64B3A7008224DF /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 5457F46E26FA00760020C5CB /* Products */;
 			projectDirPath = "";
@@ -1182,7 +1193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Swiftlint/swiftlint\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=/opt/homebrew/bin:$PATH\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, please install it using 'brew install swiftlint'\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1703,6 +1714,22 @@
 				minimumVersion = 2.9.1;
 			};
 		};
+		EB9E70572D64B349008224DF /* XCRemoteSwiftPackageReference "mapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lyft/mapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.1;
+			};
+		};
+		EB9E705A2D64B3A7008224DF /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1785,6 +1812,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EB4062BD2D648C7100E9879F /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
+		};
+		EB9E70582D64B34A008224DF /* Mapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9E70572D64B349008224DF /* XCRemoteSwiftPackageReference "mapper" */;
+			productName = Mapper;
+		};
+		EB9E705B2D64B3A7008224DF /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9E705A2D64B3A7008224DF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		EB9E705D2D64B3A7008224DF /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9E705A2D64B3A7008224DF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		EB9E705F2D64B3A7008224DF /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9E705A2D64B3A7008224DF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		EB9E70612D64B3A7008224DF /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9E705A2D64B3A7008224DF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 

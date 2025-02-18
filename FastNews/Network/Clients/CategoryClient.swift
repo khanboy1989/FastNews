@@ -8,6 +8,7 @@
 import Moya
 import Mapper
 import RxSwift
+import RxMoya
 
 class CategoryClient {
     private let configuration: CategoryApiConfiguration

@@ -7,6 +7,7 @@
 
 import Moya
 import Alamofire
+import Foundation
 
 private struct Configuration {
     struct Api {

@@ -8,6 +8,8 @@
 import Moya
 import Mapper
 import RxSwift
+import Foundation
+import RxMoya
 
 class SourceClient {
     private let configuration: SourceApiConfiguration
